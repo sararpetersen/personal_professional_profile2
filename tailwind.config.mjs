@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         "font-color": "#f5f5f5",
+        "font-color_dark": "#171717",
         "bg-color": "#171717",
       },
     },

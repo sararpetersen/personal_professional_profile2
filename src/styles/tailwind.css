@@ -37,4 +37,9 @@
     -webkit-text-stroke-color: black;
     font-style: normal;
   }
+
+  time {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
 }

@@ -5,11 +5,11 @@ import { Image } from "astro:assets";
 ---
 
 <MainLayout title="Sara Ringkow Petersen - Personal professional profile">
-  <div id="top" "top" class="top-content text-font-color max-w-7xl mx-auto pb-20 pt-32 md:pb-72 md:pt-72">
-    <h1 class="title text-7xl pb-8 tracking-wider">SARA RINGKOW PETERSEN</h1>
-    <h2 class="subtitle text-5xl tracking-wide">Multimedia-design student <br /> & web designer</h2>
+  <div class="top-content text-font-color max-w-7xl mx-auto pb-20 pt-32 md:pb-72 md:pt-72">
+    <h1 id="h1" class="title text-6xl md:text-8xl text-center md:text-left pb-12 tracking-wider">SARA RINGKOW PETERSEN</h1>
+    <h2 id="h2" class="subtitle text-3xl md:text-5xl text-center md:text-left tracking-wide">Multimedia-design student <br /> & web designer</h2>
   </div>
-  <div id="info" class="main-content1 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-40">
+  <div id="info" class="main-content1 max-w-7xl mx-auto md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-40">
     <div class="left-content text-font-color">
       <h3 class="h3-header text-3xl pb-4">WHO AM I?</h3>
       <p class="text-lg leading-8">
@@ -26,31 +26,31 @@ import { Image } from "astro:assets";
     </div>
   </div>
 
-  <div class="main-content2 max-w-7xl flex justify-center md:justify-center">
+  <div class="timeline max-w-7xl mx-auto flex justify-center md:justify-center pb-28">
     <div class="left-content text-font-color">
-      <h3 class="h3-header text-3xl pb-4">TIMELINE</h3>
+      <h3 class="h3-header text-3xl text-left pb-8">TIMELINE</h3>
 
       <ol class="relative border-s border-gray-200 dark:border-gray-700">
-        <li class="mb-10 ms-4">
-          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-          <time class="mb-1 text-md font-bold leading-none text-gray-600">August 2019 - June 2021</time>
+        <li class="mb-16 ms-4">
+          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-200"></div>
+          <time class="mb-1 text-2xl font-bold leading-none text-gray-200">August 2019 - June 2021</time>
           <h4 class="timeline-title text-lg font-regular text-gray-900 dark:text-white">HF at Egedal Gymnasium & HF</h4>
         </li>
-        <li class="mb-10 ms-4">
-          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-          <time class="mb-1 text-md font-bold leading-none text-gray-600">January 2022 - June 2022 (gap-year)</time>
+        <li class="mb-16 ms-4">
+          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-300"></div>
+          <time class="mb-1 text-2xl font-bold leading-none text-gray-300">January 2022 - June 2022 (gap-year)</time>
           <h4 class="timeline-title text-lg font-regular text-gray-900 dark:text-white">Folk high school stay at Bosei Sports Folk High School</h4>
         </li>
-        <li class="mb-10 ms-4">
-          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-          <time class="mb-1 text-md font-bold leading-none text-gray-600">August 2022 - May 2023</time>
+        <li class="mb-16 ms-4">
+          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-400"></div>
+          <time class="mb-1 text-2xl font-bold leading-none text-gray-400">August 2022 - May 2023</time>
           <h4 class="timeline-title text-lg font-regular text-gray-900 dark:text-white">
             Singular courses in Japanese (lvl. 0-B) at Frederiksberg VUC & STX
           </h4>
         </li>
-        <li class="mb-10 ms-4">
-          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-          <time class="mb-1 text-md font-bold leading-none text-gray-600">August 2023 - present</time>
+        <li class="mb-16 ms-4">
+          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-500"></div>
+          <time class="mb-1 text-2xl font-bold leading-none text-gray-500">August 2023 - present</time>
           <h4 class="timeline-title text-lg font-regular text-gray-900 dark:text-white">
             Multimedia-design student at KEA - Københavns Erhvervsakademi (3rd semester, 2nd year)
           </h4>
@@ -59,46 +59,123 @@ import { Image } from "astro:assets";
     </div>
   </div>
 
-  <div class="main-content3 max-w-7xl flex justify-center md:justify-center">
+  <div class="skills max-w-7xl mx-auto flex justify-center md:justify-center pb-40">
     <div class="left-content text-font-color">
-      <h3 class="h3-header text-3xl pb-4">SKILLS</h3>
-
-      <div class="grid gap-4">
-        <div>
-          <img class="max-w-full rounded-lg w-[100px] h-[100px]" src="/other/images.png" alt="vs code" />
+      <h3 class="h3-header text-3xl pb-12">SKILLS</h3>
+      <div class="icon-container">
+        <!-- some_icons1 -->
+        <div class="some_icons1 flex flex-wrap justify-center gap-20 mb-8">
+          <div>
+            <img
+              id="figma"
+              class="max-w-full rounded-lg w-[80px] h-[80px]"
+              src="/other/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.webp"
+              alt="figma"
+            />
+          </div>
+          <div>
+            <img id="vscode" class="max-w-full rounded-lg w-[80px] h-[80px]" src="/other/images.png" alt="vs code" />
+          </div>
+          <div>
+            <img id="microsoft" class="max-w-full rounded-lg w-[80px] h-[80px]" src="/other/Microsoft_365_(2022).svg.png" alt="microsoft 365" />
+          </div>
         </div>
-        <div class="grid grid-cols-5 gap-4">
+
+        <!-- some_icons2 underneath -->
+        <div class="some_icons2 flex justify-center gap-20">
           <div>
-            <img class="max-w-full rounded-lg w-[100px] h-[100px]" src="/other/images.png" alt="vs code" />
+            <img
+              id="creativecloud"
+              class="max-w-full rounded-lg w-[80px] h-[80px]"
+              src="/other/Adobe_Creative_Cloud_rainbow_icon.svg.png"
+              alt="creative cloud"
+            />
           </div>
           <div>
-            <img class="max-w-full rounded-lg w-[100px] h-[100px]" src="/other/Microsoft_365_(2022).svg.png" alt="microsoft 365" />
-          </div>
-          <div>
-            <img class="max-w-full rounded-lg w-[100px] h-[100px]" src="/other/Adobe_Creative_Cloud_rainbow_icon.svg.png" alt="creative cloud" />
-          </div>
-          <div>
-            <img class="max-w-full rounded-lg w-[100px] h-[100px]" src="/other/Google_Drive_Logo_512px.png" alt="google drive" />
+            <img id="google" class="max-w-full rounded-lg w-[80px] h-[80px]" src="/other/Google_Drive_Logo_512px.png" alt="google drive" />
           </div>
         </div>
       </div>
     </div>
-
-    <style>
-      body {
-        background: rgb(190, 190, 190);
-        background: linear-gradient(
-          0deg,
-          rgba(190, 190, 190, 1) 16%,
-          rgba(106, 106, 106, 1) 36%,
-          rgba(70, 70, 70, 1) 49%,
-          rgba(47, 47, 47, 1) 62%,
-          rgba(36, 36, 36, 1) 72%,
-          rgba(24, 24, 24, 1) 86%
-        );
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-    </style>
   </div>
+
+  <style>
+    body {
+      background: rgb(190, 190, 190);
+      background: linear-gradient(
+        0deg,
+        rgba(190, 190, 190, 1) 16%,
+        rgba(106, 106, 106, 1) 36%,
+        rgba(70, 70, 70, 1) 49%,
+        rgba(47, 47, 47, 1) 62%,
+        rgba(36, 36, 36, 1) 72%,
+        rgba(24, 24, 24, 1) 86%
+      );
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translatey(0px);
+      }
+      50% {
+        transform: translatey(-20px);
+      }
+      100% {
+        transform: translatey(0px);
+      }
+    }
+
+    #figma {
+      box-sizing: border-box;
+      overflow: hidden;
+      transform: translatey(0px);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    #vscode {
+      box-sizing: border-box;
+      overflow: hidden;
+      transform: translatey(0px);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    #microsoft {
+      box-sizing: border-box;
+      overflow: hidden;
+      transform: translatey(0px);
+      animation: float 8s ease-in-out infinite;
+    }
+
+    #creativecloud {
+      box-sizing: border-box;
+      overflow: hidden;
+      transform: translatey(0px);
+      animation: float 10s ease-in-out infinite;
+    }
+
+    #google {
+      box-sizing: border-box;
+      overflow: hidden;
+      transform: translatey(0px);
+      animation: float 12s ease-in-out infinite;
+    }
+  </style>
+
+  <script>
+    import { inView } from "motion";
+
+    const elementmedanimation1 = document.querySelector("#h1");
+
+    inView(elementmedanimation1, () => {
+      elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
+    });
+
+    const elementmedanimation2 = document.querySelector("#h2");
+
+    inView(elementmedanimation2, () => {
+      elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
+    });
+  </script>
 </MainLayout>
