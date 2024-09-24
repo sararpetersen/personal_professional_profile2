@@ -1,15 +1,104 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+
+<MainLayout title="Sara Ringkow Petersen - Personal professional profile">
+  <div class="top-content text-font-color max-w-7xl mx-auto pb-10 pt-8 md:pb-72 md:pt-64">
+    <h1 class="title text-7xl pb-8 tracking-wider">SARA RINGKOW PETERSEN</h1>
+    <h2 class="subtitle text-5xl tracking-wide">Multimedia-design student <br /> & web designer</h2>
+  </div>
+  <div class="main-content1 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-40">
+    <div class="left-content text-font-color">
+      <h3 class="h3-header text-3xl pb-4">WHO AM I?</h3>
+      <p class="text-lg leading-8">
+        The name’s Sara Ringkow Petersen. I’m 22 years old, and come from Copenhagen, Denmark. I live at home together with my parents, little-sister
+        and our dog. I’m late-diagosed with Autism, and have had the diagnosis for almost 2 years. <br /><br /> In my spare time, I love reading crime
+        and fantasy books and enjoy PC and console games, especially Nintendo and Super Mario. I’m also really creative, and love doing stuff like drawing,
+        keyring-braiding and bead-art. <br /><br /> My main goal is to help companies improve their digital platforms to make them more accessible for
+        people with different kinds of difficulties. On a competence-basis, I have experience with HTML, CSS, JavaScript, and frameworks like Astro and
+        Tailwind. I'm also familiar with project management tools like SCRUM and Trello, as well as design tools like Figma.
+      </p>
+    </div>
+    <div class="right-content flex justify-center md:justify-center">
+      <img src="/other/pfp.jpg" alt="me" class="w-[350px] h-[400px] object-cover rounded-md" />
+    </div>
+  </div>
+
+  <div class="main-content2 max-w-7xl flex justify-center md:justify-center">
+    <div class="left-content text-font-color">
+      <h3 class="h3-header text-3xl pb-4">TIMELINE</h3>
+
+      <ol class="relative border-s border-gray-200 dark:border-gray-700">
+        <li class="mb-10 ms-4">
+          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">August 2019 - June 2021</time>
+          <h4 class="timeline-title text-lg font-semibold text-gray-900 dark:text-white">HF at Egedal Gymnasium & HF</h4>
+        </li>
+        <li class="mb-10 ms-4">
+          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">January 2022 - June 2022 (gap-year)</time>
+          <h4 class="timeline-title text-lg font-semibold text-gray-900 dark:text-white">Folk high school stay at Bosei Sports Folk High School</h4>
+        </li>
+        <li class="mb-10 ms-4">
+          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">August 2022 - May 2023</time>
+          <h4 class="timeline-title text-lg font-semibold text-gray-900 dark:text-white">
+            Singular courses in Japanese (lvl. 0-B) at Frederiksberg VUC & STX
+          </h4>
+        </li>
+        <li class="mb-10 ms-4">
+          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">August 2023 - present</time>
+          <h4 class="timeline-title text-lg font-semibold text-gray-900 dark:text-white">
+            Multimedia-design student at KEA - Københavns Erhvervsakademi (3rd semester, 2nd year)
+          </h4>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="main-content3 max-w-7xl flex justify-center md:justify-center">
+    <div class="left-content text-font-color">
+      <h3 class="h3-header text-3xl pb-4">SKILLS</h3>
+
+      <div class="grid gap-4">
+        <div>
+          <img class="max-w-full rounded-lg w-[100px] h-[100px]" src="/other/images.png" alt="vs code" />
+        </div>
+        <div class="grid grid-cols-5 gap-4">
+          <div>
+            <img class="max-w-full rounded-lg w-[100px] h-[100px]" src="/other/images.png" alt="vs code" />
+          </div>
+          <div>
+            <img class="max-w-full rounded-lg w-[100px] h-[100px]" src="/other/Microsoft_365_(2022).svg.png" alt="microsoft 365" />
+          </div>
+          <div>
+            <img class="max-w-full rounded-lg w-[100px] h-[100px]" src="/other/Adobe_Creative_Cloud_rainbow_icon.svg.png" alt="creative cloud" />
+          </div>
+          <div>
+            <img class="max-w-full rounded-lg w-[100px] h-[100px]" src="/other/Google_Drive_Logo_512px.png" alt="google drive" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      body {
+        background: rgb(190, 190, 190);
+        background: linear-gradient(
+          0deg,
+          rgba(190, 190, 190, 1) 16%,
+          rgba(106, 106, 106, 1) 36%,
+          rgba(70, 70, 70, 1) 49%,
+          rgba(47, 47, 47, 1) 62%,
+          rgba(36, 36, 36, 1) 72%,
+          rgba(24, 24, 24, 1) 86%
+        );
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </div>
 </MainLayout>
