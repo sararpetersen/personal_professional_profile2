@@ -2,47 +2,64 @@
 
 ---
 
-<header class="text-font-color">
-  <div x-data="{ showmenu: false }" class="p-10 static lg:static w-full">
+<header class="text-font-color fixed top-0 left-0 w-full z-50 backdrop-blur-md">
+  <div x-data="{ showmenu: false }" class="p-6">
     <div id="navbar" class="flex flex-row justify-between">
-      <div id="logo" class="font-bold"><a href="#link1"><img src="/illustrations/logo.svg" alt="logo" class="w-[88px] md:w-[120px]" /></a></div>
-      <div id="desktopmenu" class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
+      <div id="logo" class="font-bold hover:opacity-50 transition duration-300">
+        <a href="#top"><img src="/illustrations/logo.svg" alt="logo" class="w-28 md:w-32" /> </a>
+      </div>
+      <div
+        id="desktopmenu"
+        class="hidden lg:block text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-font-color dark:border-gray-700"
+      >
         <ul class="flex flex-wrap -mb-px">
           <li class="me-2">
             <a
-              href="#"
-              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-              >Profile</a
+              href="#top"
+              class="p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-500 dark:hover:text-gray-500 font-bold transition duration-300 flex items-center"
+              >TOP <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5"></path>
+              </svg></a
+            >
+          </li>
+          <li class="me-2">
+            <a
+              href="#info"
+              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-500 dark:hover:text-gray-500 transition duration-300"
+              >WHO AM I?</a
             >
           </li>
           <li class="me-2">
             <a
               href="#"
-              class="inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500"
-              aria-current="page">Dashboard</a
+              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-500 dark:hover:text-gray-500 transition duration-300"
+              aria-current="page">TIMELINE</a
             >
           </li>
           <li class="me-2">
             <a
               href="#"
-              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-              >Settings</a
+              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-500 dark:hover:text-gray-500 transition duration-300"
+              >SKILLS</a
             >
           </li>
           <li class="me-2">
             <a
               href="#"
-              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-              >Contacts</a
+              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-500 dark:hover:text-gray-500 transition duration-300"
+              >MY PROJECTS</a
             >
           </li>
           <li>
-            <a class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">Disabled</a>
+            <a
+              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-500 dark:hover:text-gray-500 transition duration-300"
+              href="#">CONTACT</a
+            >
           </li>
         </ul>
       </div>
       <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"
-        ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-6">
+        ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
         </svg>
       </button>
@@ -57,55 +74,12 @@
       style="display: none;"
     >
       <ul>
-        <li class="text-center py-2 border-y-2 hover:text-gray-400 active:text-gray-500 active:underline"><a href="#link1">WHO AM I?</a></li>
-        <li class="text-center py-2 border-b-2 hover:text-gray-400 active:text-gray-500 active:underline"><a href="#link2">TIMELINE</a></li>
-        <li class="text-center py-2 border-b-2 hover:text-gray-400 active:text-gray-500 active:underline"><a href="#link3">SKILLS</a></li>
-        <li class="text-center py-2 border-b-2 hover:text-gray-400 active:text-gray-500 active:underline"><a href="#link4">MY PROJECTS</a></li>
-        <li class="text-center py-2 border-b-2 hover:text-gray-400 active:text-gray-500 active:underline"><a href="#link5">CONTACT</a></li>
+        <li class="text-center py-3 border-b-[1px] hover:text-gray-400 active:text-gray-500 active:underline"><a href="#link1">WHO AM I?</a></li>
+        <li class="text-center py-3 border-b-[1px] hover:text-gray-400 active:text-gray-500 active:underline"><a href="#link2">TIMELINE</a></li>
+        <li class="text-center py-3 border-b-[1px] hover:text-gray-400 active:text-gray-500 active:underline"><a href="#link3">SKILLS</a></li>
+        <li class="text-center py-3 border-b-[1px] hover:text-gray-400 active:text-gray-500 active:underline"><a href="#link4">MY PROJECTS</a></li>
+        <li class="text-center py-3 border-b-[1px] hover:text-gray-400 active:text-gray-500 active:underline"><a href="#link5">CONTACT</a></li>
       </ul>
     </nav>
   </div>
 </header>
-
-<div class="sm:hidden">
-  <label for="tabs" class="sr-only">Select your country</label>
-  <select
-    id="tabs"
-    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-  >
-    <option>Profile</option>
-    <option>Dashboard</option>
-    <option>setting</option>
-    <option>Invoioce</option>
-  </select>
-</div>
-<ul class="hidden text-sm font-medium text-center text-gray-500 rounded-lg shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
-  <li class="w-full focus-within:z-10">
-    <a
-      href="#"
-      class="inline-block w-full p-4 text-gray-900 bg-gray-100 border-r border-gray-200 dark:border-gray-700 rounded-s-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none dark:bg-gray-700 dark:text-white"
-      aria-current="page">Profile</a
-    >
-  </li>
-  <li class="w-full focus-within:z-10">
-    <a
-      href="#"
-      class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
-      >Dashboard</a
-    >
-  </li>
-  <li class="w-full focus-within:z-10">
-    <a
-      href="#"
-      class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
-      >Settings</a
-    >
-  </li>
-  <li class="w-full focus-within:z-10">
-    <a
-      href="#"
-      class="inline-block w-full p-4 bg-white border-s-0 border-gray-200 dark:border-gray-700 rounded-e-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
-      >Invoice</a
-    >
-  </li>
-</ul>
