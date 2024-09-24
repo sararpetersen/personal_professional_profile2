@@ -9,10 +9,10 @@ import { Image } from "astro:assets";
     <h1 id="h1" class="title text-6xl md:text-8xl text-center md:text-left pb-12 tracking-wider">SARA RINGKOW PETERSEN</h1>
     <h2 id="h2" class="subtitle text-3xl md:text-5xl text-center md:text-left tracking-wide">Multimedia-design student <br /> & web designer</h2>
   </div>
-  <div id="info" class="main-content1 max-w-7xl mx-auto md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-40">
+  <div id="info" class="main-content1 max-w-7xl mx-8 md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-20 md:pb-40">
     <div class="left-content text-font-color">
-      <h3 class="h3-header text-3xl pb-4">WHO AM I?</h3>
-      <p class="text-lg leading-8">
+      <h3 class="h3-header text-2xl md:text-3xl pb-4">WHO AM I?</h3>
+      <p class="text-sm md:text-lg leading-8">
         The name’s Sara Ringkow Petersen. I’m 22 years old, and come from Copenhagen, Denmark. I live at home together with my parents, little-sister
         and our dog. I’m late-diagosed with Autism, and have had the diagnosis for almost 2 years. <br /><br /> In my spare time, I love reading crime
         and fantasy books and enjoy PC and console games, especially Nintendo and Super Mario. I’m also really creative, and love doing stuff like drawing,
@@ -22,36 +22,50 @@ import { Image } from "astro:assets";
       </p>
     </div>
     <div class="right-content flex justify-center md:justify-center">
-      <img src="/other/pfp.jpg" alt="me" class="w-[350px] h-[400px] object-cover rounded-md" />
+      <img src="/other/pfp.jpg" alt="me" class="w-[300px] h-[300px] md:w-[350px] md:h-[350px] object-cover rounded-md" />
     </div>
   </div>
 
-  <div class="timeline max-w-7xl mx-auto flex justify-center md:justify-center pb-28">
+  <div class="timeline max-w-7xl mx-auto flex justify-center md:justify-center md:mx-10 pb-28">
     <div class="left-content text-font-color">
-      <h3 class="h3-header text-3xl text-left pb-8">TIMELINE</h3>
+      <h3 class="h3-header text-3xl text-left ml-4 pb-10 md:ml-0 md:pb-8">TIMELINE</h3>
 
       <ol class="relative border-s border-gray-200 dark:border-gray-700">
         <li class="mb-16 ms-4">
-          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-200"></div>
-          <time class="mb-1 text-2xl font-bold leading-none text-gray-200">August 2019 - June 2021</time>
-          <h4 class="timeline-title text-lg font-regular text-gray-900 dark:text-white">HF at Egedal Gymnasium & HF</h4>
+          <div
+            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-200 hidden md:block"
+          >
+          </div>
+          <time class="mb-1 text-2xl font-bold leading-none text-gray-200 md:text-2xl">August 2019 - June 2021</time>
+          <h4 class="timeline-title text-lg font-regular text-gray-900 dark:text-white md:text-xl">HF at Egedal Gymnasium & HF</h4>
         </li>
         <li class="mb-16 ms-4">
-          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-300"></div>
-          <time class="mb-1 text-2xl font-bold leading-none text-gray-300">January 2022 - June 2022 (gap-year)</time>
-          <h4 class="timeline-title text-lg font-regular text-gray-900 dark:text-white">Folk high school stay at Bosei Sports Folk High School</h4>
+          <div
+            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-300 hidden md:block"
+          >
+          </div>
+          <time class="mb-1 text-2xl font-bold leading-none text-gray-300 md:text-2xl">January 2022 - June 2022 (gap-year)</time>
+          <h4 class="timeline-title text-lg font-regular text-gray-900 dark:text-white md:text-xl">
+            Folk high school stay at Bosei Sports Folk High School
+          </h4>
         </li>
         <li class="mb-16 ms-4">
-          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-400"></div>
-          <time class="mb-1 text-2xl font-bold leading-none text-gray-400">August 2022 - May 2023</time>
-          <h4 class="timeline-title text-lg font-regular text-gray-900 dark:text-white">
+          <div
+            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-400 hidden md:block"
+          >
+          </div>
+          <time class="mb-1 text-2xl font-bold leading-none text-gray-400 md:text-2xl">August 2022 - May 2023</time>
+          <h4 class="timeline-title text-lg font-regular text-gray-900 dark:text-white md:text-xl">
             Singular courses in Japanese (lvl. 0-B) at Frederiksberg VUC & STX
           </h4>
         </li>
         <li class="mb-16 ms-4">
-          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-500"></div>
-          <time class="mb-1 text-2xl font-bold leading-none text-gray-500">August 2023 - present</time>
-          <h4 class="timeline-title text-lg font-regular text-gray-900 dark:text-white">
+          <div
+            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-500 hidden md:block"
+          >
+          </div>
+          <time class="mb-1 text-2xl font-bold leading-none text-gray-500 md:text-2xl">August 2023 - present</time>
+          <h4 class="timeline-title text-lg font-regular text-gray-900 dark:text-white md:text-1xl">
             Multimedia-design student at KEA - Københavns Erhvervsakademi (3rd semester, 2nd year)
           </h4>
         </li>
@@ -59,123 +73,220 @@ import { Image } from "astro:assets";
     </div>
   </div>
 
-  <div class="skills max-w-7xl mx-auto flex justify-center md:justify-center pb-40">
+  <div class="skills max-w-7xl mx-auto flex justify-center md:justify-center pb-40 md:pb-20">
     <div class="left-content text-font-color">
-      <h3 class="h3-header text-3xl pb-12">SKILLS</h3>
-      <div class="icon-container">
-        <!-- some_icons1 -->
-        <div class="some_icons1 flex flex-wrap justify-center gap-20 mb-8">
-          <div>
-            <img
-              id="figma"
-              class="max-w-full rounded-lg w-[80px] h-[80px]"
-              src="/other/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.webp"
-              alt="figma"
-            />
-          </div>
-          <div>
-            <img id="vscode" class="max-w-full rounded-lg w-[80px] h-[80px]" src="/other/images.png" alt="vs code" />
-          </div>
-          <div>
-            <img id="microsoft" class="max-w-full rounded-lg w-[80px] h-[80px]" src="/other/Microsoft_365_(2022).svg.png" alt="microsoft 365" />
+      <h3 class="h3-header text-3xl pb-28 pr-16">SKILLS</h3>
+    </div>
+    <div class="icon-container">
+      <!-- some_icons1 -->
+      <div class="some_icons1 flex flex-wrap justify-center gap-6 md:gap-20 mb-8">
+        <div class="icon-wrapper top-tooltip">
+          <!-- Add a class to control the tooltip position -->
+          <img
+            id="figma"
+            class="max-w-full rounded-lg w-[50px] h-[50px] sm:w-[80px] sm:h-[80px] hover:transition duration-300 hover:opacity-70 cursor-pointer"
+            src="/other/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.webp"
+            alt="figma"
+          />
+          <div class="tooltip hidden md:block">
+            <ol>
+              <li>1. Styles & components</li>
+              <li>2. Auto-layout</li>
+              <li>3. Design-systems</li>
+              <li>4. Wireframes & prototypes</li>
+            </ol>
           </div>
         </div>
-
-        <!-- some_icons2 underneath -->
-        <div class="some_icons2 flex justify-center gap-20">
-          <div>
-            <img
-              id="creativecloud"
-              class="max-w-full rounded-lg w-[80px] h-[80px]"
-              src="/other/Adobe_Creative_Cloud_rainbow_icon.svg.png"
-              alt="creative cloud"
-            />
+        <div class="icon-wrapper top-tooltip">
+          <!-- Add a class to control the tooltip position -->
+          <img
+            id="vscode"
+            class="max-w-full rounded-lg w-[50px] h-[50px] sm:w-[80px] sm:h-[80px] hover:transition duration-300 hover:opacity-70 cursor-pointer"
+            src="/other/images.png"
+            alt="vs code"
+          />
+          <div class="tooltip hidden md:block">
+            <ol>
+              <li>1. HTML</li>
+              <li>2. CSS</li>
+              <li>3. JavaScript</li>
+              <li>4. Astro</li>
+              <li>5. Tailwind</li>
+            </ol>
           </div>
-          <div>
-            <img id="google" class="max-w-full rounded-lg w-[80px] h-[80px]" src="/other/Google_Drive_Logo_512px.png" alt="google drive" />
+        </div>
+        <div class="icon-wrapper top-tooltip">
+          <!-- Add a class to control the tooltip position -->
+          <img
+            id="microsoft"
+            class="max-w-full rounded-lg w-[50px] h-[50px] sm:w-[80px] sm:h-[80px] hover:transition duration-300 hover:opacity-70 cursor-pointer"
+            src="/other/Microsoft_365_(2022).svg.png"
+            alt="microsoft 365"
+          />
+          <div class="tooltip hidden md:block">
+            <ol>
+              <li>1. Word</li>
+              <li>2. Powerpoint</li>
+              <li>3. Teams</li>
+              <li>4. Outlook</li>
+              <li>5. OneDrive</li>
+            </ol>
           </div>
         </div>
       </div>
+
+      <!-- some_icons2 -->
+      <div class="some_icons1 flex flex-wrap justify-center gap-6 md:gap-20">
+        <div class="icon-wrapper">
+          <img
+            id="creativecloud"
+            class="max-w-full rounded-lg w-[50px] h-[50px] sm:w-[80px] sm:h-[80px] hover:transition duration-300 hover:opacity-70 cursor-pointer"
+            src="/other/Adobe_Creative_Cloud_rainbow_icon.svg.png"
+            alt="creative cloud"
+          />
+          <div class="tooltip hidden md:block">
+            <ol>
+              <li>1. Adobe Illustrator</li>
+              <li>2. Adobe Premiere Pro</li>
+              <li>3. Adobe Firefly</li>
+            </ol>
+          </div>
+        </div>
+        <div class="icon-wrapper">
+          <img
+            id="google"
+            class="max-w-full rounded-lg w-[50px] h-[50px] sm:w-[80px] sm:h-[80px] hover:transition duration-300 hover:opacity-70 cursor-pointer"
+            src="/other/Google_Drive_Logo_512px.png"
+            alt="google drive"
+          />
+          <div class="tooltip hidden md:block">
+            <ol>
+              <li>1. Docs</li>
+              <li>2. Slides</li>
+              <li>3. Forms</li>
+              <li>4. Sharing and collabs</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        body {
+          background: rgb(190, 190, 190);
+          background: linear-gradient(
+            0deg,
+            rgba(190, 190, 190, 1) 16%,
+            rgba(106, 106, 106, 1) 36%,
+            rgba(70, 70, 70, 1) 49%,
+            rgba(47, 47, 47, 1) 62%,
+            rgba(36, 36, 36, 1) 72%,
+            rgba(24, 24, 24, 1) 86%
+          );
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        @keyframes float {
+          0% {
+            transform: translatey(0px);
+          }
+          50% {
+            transform: translatey(-20px);
+          }
+          100% {
+            transform: translatey(0px);
+          }
+        }
+
+        #figma {
+          box-sizing: border-box;
+          overflow: hidden;
+          transform: translatey(0px);
+          animation: float 4s ease-in-out infinite;
+        }
+
+        #vscode {
+          box-sizing: border-box;
+          overflow: hidden;
+          transform: translatey(0px);
+          animation: float 6s ease-in-out infinite;
+        }
+
+        #microsoft {
+          box-sizing: border-box;
+          overflow: hidden;
+          transform: translatey(0px);
+          animation: float 8s ease-in-out infinite;
+        }
+
+        #creativecloud {
+          box-sizing: border-box;
+          overflow: hidden;
+          transform: translatey(0px);
+          animation: float 10s ease-in-out infinite;
+        }
+
+        #google {
+          box-sizing: border-box;
+          overflow: hidden;
+          transform: translatey(0px);
+          animation: float 12s ease-in-out infinite;
+        }
+
+        .icon-wrapper {
+          position: relative;
+          display: inline-block;
+        }
+
+        /* Default behavior: tooltips appear below the images */
+        .tooltip {
+          visibility: hidden;
+          width: 150px;
+          background-color: #2f2f2f;
+          color: #f5f5f5;
+          text-align: left;
+          font-size: 12.5px;
+          border-radius: 6px;
+          padding: 8px;
+          position: absolute;
+          top: 100%; /* Default: Below */
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 0;
+          transition: opacity 0.3s;
+          margin-top: 10px; /* Adds space between the image and tooltip */
+        }
+
+        /* For the icons that need tooltips above */
+        .top-tooltip .tooltip {
+          top: auto; /* Override the top position */
+          bottom: 100%; /* Move it above */
+          margin-top: 0; /* Remove bottom margin */
+          margin-bottom: 10px; /* Optional: Adds space between the image and tooltip */
+        }
+
+        /* Hover effect */
+        .icon-wrapper:hover .tooltip {
+          visibility: visible;
+          opacity: 1;
+        }
+      </style>
+
+      <script>
+        import { inView } from "motion";
+
+        const elementmedanimation1 = document.querySelector("#h1");
+
+        inView(elementmedanimation1, () => {
+          elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
+        });
+
+        const elementmedanimation2 = document.querySelector("#h2");
+
+        inView(elementmedanimation2, () => {
+          elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
+        });
+      </script>
     </div>
   </div>
-
-  <style>
-    body {
-      background: rgb(190, 190, 190);
-      background: linear-gradient(
-        0deg,
-        rgba(190, 190, 190, 1) 16%,
-        rgba(106, 106, 106, 1) 36%,
-        rgba(70, 70, 70, 1) 49%,
-        rgba(47, 47, 47, 1) 62%,
-        rgba(36, 36, 36, 1) 72%,
-        rgba(24, 24, 24, 1) 86%
-      );
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    @keyframes float {
-      0% {
-        transform: translatey(0px);
-      }
-      50% {
-        transform: translatey(-20px);
-      }
-      100% {
-        transform: translatey(0px);
-      }
-    }
-
-    #figma {
-      box-sizing: border-box;
-      overflow: hidden;
-      transform: translatey(0px);
-      animation: float 4s ease-in-out infinite;
-    }
-
-    #vscode {
-      box-sizing: border-box;
-      overflow: hidden;
-      transform: translatey(0px);
-      animation: float 6s ease-in-out infinite;
-    }
-
-    #microsoft {
-      box-sizing: border-box;
-      overflow: hidden;
-      transform: translatey(0px);
-      animation: float 8s ease-in-out infinite;
-    }
-
-    #creativecloud {
-      box-sizing: border-box;
-      overflow: hidden;
-      transform: translatey(0px);
-      animation: float 10s ease-in-out infinite;
-    }
-
-    #google {
-      box-sizing: border-box;
-      overflow: hidden;
-      transform: translatey(0px);
-      animation: float 12s ease-in-out infinite;
-    }
-  </style>
-
-  <script>
-    import { inView } from "motion";
-
-    const elementmedanimation1 = document.querySelector("#h1");
-
-    inView(elementmedanimation1, () => {
-      elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
-    });
-
-    const elementmedanimation2 = document.querySelector("#h2");
-
-    inView(elementmedanimation2, () => {
-      elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
-    });
-  </script>
 </MainLayout>
