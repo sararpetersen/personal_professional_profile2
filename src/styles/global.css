@@ -1,0 +1,174 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(190, 190, 190);
+  background: linear-gradient(
+    0deg,
+    rgba(190, 190, 190, 1) 16%,
+    rgba(106, 106, 106, 1) 36%,
+    rgba(70, 70, 70, 1) 49%,
+    rgba(47, 47, 47, 1) 62%,
+    rgba(36, 36, 36, 1) 72%,
+    rgba(24, 24, 24, 1) 86%
+  ); /* Your existing gradient */
+  height: 100%;
+}
+
+.background-lines {
+  position: fixed; /* Keeps the lines fixed relative to the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Allows interaction with elements behind the lines */
+}
+
+.line1,
+.line2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* Ensures it covers the entire container */
+  opacity: 0.5; /* Optional: To make lines semi-transparent, adjust as needed */
+  z-index: -1; /* Ensures the lines stay behind the content */
+}
+
+.line1 {
+  background-image: url(public/illustrations/curved_line.svg);
+}
+
+.line2 {
+  background-image: url(public/illustrations/curved_line.svg);
+  transform: rotate(180deg);
+}
+
+.background-bubbles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Puts the bubbles behind the content */
+}
+
+.bubbles1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.5;
+  z-index: -1; /* Ensures the bubbles stay behind the content */
+  animation: float_horizontal 9.5s ease-in-out infinite;
+}
+
+.bubbles1 {
+  background-image: url(/illustrations/bubbles.svg);
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes float_horizontal {
+  0% {
+    transform: translatex(0px);
+  }
+  50% {
+    transform: translatex(-5px);
+  }
+  100% {
+    transform: translatex(0px);
+  }
+}
+
+#figma {
+  box-sizing: border-box;
+  overflow: hidden;
+  transform: translatey(0px);
+  animation: float 4s ease-in-out infinite;
+}
+
+#vscode {
+  box-sizing: border-box;
+  overflow: hidden;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+}
+
+#microsoft {
+  box-sizing: border-box;
+  overflow: hidden;
+  transform: translatey(0px);
+  animation: float 8s ease-in-out infinite;
+}
+
+#creativecloud {
+  box-sizing: border-box;
+  overflow: hidden;
+  transform: translatey(0px);
+  animation: float 10s ease-in-out infinite;
+}
+
+#google {
+  box-sizing: border-box;
+  overflow: hidden;
+  transform: translatey(0px);
+  animation: float 12s ease-in-out infinite;
+}
+
+.icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Default behavior: tooltips appear below the images */
+.tooltip {
+  visibility: hidden;
+  width: 150px;
+  background-color: #2f2f2f;
+  color: #f5f5f5;
+  text-align: left;
+  font-size: 12.5px;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  top: 100%; /* Default: Below */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  margin-top: 10px; /* Adds space between the image and tooltip */
+}
+
+/* For the icons that need tooltips above */
+.top-tooltip .tooltip {
+  top: auto; /* Override the top position */
+  bottom: 100%; /* Move it above */
+  margin-top: 0; /* Remove bottom margin */
+  margin-bottom: 10px; /* Optional: Adds space between the image and tooltip */
+}
+
+/* Hover effect */
+.icon-wrapper:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
