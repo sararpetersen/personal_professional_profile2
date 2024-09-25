@@ -1,18 +1,21 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import { Image } from "astro:assets";
 ---
 
-<MainLayout title="Sara Ringkow Petersen - Personal professional profile">
-  <div class="top-content text-font-color max-w-7xl mx-auto pb-20 pt-32 md:pb-72 md:pt-72">
-    <h1 id="h1" class="title text-6xl md:text-8xl text-center md:text-left pb-12 tracking-wider">SARA RINGKOW PETERSEN</h1>
+<MainLayout title="Personal professional profile – Sara Ringkow Petersen">
+  <div class="background-lines">
+    <div class="line1"></div>
+    <div class="line2"></div>
+  </div>
+  <div class="top-content text-font-color max-w-7xl mx-auto pb-80 pt-80 md:pb-80 md:pt-80">
+    <h1 id="h1" class="title text-5xl md:text-8xl text-center md:text-left pb-12">SARA RINGKOW PETERSEN</h1>
     <h2 id="h2" class="subtitle text-3xl md:text-5xl text-center md:text-left tracking-wide">Multimedia-design student <br /> & web designer</h2>
   </div>
-  <div id="info" class="main-content1 max-w-7xl mx-8 md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-20 md:pb-40">
-    <div class="left-content text-font-color">
+  <div class="main-content1 max-w-7xl mx-8 md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-20 md:pb-40">
+    <div id="info" class="left-content text-font-color">
       <h3 class="h3-header text-2xl md:text-3xl pb-4">WHO AM I?</h3>
-      <p class="text-sm md:text-lg leading-8">
+      <p class="text-sm md:text-lg md:leading-9">
         The name’s Sara Ringkow Petersen. I’m 22 years old, and come from Copenhagen, Denmark. I live at home together with my parents, little-sister
         and our dog. I’m late-diagosed with Autism, and have had the diagnosis for almost 2 years. <br /><br /> In my spare time, I love reading crime
         and fantasy books and enjoy PC and console games, especially Nintendo and Super Mario. I’m also really creative, and love doing stuff like drawing,
@@ -21,12 +24,14 @@ import { Image } from "astro:assets";
         Tailwind. I'm also familiar with project management tools like SCRUM and Trello, as well as design tools like Figma.
       </p>
     </div>
-    <div class="right-content flex justify-center md:justify-center">
+    <div id="pfp" class="right-content flex justify-center md:justify-center">
       <img src="/other/pfp.jpg" alt="me" class="w-[300px] h-[300px] md:w-[350px] md:h-[350px] object-cover rounded-md" />
     </div>
   </div>
-
-  <div class="timeline max-w-7xl mx-auto flex justify-center md:justify-center md:mx-10 pb-28">
+  <div class="background-bubbles">
+    <div class="bubbles1"></div>
+  </div>
+  <div id="timeline" class="timeline max-w-7xl mx-auto flex justify-center md:justify-center md:mx-10 pb-28">
     <div class="left-content text-font-color">
       <h3 class="h3-header text-3xl text-left ml-4 pb-10 md:ml-0 md:pb-8">TIMELINE</h3>
 
@@ -72,14 +77,16 @@ import { Image } from "astro:assets";
       </ol>
     </div>
   </div>
-
+  <div class="background-bubbles">
+    <div class="bubbles1"></div>
+  </div>
   <div class="skills max-w-7xl mx-auto flex justify-center md:justify-center pb-40 md:pb-20">
     <div class="left-content text-font-color">
       <h3 class="h3-header text-3xl pb-28 pr-16">SKILLS</h3>
     </div>
     <div class="icon-container">
       <!-- some_icons1 -->
-      <div class="some_icons1 flex flex-wrap justify-center gap-6 md:gap-20 mb-8">
+      <div class="app_icons1 flex flex-wrap justify-center gap-6 md:gap-20 mb-8">
         <div class="icon-wrapper top-tooltip">
           <!-- Add a class to control the tooltip position -->
           <img
@@ -136,7 +143,7 @@ import { Image } from "astro:assets";
       </div>
 
       <!-- some_icons2 -->
-      <div class="some_icons1 flex flex-wrap justify-center gap-6 md:gap-20">
+      <div class="app_icons2 flex flex-wrap justify-center gap-6 md:gap-20">
         <div class="icon-wrapper">
           <img
             id="creativecloud"
@@ -172,6 +179,8 @@ import { Image } from "astro:assets";
 
       <style>
         body {
+          margin: 0;
+          padding: 0;
           background: rgb(190, 190, 190);
           background: linear-gradient(
             0deg,
@@ -181,9 +190,66 @@ import { Image } from "astro:assets";
             rgba(47, 47, 47, 1) 62%,
             rgba(36, 36, 36, 1) 72%,
             rgba(24, 24, 24, 1) 86%
-          );
-          background-size: cover;
+          ); /* Your existing gradient */
+          height: 100%;
+        }
+
+        .background-lines {
+          position: fixed; /* Keeps the lines fixed relative to the viewport */
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          pointer-events: none; /* Allows interaction with elements behind the lines */
+        }
+
+        .line1,
+        .line2 {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
           background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover; /* Ensures it covers the entire container */
+          opacity: 0.5; /* Optional: To make lines semi-transparent, adjust as needed */
+          z-index: -1; /* Ensures the lines stay behind the content */
+        }
+
+        .line1 {
+          background-image: url(public/illustrations/curved_line.svg);
+        }
+
+        .line2 {
+          background-image: url(public/illustrations/curved_line.svg);
+          transform: rotate(180deg);
+        }
+
+        .background-bubbles {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          z-index: -1; /* Puts the bubbles behind the content */
+        }
+
+        .bubbles1 {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background-position: center;
+          background-size: contain;
+          opacity: 0.5;
+          z-index: -1; /* Ensures the bubbles stay behind the content */
+          animation: float_horizontal 9.5s ease-in-out infinite;
+        }
+
+        .bubbles1 {
+          background-image: url(/illustrations/bubbles.svg);
         }
 
         @keyframes float {
@@ -195,6 +261,18 @@ import { Image } from "astro:assets";
           }
           100% {
             transform: translatey(0px);
+          }
+        }
+
+        @keyframes float_horizontal {
+          0% {
+            transform: translatex(0px);
+          }
+          50% {
+            transform: translatex(-20px);
+          }
+          100% {
+            transform: translatex(0px);
           }
         }
 
@@ -285,6 +363,24 @@ import { Image } from "astro:assets";
 
         inView(elementmedanimation2, () => {
           elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
+        });
+
+        const elementmedanimation3 = document.querySelector("#info");
+
+        inView(elementmedanimation3, () => {
+          elementmedanimation3.classList.add("animate__animated", "animate__fadeInLeft");
+        });
+
+        const elementmedanimation4 = document.querySelector("#pfp");
+
+        inView(elementmedanimation4, () => {
+          elementmedanimation4.classList.add("animate__animated", "animate__fadeInRight");
+        });
+
+        const elementmedanimation5 = document.querySelector("#timeline");
+
+        inView(elementmedanimation5, () => {
+          elementmedanimation5.classList.add("animate__animated", "animate__rotateInDownLeft");
         });
       </script>
     </div>
