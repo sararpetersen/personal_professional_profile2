@@ -81,10 +81,10 @@ import Button from "../components/Button.astro";
   <div class="background-bubbles">
     <div class="bubbles1"></div>
   </div>
-  <div id="skills" class="skills max-w-7xl mx-auto flex justify-center md:justify-center pb-40 md:pb-20">
+  <div id="skills" class="skills max-w-7xl mx-auto flex justify-center md:justify-center pb-24 md:pb-24">
     <div class="icon-container">
       <div class="left-content text-font-color">
-        <h3 class="h3-header text-3xl text-center">SKILLS</h3>
+        <h3 class="h3-header text-3xl text-center pb-20">SKILLS</h3>
       </div>
       <!-- some_icons1 -->
       <div class="app_icons1 flex flex-wrap justify-center gap-6 md:gap-20 mb-8">
@@ -177,58 +177,61 @@ import Button from "../components/Button.astro";
           </div>
         </div>
       </div>
-      <div class="projects">
-        <div>
-          <div class="container mx-auto px-4 py-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-              <!-- Large item -->
-              <div class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">
-                <img src="/other/entrance_exam.png" alt="Nature" class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 class="text-2xl font-bold text-white">Entrance-exam</h3>
-                    <p class="text-white">Discover the beauty of the natural world</p>
-                  </div>
+    </div>
+  </div>
+  <div id="projects" class="projects_container pb-40 pt-28 md:pb-20 md">
+    <div class="projects">
+      <div class="flex justify-center">
+        <div class="container mx-auto px-4 py-8">
+          <h3 class="text-4xl font-bold text-center mb-8">HIGHLIGHTED PROJECTS</h3>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <!-- Large item -->
+            <div class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">
+              <img src="/other/entrance_exam.png" alt="Nature" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 class="text-2xl font-bold text-white">Entrance-exam</h3>
+                  <p class="text-white">First assignment: 1st semester</p>
                 </div>
               </div>
+            </div>
 
-              <!-- Two small items -->
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                <img src="/other/mak.png" alt="Food" class="w-full h-48 object-cover" />
-                <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 class="text-2xl font-bold text-white">The MAK committee (NGO)</h3>
-                    <p class="text-white">Case-assignment: 1st semester</p>
-                  </div>
+            <!-- Two small items -->
+            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img src="/other/mak.png" alt="Food" class="w-full h-48 object-cover" />
+              <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 class="text-2xl font-bold text-white">The MAK committee</h3>
+                  <p class="text-white">Case-assignment: 1st semester</p>
                 </div>
               </div>
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                <img src="/other/1st_portfolio.png" alt="Technology" class="w-full h-48 object-cover" />
-                <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 class="text-2xl font-bold text-white">First portfolio-site</h3>
-                    <p class="text-white">Exam-assignment: 1st semester</p>
-                  </div>
+            </div>
+            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img src="/other/1st_portfolio.png" alt="Technology" class="w-full h-48 object-cover" />
+              <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 class="text-2xl font-bold text-white">First portfolio-site</h3>
+                  <p class="text-white">Exam-assignment: 1st semester</p>
                 </div>
               </div>
+            </div>
 
-              <!-- Three medium items -->
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                <img src="/other/2nd_semester_exam.png" alt="Travel" class="w-full h-48 object-cover" />
-                <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 class="text-2xl font-bold text-white">Volander Art</h3>
-                    <p class="text-white">Exam-assignment: 2nd semester</p>
-                  </div>
+            <!-- Three medium items -->
+            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img src="/other/2nd_semester_exam.png" alt="Travel" class="w-full h-48 object-cover" />
+              <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 class="text-2xl font-bold text-white">Volander Art</h3>
+                  <p class="text-white">Exam-assignment: 2nd semester</p>
                 </div>
               </div>
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                <img src="public/other/digital_cleanup_day.png" alt="Art" class="w-full h-48 object-cover" />
-                <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 class="text-2xl font-bold text-white">Digital Cleanup Day 2025</h3>
-                    <p class="text-white">Case-assignment 1: 3rd semester</p>
-                  </div>
+            </div>
+            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img src="public/other/digital_cleanup_day.png" alt="Art" class="w-full h-48 object-cover" />
+              <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 class="text-2xl font-bold text-white">Digital Cleanup Day</h3>
+                  <p class="text-white">Case-assignment: 3rd semester</p>
                 </div>
               </div>
             </div>
