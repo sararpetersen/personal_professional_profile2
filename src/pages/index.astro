@@ -251,6 +251,66 @@ import Button from "../components/Button.astro";
         </div>
       </div>
     </div>
+    <div class="contact">
+      <!-- Container for header and icons -->
+      <div class="flex flex-col items-center pt-28 md:pt-60">
+        <!-- Centered Header -->
+        <h3 class="text-4xl font-bold text-center mb-8 text-font-color">FIND ME ON SOCIAL MEDIA</h3>
+        <!-- Container for the icons -->
+        <div class="flex justify-center space-x-5">
+          <a href="https://www.facebook.com/profile.php?id=61558070190613" target="_blank">
+            <img src="/illustrations/facebook2.svg" alt="facebook" class="w-20 hover:opacity-70" />
+          </a>
+          <a href="https://www.instagram.com/srp_portfolio/" target="_blank">
+            <img src="/illustrations/instagram2.svg" alt="instagram" class="w-20 hover:opacity-70" />
+          </a>
+          <a href="https://www.linkedin.com/in/sara-ringkow-petersen-49830b264/" target="_blank">
+            <img src="/illustrations/linkedin2.svg" alt="linkedin" class="w-20 hover:opacity-70" />
+          </a>
+          <a href="https://dk.pinterest.com/sararingkow/" target="_blank">
+            <img src="/illustrations/pinterest2.svg" alt="pinterest" class="w-20 hover:opacity-70" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="forms_container">
+      <div class="flex flex-col items-center pt-28 md:pt-60">
+        <!-- Centered Header -->
+        <h3 class="text-4xl font-bold text-center mb-8 text-font-color">CONTACT ME</h3>
+      </div>
+      <form class="max-w-sm mx-auto">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+        <div class="flex">
+          <input
+            type="text"
+            id="website-admin"
+            class="rounded-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Name"
+          />
+        </div>
+      </form>
+
+      <form class="max-w-sm mx-auto">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900"></label>
+        <div class="flex">
+          <input
+            type="email"
+            id="website-admin"
+            class="rounded-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Email"
+          />
+        </div>
+      </form>
+
+      <form class="max-w-sm mx-auto">
+        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+        <textarea
+          id="message"
+          rows="4"
+          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Message..."></textarea>
+      </form>
+    </div>
     <script>
       import { inView } from "motion";
 
