@@ -38,7 +38,7 @@ import Button from "../components/Button.astro";
     <div class="left-content text-font-color">
       <h3 class="text-4xl text-left ml-4 pb-10 md:ml-0 md:pb-8">TIMELINE</h3>
 
-      <ol class="relative border-s border-gray-200 dark:border-gray-700">
+      <ol class="relative border-s border-gray-200 dark:border-bg-color_dark">
         <li class="mb-16 ms-4">
           <div
             class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-200 hidden md:block"
@@ -250,74 +250,90 @@ import Button from "../components/Button.astro";
         </div>
       </div>
     </div>
-
-    <div class="contact">
-      <!-- Container for header and icons -->
-      <div class="flex flex-col items-center pt-20 md:pt-40">
-        <!-- Centered Header -->
-        <h3 class="text-3xl font-bold text-center mb-8 text-font-color md:text-4xl z-[1]">FIND ME ON SOCIAL MEDIA</h3>
-        <!-- Container for the icons -->
-        <div class="flex justify-center space-x-5">
-          <a href="https://www.facebook.com/profile.php?id=61558070190613" target="_blank">
-            <img src="/illustrations/facebook2.svg" alt="facebook" class="w-[50px] h-[50px] sm:w-[100px] sm:h-[100px] hover:opacity-70" />
-          </a>
-          <a href="https://www.instagram.com/srp_portfolio/" target="_blank">
-            <img src="/illustrations/instagram2.svg" alt="instagram" class="w-[50px] h-[50px] sm:w-[100px] sm:h-[100px] hover:opacity-70" />
-          </a>
-          <a href="https://www.linkedin.com/in/sara-ringkow-petersen-49830b264/" target="_blank">
-            <img src="/illustrations/linkedin2.svg" alt="linkedin" class="w-[50px] h-[50px] sm:w-[100px] sm:h-[100px] hover:opacity-70" />
-          </a>
-          <a href="https://dk.pinterest.com/sararingkow/" target="_blank">
-            <img src="/illustrations/pinterest2.svg" alt="pinterest" class="w-[50px] h-[50px] sm:w-[100px] sm:h-[100px] hover:opacity-70" />
-          </a>
-        </div>
+  </div>
+  <div class="some">
+    <!-- Container for header and icons -->
+    <div class="flex flex-col items-center pt-20 md:pt-40">
+      <!-- Centered Header -->
+      <h3 class="text-3xl font-bold text-center mb-8 text-font-color md:text-4xl z-[1]">FIND ME ON SOCIAL MEDIA</h3>
+      <!-- Container for the icons -->
+      <div class="flex justify-center space-x-5">
+        <a href="https://www.facebook.com/profile.php?id=61558070190613" target="_blank">
+          <img src="/illustrations/facebook2.svg" alt="facebook" class="w-[50px] h-[50px] sm:w-[100px] sm:h-[100px] hover:opacity-70" />
+        </a>
+        <a href="https://www.instagram.com/srp_portfolio/" target="_blank">
+          <img src="/illustrations/instagram2.svg" alt="instagram" class="w-[50px] h-[50px] sm:w-[100px] sm:h-[100px] hover:opacity-70" />
+        </a>
+        <a href="https://www.linkedin.com/in/sara-ringkow-petersen-49830b264/" target="_blank">
+          <img src="/illustrations/linkedin2.svg" alt="linkedin" class="w-[50px] h-[50px] sm:w-[100px] sm:h-[100px] hover:opacity-70" />
+        </a>
+        <a href="https://dk.pinterest.com/sararingkow/" target="_blank">
+          <img src="/illustrations/pinterest2.svg" alt="pinterest" class="w-[50px] h-[50px] sm:w-[100px] sm:h-[100px] hover:opacity-70" />
+        </a>
       </div>
     </div>
-    <div class="forms_container flex justify-center">
-      <section id="contact" class="pt-20 md:pt-40 pb-20 md:pb-40 max-w-5xl mx-auto p-6">
-        <div class="flex flex-col items-center md:flex-row md:items-center md:justify-center">
-          <img class="w-[150px] h-[150px] md:w-[250px] md:h-[250px] object-cover rounded-full shadow-xl mb-6 md:mb-0" src="/other/pfp3.jpeg" alt="" />
-          <div class="md:ml-4 text-center md:text-left pl-20">
-            <h3 class="text-gray-200 font-bold text-3xl md:text-4xl">LET'S TALK!</h3>
-            <p class="text-font-color_dark text-md md:text-lg">Mail: sara.ringkow@gmail.com</p>
-            <p class="text-font-color_dark text-md md:text-lg">Phone: +45 42428807</p>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <script>
-      import { inView } from "motion";
-
-      const elementmedanimation1 = document.querySelector("#h1");
-
-      inView(elementmedanimation1, () => {
-        elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
-      });
-
-      const elementmedanimation2 = document.querySelector("#h2");
-
-      inView(elementmedanimation2, () => {
-        elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
-      });
-
-      const elementmedanimation3 = document.querySelector("#info");
-
-      inView(elementmedanimation3, () => {
-        elementmedanimation3.classList.add("animate__animated", "animate__fadeInLeft");
-      });
-
-      const elementmedanimation4 = document.querySelector("#pfp");
-
-      inView(elementmedanimation4, () => {
-        elementmedanimation4.classList.add("animate__animated", "animate__fadeInRight");
-      });
-
-      const elementmedanimation5 = document.querySelector("#timeline");
-
-      inView(elementmedanimation5, () => {
-        elementmedanimation5.classList.add("animate__animated", "animate__rotateInDownLeft");
-      });
-    </script>
   </div>
+  <div id="contact" class="forms_container flex justify-center">
+    <section class="pt-20 md:pt-40 pb-20 md:pb-40 max-w-5xl mx-auto p-6">
+      <div class="flex flex-col items-center md:flex-row md:items-center md:justify-center">
+        <img class="w-[150px] h-[150px] md:w-[250px] md:h-[250px] object-cover rounded-full shadow-xl mb-6 md:mb-0" src="/other/pfp3.jpeg" alt="" />
+        <div class="md:ml-4 text-center md:text-left pl-20">
+          <h3 class="text-gray-200 font-bold text-3xl md:text-4xl">LET'S TALK!</h3>
+          <p class="text-font-color_dark text-md md:text-lg">Mail: sara.ringkow@gmail.com</p>
+          <p class="text-font-color_dark text-md md:text-lg">Phone: +45 42428807</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    import { inView } from "motion";
+
+    // Already animated elements
+    const elementmedanimation1 = document.querySelector("#h1");
+    inView(elementmedanimation1, () => {
+      elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
+    });
+
+    const elementmedanimation2 = document.querySelector("#h2");
+    inView(elementmedanimation2, () => {
+      elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
+    });
+
+    const elementmedanimation3 = document.querySelector("#info");
+    inView(elementmedanimation3, () => {
+      elementmedanimation3.classList.add("animate__animated", "animate__fadeInLeft");
+    });
+
+    const elementmedanimation4 = document.querySelector("#pfp");
+    inView(elementmedanimation4, () => {
+      elementmedanimation4.classList.add("animate__animated", "animate__fadeInRight");
+    });
+
+    const elementmedanimation5 = document.querySelector("#timeline");
+    inView(elementmedanimation5, () => {
+      elementmedanimation5.classList.add("animate__animated", "animate__rotateInDownLeft");
+    });
+
+    const elementmedanimation6 = document.querySelector("#contact");
+    inView(elementmedanimation6, () => {
+      elementmedanimation6.classList.add("animate__animated", "animate__zoomIn");
+    });
+
+    // New animations for missing elements
+    const elementmedanimation7 = document.querySelector(".skills");
+    inView(elementmedanimation7, () => {
+      elementmedanimation7.classList.add("animate__animated", "animate__fadeInUp");
+    });
+
+    const elementmedanimation8 = document.querySelector(".projects_container");
+    inView(elementmedanimation8, () => {
+      elementmedanimation8.classList.add("animate__animated", "animate__zoomIn");
+    });
+
+    const elementmedanimation9 = document.querySelector(".some");
+    inView(elementmedanimation9, () => {
+      elementmedanimation9.classList.add("animate__animated", "animate__fadeInLeft");
+    });
+  </script>
 </MainLayout>
