@@ -6,7 +6,7 @@
   <div x-data="{ showmenu: false }" class="p-6">
     <div id="navbar" class="flex flex-row justify-between">
       <div id="logo" class="font-bold hover:opacity-30 transition duration-300">
-        <a href="#top"><img src="/illustrations/logo.svg" alt="logo" class="w-28 md:w-32" /> </a>
+        <a href="#top"><img src="/illustrations/logo.svg" alt="logo" class="cursor-none w-28 md:w-32" /> </a>
       </div>
       <div
         id="desktopmenu"
@@ -49,8 +49,15 @@
           </li>
         </ul>
       </div>
-      <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"
-        ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+      <button id="burgermenu" class="lg:hidden cursor-none" x-on:click="showmenu = ! showmenu"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-8 hover:text-hover-header transition duration-30"
+        >
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
         </svg>
       </button>
@@ -65,30 +72,20 @@
       style="display: none;"
     >
       <ul>
-        <li
-          class="text-center py-3 border-b-[1px] hover:text-hover-header active:text-hover-header active:underline transition duration-300 cursor-none"
-        >
-          <a href="#info">WHO AM I?</a>
+        <li class="text-center py-3 border-b-[1px] hover:text-hover-header active:text-hover-header active:underline transition duration-30">
+          <a class="cursor-none" href="#info">WHO AM I?</a>
         </li>
-        <li
-          class="text-center py-3 border-b-[1px] hover:text-hover-header active:text-hover-header active:underline transition duration-300 cursor-none"
-        >
-          <a href="#timeline">TIMELINE</a>
+        <li class="text-center py-3 border-b-[1px] hover:text-hover-header active:text-hover-header active:underline transition duration-300">
+          <a class="cursor-none" href="#timeline">TIMELINE</a>
         </li>
-        <li
-          class="text-center py-3 border-b-[1px] hover:text-hover-header active:text-hover-header active:underline transition duration-300 cursor-none"
-        >
-          <a href="#skills">SKILLS</a>
+        <li class="text-center py-3 border-b-[1px] hover:text-hover-header active:text-hover-header active:underline transition duration-300">
+          <a class="cursor-none" href="#skills">SKILLS</a>
         </li>
-        <li
-          class="text-center py-3 border-b-[1px] hover:text-hover-header active:text-hover-header active:underline transition duration-300 cursor-none"
-        >
-          <a href="#projects">MY PROJECTS</a>
+        <li class="text-center py-3 border-b-[1px] hover:text-hover-header active:text-hover-header active:underline transition duration-300">
+          <a class="cursor-none" href="#projects">MY PROJECTS</a>
         </li>
-        <li
-          class="text-center py-3 border-b-[1px] hover:text-hover-header active:text-hover-header active:underline transition duration-300 cursor-none"
-        >
-          <a href="#contact">CONTACT</a>
+        <li class="text-center py-3 border-b-[1px] hover:text-hover-header active:text-hover-header active:underline transition duration-300">
+          <a class="cursor-none" href="#contact">CONTACT</a>
         </li>
       </ul>
     </nav>
