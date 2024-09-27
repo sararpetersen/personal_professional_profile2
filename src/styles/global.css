@@ -194,7 +194,3 @@ body {
   z-index: 1000; /* Ensure it's above other elements */
   transition: left 0.1s ease, top 0.1s ease; /* Smooth transition for position */
 }
-
-#cursor:hover {
-  opacity: 70;
-}
