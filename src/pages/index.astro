@@ -196,7 +196,7 @@ import Button from "../components/Button.astro";
   <div id="projects" class="projects_container pt-20 md:pt-60">
     <div class="projects">
       <div class="flex justify-center">
-        <div class="container mx-auto px-4 py-8">
+        <div class="container mx-auto px-4 py-4">
           <h3 class="text-4xl font-bold text-left mb-8 text-font-color">HIGHLIGHTED PROJECTS</h3>
           <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
             <!-- Large item -->
@@ -211,7 +211,17 @@ import Button from "../components/Button.astro";
                 </div>
               </a>
             </div>
-
+            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <a href="http://sararingkow.dk/kea/03_ux/01_kodet_site/index.html" target="_blank" class="block w-full h-full">
+                <img src="/other/ux_site.png" alt="Technology" class="w-full h-48 object-cover" />
+                <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div class="absolute bottom-0 left-0 right-0 p-4">
+                    <h4 class="text-2xl font-bold text-white">UX/UI-site</h4>
+                    <p class="text-white">Second assignment: 1st semester</p>
+                  </div>
+                </div>
+              </a>
+            </div>
             <!-- Two small items -->
             <div class="relative overflow-hidden rounded-2xl shadow-lg group">
               <a href="https://makomiteen.netlify.app/" target="_blank">
@@ -219,7 +229,7 @@ import Button from "../components/Button.astro";
                 <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div class="absolute bottom-0 left-0 right-0 p-4">
                     <h4 class="text-2xl font-bold text-white">The MAK committee</h4>
-                    <p class="text-white">Case-assignment: 1st semester</p>
+                    <p class="text-white">First case-assignment: 1st semester</p>
                   </div>
                 </div>
               </a>
@@ -237,27 +247,14 @@ import Button from "../components/Button.astro";
             </div>
 
             <!-- Three medium items -->
+
             <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-              <a href="https://volander-art.netlify.app/" target="_blank">
-                <img src="/other/2nd_semester_exam.png" alt="Travel" class="w-full h-48 object-cover" />
+              <a href="https://vild-mad.netlify.app/" target="_blank">
+                <img src="/other/vildmad.png" alt="Food" class="w-full h-48 object-cover" />
                 <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div class="absolute bottom-0 left-0 right-0 p-4">
-                    <h4 class="text-2xl font-bold text-white">Volander Art</h4>
-                    <p class="text-white">Exam-assignment: 2nd semester</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-              <a href="https://digitalskraldedag-dk.netlify.app/" target="_blank">
-                <img src="/other/digital_cleanup_day.png" alt="Art" class="w-full h-48 object-cover" />
-                <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="absolute bottom-0 left-0 right-0 p-4">
-                    <h4 class="text-2xl font-bold text-white">Digital Cleanup Day</h4>
-                    <p class="text-white">
-                      Case-assignment: 3rd semester <br />
-                      <span class="text-sm italic">(Has to be viewed in Chrome)</span>
-                    </p>
+                    <h4 class="text-2xl font-bold text-white">Vild Mad</h4>
+                    <p class="text-white">Case-assignment: 2nd semester</p>
                   </div>
                 </div>
               </a>
@@ -265,116 +262,171 @@ import Button from "../components/Button.astro";
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="some">
-    <!-- Container for header and icons -->
-    <div class="flex flex-col items-center pt-20 md:pt-60">
-      <!-- Centered Header -->
-      <h3 class="text-3xl font-bold text-center mb-8 text-font-color md:text-4xl z-[1]">FIND ME ON SOCIAL MEDIA</h3>
-      <!-- Container for the icons -->
-      <div class="flex justify-center space-x-5">
-        <a href="https://www.facebook.com/profile.php?id=61558070190613" target="_blank">
-          <img
-            src="/illustrations/facebook2.svg"
-            alt="facebook"
-            class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:opacity-70 transition duration-300"
-          />
-        </a>
-        <a href="https://www.instagram.com/srp_portfolio/" target="_blank">
-          <img
-            src="/illustrations/instagram2.svg"
-            alt="instagram"
-            class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:opacity-70 transition duration-300"
-          />
-        </a>
-        <a href="https://www.linkedin.com/in/sara-ringkow-petersen-49830b264/" target="_blank">
-          <img
-            src="/illustrations/linkedin2.svg"
-            alt="linkedin"
-            class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:opacity-70 transition duration-300"
-          />
-        </a>
-        <a href="https://dk.pinterest.com/sararingkow/" target="_blank">
-          <img
-            src="/illustrations/pinterest2.svg"
-            alt="pinterest"
-            class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:opacity-70 transition duration-300"
-          />
-        </a>
-      </div>
-    </div>
-  </div>
-  <div id="contact" class="forms_container flex justify-center">
-    <section class="pt-20 md:pt-40 pb-20 md:pb-40 max-w-5xl mx-auto p-6">
-      <div class="flex flex-col items-center md:flex-row md:items-center md:justify-center">
-        <img class="w-[150px] h-[150px] md:w-[250px] md:h-[250px] object-cover rounded-full shadow-xl mb-6 md:mb-0" src="/other/pfp3.jpeg" alt="" />
-        <div class="md:ml-4 text-center md:text-left pl-0 md:pl-20">
-          <h3 class="text-gray-200 font-bold text-3xl md:text-4xl pb-4 md:pb-8">LET'S TALK!</h3>
-          <p class="text-font-color_dark text-md md:text-lg">Mail: sara.ringkow@gmail.com</p>
-          <p class="text-font-color_dark text-md md:text-lg">Phone: +45 42428807</p>
+      <div class="projects">
+        <div class="flex justify-center">
+          <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <!-- Three medium items -->
+              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                <a href="https://t8-karrusel.netlify.app/" target="_blank" class="block w-full h-full">
+                  <img src="/other/karrusel.png" alt="Nature" class="w-full h-full object-cover" />
+                  <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                      <h4 class="text-2xl font-bold text-white">Karrusel Festival</h4>
+                      <p class="text-white">Case assignment: 2nd semester</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                <a href="https://itmv-t9.netlify.app/" target="_blank">
+                  <img src="/other/itmv.png" alt="Art" class="w-full h-48 object-cover" />
+                  <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                      <h4 class="text-2xl font-bold text-white">I Tråd Med Verden</h4>
+                      <p class="text-white">Case-assignment: 2nd semester</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                <a href="https://volander-art.netlify.app/" target="_blank">
+                  <img src="/other/2nd_semester_exam.png" alt="Travel" class="w-full h-48 object-cover" />
+                  <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                      <h4 class="text-2xl font-bold text-white">Volander Art</h4>
+                      <p class="text-white">Exam-assignment: 2nd semester</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                <a href="https://digitalskraldedag-dk.netlify.app/" target="_blank">
+                  <img src="/other/digital_cleanup_day.png" alt="Art" class="w-full h-48 object-cover" />
+                  <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                      <h4 class="text-2xl font-bold text-white">Digital Cleanup Day</h4>
+                      <p class="text-white">
+                        Case-assignment: 3rd semester <br />
+                        <span class="text-sm italic">(Has to be viewed in Chrome)</span>
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+    <div class="some">
+      <!-- Container for header and icons -->
+      <div class="flex flex-col items-center pt-20 md:pt-60">
+        <!-- Centered Header -->
+        <h3 class="text-3xl font-bold text-center mb-8 text-font-color md:text-4xl z-[1]">FIND ME ON SOCIAL MEDIA</h3>
+        <!-- Container for the icons -->
+        <div class="flex justify-center space-x-5">
+          <a href="https://www.facebook.com/profile.php?id=61558070190613" target="_blank">
+            <img
+              src="/illustrations/facebook2.svg"
+              alt="facebook"
+              class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:opacity-70 transition duration-300"
+            />
+          </a>
+          <a href="https://www.instagram.com/srp_portfolio/" target="_blank">
+            <img
+              src="/illustrations/instagram2.svg"
+              alt="instagram"
+              class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:opacity-70 transition duration-300"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/sara-ringkow-petersen-49830b264/" target="_blank">
+            <img
+              src="/illustrations/linkedin2.svg"
+              alt="linkedin"
+              class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:opacity-70 transition duration-300"
+            />
+          </a>
+          <a href="https://dk.pinterest.com/sararingkow/" target="_blank">
+            <img
+              src="/illustrations/pinterest2.svg"
+              alt="pinterest"
+              class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:opacity-70 transition duration-300"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="contact" class="forms_container flex justify-center">
+      <section class="pt-20 md:pt-40 pb-20 md:pb-40 max-w-5xl mx-auto p-6">
+        <div class="flex flex-col items-center md:flex-row md:items-center md:justify-center">
+          <img class="w-[150px] h-[150px] md:w-[250px] md:h-[250px] object-cover rounded-full shadow-xl mb-6 md:mb-0" src="/other/pfp3.jpeg" alt="" />
+          <div class="md:ml-4 text-center md:text-left pl-0 md:pl-20">
+            <h3 class="text-gray-200 font-bold text-3xl md:text-4xl pb-4 md:pb-8">LET'S TALK!</h3>
+            <p class="text-font-color_dark text-md md:text-lg">Mail: sara.ringkow@gmail.com</p>
+            <p class="text-font-color_dark text-md md:text-lg">Phone: +45 42428807</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="cv" class="cv flex flex-col items-center pb-40">
+      <h3 class="text-4xl text-center pb-8 text-font-color">WANNA KNOW MORE ABOUT ME?</h3>
+      <Button class="text-center">CHECK OUT MY PERSONAL CV HERE (DK)</Button>
+    </div>
+    <script>
+      import { inView } from "motion";
+
+      // Already animated elements
+      const elementmedanimation1 = document.querySelector("#h1");
+      inView(elementmedanimation1, () => {
+        elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
+      });
+
+      const elementmedanimation2 = document.querySelector("#h2");
+      inView(elementmedanimation2, () => {
+        elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
+      });
+
+      const elementmedanimation3 = document.querySelector("#info");
+      inView(elementmedanimation3, () => {
+        elementmedanimation3.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation4 = document.querySelector("#pfp");
+      inView(elementmedanimation4, () => {
+        elementmedanimation4.classList.add("animate__animated", "animate__fadeInRight");
+      });
+
+      const elementmedanimation5 = document.querySelector("#timeline");
+      inView(elementmedanimation5, () => {
+        elementmedanimation5.classList.add("animate__animated", "animate__rotateInDownLeft");
+      });
+
+      const elementmedanimation6 = document.querySelector("#contact");
+      inView(elementmedanimation6, () => {
+        elementmedanimation6.classList.add("animate__animated", "animate__zoomIn");
+      });
+
+      // New animations for missing elements
+      const elementmedanimation7 = document.querySelector(".skills");
+      inView(elementmedanimation7, () => {
+        elementmedanimation7.classList.add("animate__animated", "animate__fadeInRight");
+      });
+
+      const elementmedanimation8 = document.querySelector(".projects_container");
+      inView(elementmedanimation8, () => {
+        elementmedanimation8.classList.add("animate__animated", "animate__zoomIn");
+      });
+
+      const elementmedanimation9 = document.querySelector(".some");
+      inView(elementmedanimation9, () => {
+        elementmedanimation9.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation10 = document.querySelector("#cv");
+      inView(elementmedanimation10, () => {
+        elementmedanimation10.classList.add("animate__animated", "animate__fadeInDown");
+      });
+    </script>
   </div>
-  <div id="cv" class="cv flex flex-col items-center pb-40">
-    <h3 class="text-4xl text-center pb-8 text-font-color">WANNA KNOW MORE ABOUT ME?</h3>
-    <Button class="text-center">CHECK OUT MY PERSONAL CV HERE (DK)</Button>
-  </div>
-
-  <script>
-    import { inView } from "motion";
-
-    // Already animated elements
-    const elementmedanimation1 = document.querySelector("#h1");
-    inView(elementmedanimation1, () => {
-      elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
-    });
-
-    const elementmedanimation2 = document.querySelector("#h2");
-    inView(elementmedanimation2, () => {
-      elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
-    });
-
-    const elementmedanimation3 = document.querySelector("#info");
-    inView(elementmedanimation3, () => {
-      elementmedanimation3.classList.add("animate__animated", "animate__fadeInLeft");
-    });
-
-    const elementmedanimation4 = document.querySelector("#pfp");
-    inView(elementmedanimation4, () => {
-      elementmedanimation4.classList.add("animate__animated", "animate__fadeInRight");
-    });
-
-    const elementmedanimation5 = document.querySelector("#timeline");
-    inView(elementmedanimation5, () => {
-      elementmedanimation5.classList.add("animate__animated", "animate__rotateInDownLeft");
-    });
-
-    const elementmedanimation6 = document.querySelector("#contact");
-    inView(elementmedanimation6, () => {
-      elementmedanimation6.classList.add("animate__animated", "animate__zoomIn");
-    });
-
-    // New animations for missing elements
-    const elementmedanimation7 = document.querySelector(".skills");
-    inView(elementmedanimation7, () => {
-      elementmedanimation7.classList.add("animate__animated", "animate__fadeInRight");
-    });
-
-    const elementmedanimation8 = document.querySelector(".projects_container");
-    inView(elementmedanimation8, () => {
-      elementmedanimation8.classList.add("animate__animated", "animate__zoomIn");
-    });
-
-    const elementmedanimation9 = document.querySelector(".some");
-    inView(elementmedanimation9, () => {
-      elementmedanimation9.classList.add("animate__animated", "animate__fadeInLeft");
-    });
-
-    const elementmedanimation10 = document.querySelector("#cv");
-    inView(elementmedanimation10, () => {
-      elementmedanimation10.classList.add("animate__animated", "animate__fadeInDown");
-    });
-  </script>
 </MainLayout>
