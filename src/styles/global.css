@@ -42,11 +42,11 @@ body {
 }
 
 .line1 {
-  background-image: url(public/illustrations/curved_line.svg);
+  background-image: url(/illustrations/curved_line.svg);
 }
 
 .line2 {
-  background-image: url(public/illustrations/curved_line.svg);
+  background-image: url(/illustrations/curved_line.svg);
   transform: rotate(180deg);
 }
 
