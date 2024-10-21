@@ -89,7 +89,7 @@ import Button from "../components/Button.astro";
       <h3 class="text-3xl md:text-4xl pb-4 text-font-color">SKILLS</h3>
       <h4 class="text-xl text-font-color">
         Hover over the different app-icons to <br />learn more about my competencies <br />
-        <span class="font-bold">(does not work on mobile)</span>
+        <span class="font-bold">(Does not work on mobile)</span>
       </h4>
     </div>
     <div class="icon-container">
@@ -364,8 +364,16 @@ import Button from "../components/Button.astro";
         <img class="w-[150px] h-[150px] md:w-[250px] md:h-[250px] object-cover rounded-full shadow-xl mb-6 md:mb-0" src="/other/pfp3.jpeg" alt="" />
         <div class="md:ml-4 text-center md:text-left pl-0 md:pl-20">
           <h3 class="text-gray-200 font-bold text-3xl md:text-4xl pb-4 md:pb-8">LET'S TALK!</h3>
-          <p class="text-font-color_dark text-md md:text-lg">Mail: sara.ringkow@gmail.com</p>
-          <p class="text-font-color_dark text-md md:text-lg">Phone: +45 42428807</p>
+          <p class="text-font-color_dark text-md md:text-lg">
+            <em>Phone: </em><a href="tel:+4542428807" class="hover:text-[#FF3333] hover:underline transition duration-300">+45 42428807</a>
+          </p>
+          <p class="text-font-color_dark text-md md:text-lg">
+            <em>Mail: </em><a href="mailto:sara.ringkow@gmail.com" class="hover:text-[#FF3333] hover:underline transition duration-300"
+              >sara.ringkow@gmail.com</a
+            >
+            <span class="text-main">/</span>
+            <a href="mailto:sape0003@stud.kea.dk" class="hover:text-[#FF3333] hover:underline transition duration-300">sape0003@stud.kea.dk</a>
+          </p>
         </div>
       </div>
     </section>
