@@ -332,36 +332,66 @@ import Button from "../components/Button.astro";
   <div class="some">
     <!-- Container for header and icons -->
     <div class="flex flex-col items-center pt-20 md:pt-60">
-      <!-- Centered Header -->
       <h3 class="text-3xl md:text-4xl font-bold text-center pb-4 md:pb-8 text-font-color z-[1]">FIND ME ON SOCIAL MEDIA</h3>
-      <!-- Container for the icons -->
       <div class="flex justify-center space-x-5">
-        <a class="cursor-none" href="https://www.facebook.com/profile.php?id=61558070190613" target="_blank">
+        <a
+          class="cursor-none group relative w-[70px] h-[70px] sm:w-[90px] sm:h-[90px]"
+          href="https://www.facebook.com/profile.php?id=61558070190613"
+          target="_blank"
+        >
           <img
             src="/illustrations/facebook2.svg"
             alt="facebook"
-            class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:opacity-70 transition duration-300"
+            class="absolute inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition duration-500 ease-in-out"
+          />
+          <img
+            src="/illustrations/facebook2_red.svg"
+            alt="facebook"
+            class="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
           />
         </a>
-        <a class="cursor-none" href="https://www.instagram.com/srp_portfolio/" target="_blank">
+        <a
+          class="cursor-none group relative w-[70px] h-[70px] sm:w-[90px] sm:h-[90px]"
+          href="https://www.instagram.com/srp_portfolio/"
+          target="_blank"
+        >
           <img
             src="/illustrations/instagram2.svg"
             alt="instagram"
-            class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:opacity-70 transition duration-300"
+            class="absolute inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition duration-500 ease-in-out"
+          />
+          <img
+            src="/illustrations/instagram2_red.svg"
+            alt="instagram"
+            class="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
           />
         </a>
-        <a class="cursor-none" href="https://www.linkedin.com/in/sara-ringkow-petersen-49830b264/" target="_blank">
+        <a
+          class="cursor-none group relative w-[70px] h-[70px] sm:w-[90px] sm:h-[90px]"
+          href="https://www.linkedin.com/in/sara-ringkow-petersen-49830b264/"
+          target="_blank"
+        >
           <img
             src="/illustrations/linkedin2.svg"
             alt="linkedin"
-            class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:opacity-70 transition duration-300"
+            class="absolute inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition duration-500 ease-in-out"
+          />
+          <img
+            src="/illustrations/linkedin2_red.svg"
+            alt="linkedin"
+            class="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
           />
         </a>
-        <a class="cursor-none" href="https://dk.pinterest.com/sararingkow/" target="_blank">
+        <a class="cursor-none group relative w-[70px] h-[70px] sm:w-[90px] sm:h-[90px]" href="https://dk.pinterest.com/sararingkow/" target="_blank">
           <img
             src="/illustrations/pinterest2.svg"
             alt="pinterest"
-            class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:opacity-70 transition duration-300"
+            class="absolute inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition duration-500 ease-in-out"
+          />
+          <img
+            src="/illustrations/pinterest2_red.svg"
+            alt="pinterest"
+            class="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
           />
         </a>
       </div>
@@ -373,19 +403,15 @@ import Button from "../components/Button.astro";
         <img class="w-[150px] h-[150px] md:w-[250px] md:h-[250px] object-cover rounded-full shadow-xl mb-6 md:mb-0" src="/other/pfp3.webp" alt="" />
         <div class="md:ml-4 text-center md:text-left pl-0 md:pl-20">
           <h3 class="text-gray-200 font-bold text-3xl md:text-4xl pb-4 md:pb-8">LET'S TALK!</h3>
-          <p class="phone text-font-color_dark text-md md:text-lg">
-            <b>Phone: </b><a href="tel:+4542428807" class="hover:text-hover-header hover:underline transition duration-300 cursor-none"
-              >+45 42 42 88 07</a
-            >
+          <p class="some1 text-font-color_dark text-md md:text-lg">
+            <b>Phone: </b><a href="tel:+4542428807" class="hover:text-hover-header transition duration-500 cursor-none">+45 42 42 88 07</a>
           </p>
-          <p class="mail text-font-color_dark text-md md:text-lg">
-            <b>Mail: </b><a href="mailto:sara.ringkow@gmail.com" class="hover:text-hover-header hover:underline transition duration-300 cursor-none"
+          <p class="some1 text-font-color_dark text-md md:text-lg">
+            <b>Mail: </b><a href="mailto:sara.ringkow@gmail.com" class="hover:text-hover-header transition duration-300 cursor-none"
               >sara.ringkow@gmail.com</a
             >
             <span class="text-main">/</span>
-            <a href="mailto:sape0003@stud.kea.dk" class="hover:text-hover-header hover:underline transition duration-300 cursor-none"
-              >sape0003@stud.kea.dk</a
-            >
+            <a href="mailto:sape0003@stud.kea.dk" class="hover:text-hover-header transition duration-500 cursor-none">sape0003@stud.kea.dk</a>
           </p>
         </div>
       </div>

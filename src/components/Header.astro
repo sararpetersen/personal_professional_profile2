@@ -1,59 +1,75 @@
 ---
-
+import "../styles/global.css";
 ---
 
 <header class="text-font-color fixed top-0 left-0 w-full z-50 backdrop-blur-md">
-  <div x-data="{ showmenu: false }" class="p-6">
-    <div id="navbar" class="flex flex-row justify-between">
-      <div id="logo" class="font-bold hover:opacity-30 transition duration-300">
-        <a href="#top"><img src="/illustrations/logo.svg" alt="logo" class="cursor-none w-20 md:w-20" /> </a>
+  <div x-data="{ showmenu: false }" class="p-2">
+    <div id="navbar" class="flex flex-row justify-between items-center">
+      <!-- Added items-center -->
+      <div id="logo" class="relative font-bold transition-opacity duration-300 ease-in-out group w-20 h-20">
+        <!-- Fixed width and height -->
+        <a href="#top" class="relative inline-block w-full h-full cursor-none">
+          <!-- Default Logo -->
+          <img
+            src="/illustrations/logo.svg"
+            alt="logo"
+            class="opacity-100 group-hover:opacity-0 transition-opacity duration-300 ease-in-out object-contain w-full h-full"
+          />
+          <!-- Hover Logo -->
+          <img
+            src="/illustrations/logo_grey.svg"
+            alt="logo grey"
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out object-contain w-full h-full"
+          />
+        </a>
       </div>
-      <div id="desktopmenu" class="hidden lg:block text-sm font-medium text-center text-gray-500 border-b border-font-color dark:text-font-color">
+
+      <div id="desktopmenu" class="hidden lg:block text-font-medium text-center">
         <ul class="flex flex-wrap -mb-px">
-          <li class="me-2">
+          <li class="some1 me-2">
             <a
               href="#info"
-              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header hover:border-hover-header transition duration-300 cursor-none"
+              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 cursor-none"
               >WHO AM I?</a
             >
           </li>
-          <li class="me-2">
+          <li class="some1 me-2">
             <a
               href="#timeline"
-              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header hover:border-hover-header dark:hover:border-hover-header transition duration-300 cursor-none"
+              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 cursor-none"
               aria-current="page">TIMELINE</a
             >
           </li>
-          <li class="me-2">
+          <li class="some1 me-2">
             <a
               href="#skills"
-              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header hover:border-hover-header dark:hover:border-hover-header transition duration-300 cursor-none"
+              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 cursor-none"
               >SKILLS</a
             >
           </li>
-          <li class="me-2">
+          <li class="some1 me-2">
             <a
               href="#projects"
-              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header hover:border-hover-header dark:hover:border-hover-header transition duration-300 cursor-none"
+              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 cursor-none"
               >MY PROJECTS</a
             >
           </li>
-          <li>
+          <li class="some1 me-2">
             <a
-              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header hover:border-hover-header dark:hover:border-hover-header transition duration-300 cursor-none"
+              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 cursor-none"
               href="#contact">CONTACT</a
             >
           </li>
         </ul>
       </div>
-      <button id="burgermenu" class="lg:hidden cursor-none" x-on:click="showmenu = ! showmenu"
-        ><svg
+      <button id="burgermenu" class="lg:hidden cursor-none" x-on:click="showmenu = ! showmenu">
+        <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="size-8 hover:text-hover-header transition duration-30"
+          class="size-8 hover:text-hover-header transition duration-500"
         >
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
         </svg>
@@ -69,19 +85,19 @@
       style="display: none;"
     >
       <ul>
-        <li class="text-center py-3 border-b-[1px] hover:text-hover-header active:text-hover-header active:underline transition duration-30">
+        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500">
           <a class="cursor-none" href="#info">WHO AM I?</a>
         </li>
-        <li class="text-center py-3 border-b-[1px] hover:text-hover-header active:text-hover-header active:underline transition duration-300">
+        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500">
           <a class="cursor-none" href="#timeline">TIMELINE</a>
         </li>
-        <li class="text-center py-3 border-b-[1px] hover:text-hover-header active:text-hover-header active:underline transition duration-300">
+        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500">
           <a class="cursor-none" href="#skills">SKILLS</a>
         </li>
-        <li class="text-center py-3 border-b-[1px] hover:text-hover-header active:text-hover-header active:underline transition duration-300">
+        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500">
           <a class="cursor-none" href="#projects">MY PROJECTS</a>
         </li>
-        <li class="text-center py-3 border-b-[1px] hover:text-hover-header active:text-hover-header active:underline transition duration-300">
+        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500">
           <a class="cursor-none" href="#contact">CONTACT</a>
         </li>
       </ul>

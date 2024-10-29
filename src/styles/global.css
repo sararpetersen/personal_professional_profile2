@@ -51,6 +51,8 @@ body {
   transform: rotate(180deg);
 }
 
+/*Bubbles*/
+
 .background-bubbles {
   position: fixed;
   top: 0;
@@ -108,6 +110,7 @@ body {
   }
 }
 
+/*Tooltip icons*/
 #figma {
   box-sizing: border-box;
   overflow: hidden;
@@ -148,7 +151,7 @@ body {
   display: inline-block;
 }
 
-/* Default behavior: tooltips appear below the images */
+/* For the icons that need tooltips below */
 .tooltip {
   visibility: hidden;
   width: 215px;
@@ -176,7 +179,7 @@ body {
   margin-bottom: 10px; /* Optional: Adds space between the image and tooltip */
 }
 
-/* Hover effect */
+/* Tooltip hover effect */
 .icon-wrapper:hover .tooltip {
   visibility: visible;
   opacity: 1;
@@ -194,4 +197,33 @@ body {
   z-index: 1000; /* Ensure it's above other elements */
   transition: left 0.1s ease, top 0.1s ease; /* Smooth transition for position */
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+}
+
+/*Link-hover effect*/
+.some1 a {
+  position: relative;
+  line-height: 1.75rem /* 28px */;
+}
+
+.some1 a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #ff3333;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.some1 a:hover {
+  color: #ff3333;
+}
+
+.some1 a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
