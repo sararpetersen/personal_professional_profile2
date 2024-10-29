@@ -10,13 +10,13 @@ import Button from "../components/Button.astro";
     <div class="line1"></div>
     <div class="line2"></div>
   </div>
-  <div class="top-content text-font-color max-w-7xl mx-auto py-80">
+  <div class="top-content text-font-color max-w-7xl mx-auto pb-96 pt-80 md:pb-96 md:pt-80">
     <h1 id="h1" class="title text-5xl md:text-8xl text-center md:text-left pb-12">SARA RINGKOW PETERSEN</h1>
     <h2 id="h2" class="subtitle text-3xl md:text-5xl text-center md:text-left tracking-wide">UX/web designer</h2>
   </div>
-  <div class="main-content1 max-w-7xl mx-8 md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-40">
-    <div id="info" class="left-content text-font-color pt-20 md:pt-52">
-      <h3 class="text-3xl md:text-4xl">WHO AM I?</h3>
+  <div class="main-content1 max-w-7xl mx-8 md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-30 md:pb-60">
+    <div id="info" class="left-content text-font-color">
+      <h3 class="text-3xl md:text-4xl pb-4">WHO AM I?</h3>
       <p class="starting-text text-lg md:text-xl leading-6 md:leading-9">
         My name is Sara Ringkow Petersen, a 22-year-old based in <span class="text-hover-header font-bold">Copenhagen</span>. I’m currently seeking an <span
           class="text-hover-header font-bold">internship</span
@@ -28,16 +28,17 @@ import Button from "../components/Button.astro";
         those with special needs.
       </p>
     </div>
-    <div id="pfp" class="right-content flex justify-center pt-20 md:pt-52">
-      <img src="/other/pfp.webp" alt="me" class="w-[200px] h-[200px] md:w-[350px] md:h-[400px] object-cover rounded-full shadow-md" />
+    <div id="pfp" class="right-content flex justify-center md:justify-center pt-10 md:pt-20 pb-32">
+      <img src="/other/pfp.webp" alt="me" class="w-[200px] h-[200px] md:w-[400px] md:h-[400px] object-cover rounded-full shadow-md" />
     </div>
   </div>
   <div class="background-bubbles">
     <div class="bubbles1"></div>
   </div>
-  <div id="timeline" class="timeline max-w-3xl mx-auto flex justify-center md:justify-center md:max-w-6xl pb-20 pt-20 md:pt-52">
+  <div id="timeline" class="timeline max-w-3xl mx-auto flex justify-center md:justify-center md:max-w-6xl pb-20 md:pb-60">
     <div class="left-content text-font-color">
-      <h3 class="text-3xl md:text-4xl text-left ml-4 pb-10 pt-20">TIMELINE</h3>
+      <h3 class="text-3xl md:text-4xl text-left ml-4 pb-10 md:ml-0 md:pb-8">TIMELINE</h3>
+
       <ol class="relative border-s border-gray-200 dark:border-gray-400">
         <li class="mb-16 ms-4">
           <div
@@ -91,15 +92,15 @@ import Button from "../components/Button.astro";
   <div class="background-bubbles">
     <div class="bubbles1"></div>
   </div>
-  <div id="skills" class="skills max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center mb-8 pt-20 md:pt-52">
-    <div class="text-center md:text-left mb-8 md:mb-0 md:mr-8 pr-0 md:pr-12 pb-8">
+  <div id="skills" class="skills max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-center mb-8">
+    <div class="text-center md:text-left mb-8 md:mb-0 md:mr-8 pr-0 md:pr-12 pb-12">
       <h3 class="text-3xl md:text-4xl pb-4 text-font-color">SKILLS</h3>
       <h4 class="text-xl text-font-color">
         Hover over the different app-icons to <br />learn more about my competencies <br />
         <span class="font-bold">(Does not work on mobile)</span>
       </h4>
     </div>
-    <div class="icon-container pt-12">
+    <div class="icon-container">
       <div class="left-content text-font-color"></div>
       <!-- some_icons1 -->
       <div class="app_icons1 flex flex-wrap justify-center gap-6 mb-8 md:gap-20">
@@ -201,7 +202,7 @@ import Button from "../components/Button.astro";
     </div>
   </div>
 
-  <div id="projects" class="projects_container pt-20 md:pt-52 pb-40">
+  <div id="projects" class="projects_container pt-20 md:pt-60 pb-20">
     <div class="projects">
       <div class="flex justify-center">
         <div class="container mx-auto px-4 py-4">
@@ -329,15 +330,15 @@ import Button from "../components/Button.astro";
     </div>
   </div>
 
-  <div class="some flex flex-col items-center justify-center text-font-color pt-16 md:pt-52" id="contact-header">
-    <h3 class="text-4xl md:text-5xl text-left md:text-center text-font-color md:pb-16 max-w-7xl mx-auto z-[1]">CONTACT-INFORMATION</h3>
-    <hr class="w-1/2 md:w-1/3 border-[0.5px] border-main opacity-70 hidden md:block" />
+  <div class="some flex flex-col items-center justify-center text-font-color pt-16 md:pt-60" id="contact-header">
+    <h3 class="text-4xl md:text-5xl text-left md:text-center text-font-color md:pb-8 pb-8 max-w-7xl mx-auto z-[1]">CONTACT-INFORMATION</h3>
+    <hr class="w-1/2 md:w-1/3 border-[0.5px] border-font-color opacity-50" />
   </div>
-  <div id="contact" class="flex flex-col items-center pt-20 md:pt-28">
-    <h3 class="text-2xl md:text-3xl font-bold text-center pb-4 md:pb-8 text-font-color z-[1]">FIND ME ON SOCIAL MEDIA</h3>
+  <div id="contact" class="flex flex-col items-center pt-28 md:pt-40">
+    <h3 class="text-2xl md:text-4xl font-bold text-center pb-4 md:pb-8 text-font-color z-[1]">FIND ME ON SOCIAL MEDIA</h3>
     <div class="flex justify-center space-x-5">
       <a
-        class="group relative w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] transition-transform duration-300 transform hover:scale-105"
+        class="group relative w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] transition-transform duration-300 transform hover:scale-105 cursor-none"
         href="https://www.facebook.com/profile.php?id=61558070190613"
         target="_blank"
       >
@@ -353,7 +354,7 @@ import Button from "../components/Button.astro";
         />
       </a>
       <a
-        class="group relative w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] transition-transform duration-300 transform hover:scale-105"
+        class="group relative w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] transition-transform duration-300 transform hover:scale-105 cursor-none"
         href="https://www.instagram.com/srp_portfolio/"
         target="_blank"
       >
@@ -369,7 +370,7 @@ import Button from "../components/Button.astro";
         />
       </a>
       <a
-        class="group relative w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] transition-transform duration-300 transform hover:scale-105"
+        class="group relative w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] transition-transform duration-300 transform hover:scale-105 cursor-none"
         href="https://www.linkedin.com/in/sara-ringkow-petersen-49830b264/"
         target="_blank"
       >
@@ -385,7 +386,7 @@ import Button from "../components/Button.astro";
         />
       </a>
       <a
-        class="group relative w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] transition-transform duration-300 transform hover:scale-105"
+        class="group relative w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] transition-transform duration-300 transform hover:scale-105 cursor-none"
         href="https://dk.pinterest.com/sararingkow/"
         target="_blank"
       >
@@ -405,9 +406,9 @@ import Button from "../components/Button.astro";
   <div id="phone_mail" class="forms_container flex justify-center pt-20 md:pt-28">
     <section class="max-w-5xl mx-auto p-6">
       <div class="flex flex-col items-center md:flex-row md:items-center md:justify-center">
-        <img class="w-[150px] h-[150px] md:w-[250px] md:h-[250px] object-cover rounded-full shadow-xl mb-6 md:mb-0" src="/other/pfp3.webp" alt="" />
+        <img class="w-[150px] h-[150px] md:w-[250px] md:h-[250px] object-cover rounded-full shadow-xl mb-8 md:mb-0" src="/other/pfp3.webp" alt="" />
         <div class="md:ml-4 text-center md:text-left pl-0 md:pl-20">
-          <h3 class="text-gray-200 font-bold text-2xl md:text-3xl pb-4">LET'S TALK!</h3>
+          <h3 class="text-gray-200 font-bold text-2xl md:text-4xl pb-4">LET'S TALK!</h3>
           <p class="some1 text-font-color_dark text-md md:text-lg">
             <b>Phone: </b><a href="tel:+4542428807" class="hover:text-hover-header transition duration-500 cursor-none">+45 42 42 88 07</a>
           </p>
@@ -422,9 +423,9 @@ import Button from "../components/Button.astro";
       </div>
     </section>
   </div>
-  <div id="cv" class="cv flex flex-col items-center pb-12 md:pb-16 md:pt-28 pt-16">
-    <hr class="w-1/2 md:w-1/3 border-[0.5px] border-main opacity-70 hidden md:block" />
-    <h3 class="text-2xl md:text-3xl text-center pb-4 md:pb-8 pt-16 text-font-color">WANNA KNOW MORE ABOUT ME?</h3>
+  <div id="cv" class="cv flex flex-col items-center pb-12 md:pb-16 pt-28 md:pt-40">
+    <hr class="w-1/2 md:w-1/3 border-[0.5px] border-font-color opacity-50" />
+    <h3 class="text-2xl md:text-4xl text-center pt-8 md:pt-12 md:pb-8 pb-4 text-font-color">WANNA KNOW MORE ABOUT ME?</h3>
     <Button class="text-center transition duration-300 transform hover:scale-105">CHECK OUT MY PERSONAL CV HERE</Button>
   </div>
 
@@ -534,9 +535,11 @@ import Button from "../components/Button.astro";
         }
       }
     })();
-
-    // Entrance animation
-    /*Entrance Animation*/
-    animate("body", { opacity: [0, 1] }, { duration: 1 });
   </script>
+
+  <style>
+    .hidden {
+      opacity: 0;
+    }
+  </style>
 </MainLayout>
