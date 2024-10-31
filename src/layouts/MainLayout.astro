@@ -13,6 +13,11 @@ import ScrollToTop from "../components/ScrollToTop.astro";
     <link rel="icon" type="image/svg" href="/illustrations/cursor.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="noindex" />
+    <meta name="title" content={Astro.props.title} />
+    <meta name="description" content={Astro.props.description} />
+    <meta property="og:title" content={Astro.props.ogtitle} />
+    <meta property="og:description" content={Astro.props.ogdescription} />
     <title>{Astro.props.title}</title>
   </head>
   <body>
