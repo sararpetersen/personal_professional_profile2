@@ -12,16 +12,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: rgb(190, 190, 190);
-  background: linear-gradient(
-    0deg,
-    rgba(190, 190, 190, 1) 16%,
-    rgba(106, 106, 106, 1) 36%,
-    rgba(70, 70, 70, 1) 49%,
-    rgba(47, 47, 47, 1) 62%,
-    rgba(36, 36, 36, 1) 72%,
-    rgba(24, 24, 24, 1) 86%
-  ); /* Your existing gradient */
+  background: rgb(31, 41, 55);
+  background: linear-gradient(0deg, rgba(31, 41, 55, 1) 0%, rgba(17, 24, 39, 1) 47%, rgba(0, 0, 0, 1) 86%); /* Your existing gradient */
   height: 100%;
 }
 
