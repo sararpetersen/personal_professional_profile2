@@ -12,16 +12,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: rgb(190, 190, 190);
-  background: linear-gradient(
-    0deg,
-    rgba(190, 190, 190, 1) 16%,
-    rgba(106, 106, 106, 1) 36%,
-    rgba(70, 70, 70, 1) 49%,
-    rgba(47, 47, 47, 1) 62%,
-    rgba(36, 36, 36, 1) 72%,
-    rgba(24, 24, 24, 1) 86%
-  );
+  background: rgb(31, 41, 55);
+  background: linear-gradient(0deg, rgba(31, 41, 55, 1) 0%, rgba(17, 24, 39, 1) 47%, rgba(0, 0, 0, 1) 100%);
   height: 100%;
 }
 
@@ -162,10 +154,9 @@ body {
   visibility: hidden;
   width: 215px;
   height: auto;
-  background-color: #2f2f2f;
-  color: #f5f5f5;
+  background-color: #424d60;
+  color: #f9f9f9;
   text-align: center;
-  font-size: 16px;
   border-radius: 6px;
   padding: 8px;
   position: absolute;
@@ -196,7 +187,7 @@ body {
   position: absolute;
   width: 50px; /* Width of the cursor */
   height: 50px; /* Height of the cursor */
-  background-color: #ff3333; /* Color of the cursor */
+  background-color: #d32f2f; /* Color of the cursor */
   border-radius: 50%; /* Make it circular */
   pointer-events: none; /* Prevent it from blocking mouse events */
   transform: translate(-50%, -50%); /* Center the cursor on the mouse */
@@ -217,7 +208,7 @@ body {
   width: 100%;
   height: 2px;
   border-radius: 4px;
-  background-color: #ff3333;
+  background-color: #d32f2f;
   bottom: 0;
   left: 0;
   transform-origin: right;
@@ -226,7 +217,7 @@ body {
 }
 
 .some1 a:hover {
-  color: #ff3333;
+  color: #d32f2f;
 }
 
 .some1 a:hover::before {

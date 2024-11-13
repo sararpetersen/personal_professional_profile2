@@ -4,11 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        "font-color": "#f5f5f5",
+        "font-color": "#f9f9f9",
         "font-color_dark": "#171717",
         "bg-color": "#171717",
         "bg-color_dark": "#2f2f2f",
-        "hover-header": "#FF3333",
+        "hover-header": "#d32f2f",
       },
     },
   },
