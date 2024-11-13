@@ -2,46 +2,53 @@
 
 ---
 
-<button id="scrollToTopBtn" title="Go to top"
-  ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
-    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5"></path>
+<!-- Scroll-to-Top Button -->
+<button
+  id="scrollToTop"
+  class="fixed bottom-8 right-8 p-4 rounded-full bg-hover-header text-[#f9f9f9] shadow-md hover:bg-red-700 transition-opacity duration-300 opacity-0 invisible"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
   </svg>
 </button>
 
 <style>
-  #scrollToTopBtn {
-    background-color: #d32f2f;
-    font-family: "Almarai", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    color: #f9f9f9;
-    outline: none;
-    cursor: pointer;
-    padding: 15px 15px;
-    border-radius: 250px;
-    box-shadow:
-      0 4px 6px -1px rgb(0 0 0 / 0.1),
-      0 2px 4px -2px rgb(0 0 0 / 0.1);
+  /* Scroll-to-Top Button */
+  #scrollToTop {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+    z-index: 999;
   }
 
-  #scrollToTopBtn:hover {
-    transform: translateY(-5px);
-    transition: all 0.3s ease-in-out;
-    background-color: #bc2121;
-    color: #f9f9f9;
-    cursor: none;
+  #scrollToTop.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #scrollToTop:hover {
+    transform: translate(0, -5px);
+    transition: transform 0.3s ease;
+    cursor: pointer;
   }
 </style>
 
 <script>
-  document.getElementById("scrollToTopBtn").addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+  // Show or hide the scroll-to-top button based on scroll position
+  const scrollToTopButton = document.getElementById("scrollToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollToTopButton.classList.add("show");
+    } else {
+      scrollToTopButton.classList.remove("show");
+    }
+  });
+
+  // Scroll to top when the button is clicked
+  scrollToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 </script>
