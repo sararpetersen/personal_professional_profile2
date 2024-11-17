@@ -16,13 +16,13 @@ import Button from "../components/Button.astro";
     <div class="line2"></div>
   </div>
   <div class="top-content text-font-color max-w-7xl mx-auto pb-96 pt-80 md:pb-96 md:pt-80">
-    <h1 id="h1" class="title text-5xl md:text-8xl text-center md:text-left pb-12">SARA RINGKOW PETERSEN</h1>
-    <h2 id="h2" class="subtitle font-normal text-3xl md:text-5xl text-center md:text-left tracking-wide">UX/web designer</h2>
+    <h1 id="h1" class="title text-5xl md:text-8xl text-center md:md:text-left text-center pb-12">SARA RINGKOW PETERSEN</h1>
+    <h2 id="h2" class="subtitle font-normal text-3xl md:text-5xl text-center md:md:text-left text-center tracking-wide">UX/web designer</h2>
   </div>
   <div class="main-content1 max-w-7xl mx-8 md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-30 md:pb-60">
     <div id="info" class="left-content text-font-color">
-      <h3 class="text-3xl md:text-4xl pb-4">WHO AM I?</h3>
-      <p class="starting-text leading-8 md:leading-9">
+      <h3 class="text-3xl md:text-4xl pb-4 md:text-left text-center">WHO AM I?</h3>
+      <p class="starting-text leading-8 md:leading-9 md:md:text-left text-center">
         My name is Sara Ringkow Petersen, a 22-year-old based in <span class="text-hover-header font-bold">Copenhagen</span>. I’m currently seeking an <span
           class="text-hover-header font-bold">internship</span
         > as a UX or web designer, where I can apply my skills and contribute to projects that prioritize inclusive and user-centered digital experiences.
@@ -32,6 +32,9 @@ import Button from "../components/Button.astro";
         having been diagnosed with autism at a later age, drives my commitment to inclusive design&mdash; making digital platforms better for everyone,
         especially those with special needs.
       </p>
+      <div class="ornament flex md:justify-start justify-center items-center pt-12">
+        <img src="/illustrations/ornament3.svg" alt="ornament" class="w-[60%] md:w-[60%]" />
+      </div>
     </div>
     <div id="pfp" class="right-content flex justify-center md:justify-center pt-10 md:pt-20 pb-32">
       <img
@@ -46,7 +49,7 @@ import Button from "../components/Button.astro";
   </div>
   <div id="timeline" class="timeline max-w-3xl mx-auto flex justify-center md:justify-center md:max-w-6xl pb-20 md:pb-60">
     <div class="left-content text-font-color">
-      <h3 class="text-3xl md:text-4xl text-left ml-4 pb-10 md:ml-0 md:pb-8">TIMELINE</h3>
+      <h3 class="text-3xl md:text-4xl ml-4 pb-10 md:ml-0 md:pb-8">TIMELINE</h3>
 
       <ol class="relative border-s border-gray-200 dark:border-gray-400">
         <li class="mb-16 ms-4">
@@ -99,7 +102,7 @@ import Button from "../components/Button.astro";
     <div class="bubbles1"></div>
   </div>
   <div id="skills" class="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-center mb-8">
-    <div class="text-center md:text-left mb-8 md:mb-0 md:mr-8 pr-0 md:pr-12 pb-12">
+    <div class="text-center md:md:text-left mb-8 md:mb-0 md:mr-8 pr-0 md:pr-12 pb-12">
       <h3 class="text-3xl md:text-4xl pb-4 text-font-color">SKILLS</h3>
       <h4 class="text-xl text-font-color">
         Hover over the different app-icons to <br />learn more about my competencies <br />
@@ -213,8 +216,10 @@ import Button from "../components/Button.astro";
     <div class="projects-container">
       <div class="flex justify-center">
         <div class="container mx-auto px-4 py-4">
-          <h3 class="text-3xl md:text-4xl font-bold text-left pb-[10px] text-font-color">HIGHLIGHTED PROJECTS</h3>
-          <h4 class="text-lg text-font-color mb-8">Hover over the different images and click <br class="md:hidden block" /> them to see more</h4>
+          <h3 class="text-3xl md:text-4xl font-bold md:text-left text-center pb-[10px] text-font-color">HIGHLIGHTED PROJECTS</h3>
+          <h4 class="text-lg text-font-color mb-8 md:text-left text-center">
+            Hover over the different images and click <br class="md:hidden block" /> them to see more
+          </h4>
           <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
             <!-- Large item -->
             <div class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">
@@ -437,18 +442,17 @@ import Button from "../components/Button.astro";
     </div>
   </div>
 
-  <div id="contact-header" class="flex flex-col items-center justify-center px-6 pt-24 text-font-color md:pt-60 max-w-7xl mx-auto z-[1]">
+  <div id="contact-header" class="flex flex-col items-center mx-auto justify-center px-6 pt-24 text-font-color md:pt-60 z-[1]">
     <h1 class="text-4xl md:text-5xl font-bold text-center pb-[30px] pt-[16px]">LET'S TALK!</h1>
-    <hr class="w-1/2 md:w-1/3 border-[0.5px] border-font-color opacity-50" />
-    <h4 class="text-2xl text-center italic font-bold pb-[5px] pt-8 md:pt-12">I'M ALWAYS OPEN TO NEW OPPORTUNITIES</h4>
-    <p class="text-lg text-center pb-8 md:pb-12">Feel free to contact me if you have any questions, comments or just want to say hi!</p>
-    <hr class="w-1/2 md:w-1/3 border-[0.5px] border-font-color opacity-50" />
+    <div class="ornament flex justify-center items-center pt-4">
+      <img src="/illustrations/ornament2.svg" alt="ornament" class="w-[60%] md:w-[40%]" />
+    </div>
   </div>
-  <div id="contact" class="flex flex-col items-center pt-20 md:pt-28">
-    <h2 class="text-3xl md:text-4xl font-bold text-center pb-4 md:pb-8 text-font-color z-[1]">SOCIAL MEDIA</h2>
+  <div id="contact" class="flex flex-col items-center pt-20 md:pt-24">
+    <h2 class="md:text-3xl text-2xl font-bold text-center pb-4 md:pb-8 text-font-color z-[1]">SOCIAL MEDIA</h2>
     <div class="flex justify-center space-x-5">
       <a
-        class="group relative w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] transition-transform duration-300 transform hover:scale-105 cursor-none"
+        class="group relative w-[50px] h-[50px] sm:w-[70px] sm:h-[70px] transition-transform duration-300 transform hover:scale-105 cursor-none"
         href="https://www.facebook.com/profile.php?id=61558070190613"
         target="_blank"
       >
@@ -464,7 +468,7 @@ import Button from "../components/Button.astro";
         />
       </a>
       <a
-        class="group relative w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] transition-transform duration-300 transform hover:scale-105 cursor-none"
+        class="group relative w-[50px] h-[50px] sm:w-[70px] sm:h-[70px] transition-transform duration-300 transform hover:scale-105 cursor-none"
         href="https://www.instagram.com/srp_portfolio/"
         target="_blank"
       >
@@ -480,7 +484,7 @@ import Button from "../components/Button.astro";
         />
       </a>
       <a
-        class="group relative w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] transition-transform duration-300 transform hover:scale-105 cursor-none"
+        class="group relative w-[50px] h-[50px] sm:w-[70px] sm:h-[70px] transition-transform duration-300 transform hover:scale-105 cursor-none"
         href="https://www.linkedin.com/in/sara-ringkow-petersen-49830b264/"
         target="_blank"
       >
@@ -496,7 +500,7 @@ import Button from "../components/Button.astro";
         />
       </a>
       <a
-        class="group relative w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] transition-transform duration-300 transform hover:scale-105 cursor-none"
+        class="group relative w-[50px] h-[50px] sm:w-[70px] sm:h-[70px] transition-transform duration-300 transform hover:scale-105 cursor-none"
         href="https://dk.pinterest.com/sararingkow/"
         target="_blank"
       >
@@ -521,8 +525,8 @@ import Button from "../components/Button.astro";
           src="/other/pfp3.webp"
           alt="profile picture"
         />
-        <div class="md:ml-4 text-center md:text-left pl-0 md:pl-20">
-          <h2 class="text-font-color font-bold text-3xl md:text-4xl pb-[20px]">CONTACT INFORMATION</h2>
+        <div class="md:ml-4 text-center md:md:text-left pl-0 md:pl-20">
+          <h2 class="text-font-color font-boldt md:text-3xl text-2xl pb-[20px]">CONTACT INFORMATION</h2>
           <p class="some1 text-font-color">
             <b>Phone: </b><a href="tel:+4542428807" class="hover:text-hover-header transition duration-500 cursor-none">+45 42 42 88 07</a>
           </p>
@@ -538,10 +542,13 @@ import Button from "../components/Button.astro";
     </section>
   </div>
   <div id="cv" class="flex flex-col items-center pb-20 md:pb-24 pt-20">
-    <h2 class="text-3xl md:text-4xl text-center pt-8 md:pt-12 md:pb-8 pb-4 text-font-color">
+    <h2 class="md:text-3xl text-2xl text-center pt-8 md:pt-12 md:pb-8 pb-4 text-font-color">
       WANNA KNOW <br class="md:hidden block" /> MORE ABOUT ME?
     </h2>
     <Button class="text-center transition duration-300 transform hover:scale-105">CHECK OUT MY PERSONAL CV HERE</Button>
+    <div class="ornament flex justify-center items-center pt-20 md:pt-24">
+      <img src="/illustrations/ornament.svg" alt="ornament" class="w-[60%] md:w-[40%]" />
+    </div>
   </div>
 
   <script>
