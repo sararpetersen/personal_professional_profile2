@@ -15,15 +15,15 @@ import Button from "../components/Button.astro";
     <div class="line1"></div>
     <div class="line2"></div>
   </div>
-  <div class="top-content text-font-color max-w-7xl mx-auto pb-96 pt-80 md:pb-96 md:pt-80">
+  <div class="top-content text-font-color max-w-3xl mx-8 md:max-w-6xl md:mx-auto pb-96 pt-80 md:pb-96 md:pt-80">
     <h1 id="h1" class="title text-5xl md:text-8xl md:text-left text-center pb-12">SARA RINGKOW PETERSEN</h1>
     <h2 id="h2" class="subtitle font-normal text-3xl md:text-5xl md:text-left text-center tracking-wide">UX/web designer</h2>
   </div>
 
   <div class="main-content1 max-w-7xl mx-8 md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-20 md:pb-32">
     <div id="info" class="left-content text-font-color">
-      <h3 class="text-3xl md:text-4xl pb-4 md:text-left text-center">WHO AM I?</h3>
-      <p class="starting-text leading-8 md:leading-9 md:md:text-left text-center">
+      <h3 class="text-3xl md:text-4xl pb-4 md:text-left text-left">WHO AM I?</h3>
+      <p class="starting-text leading-8 md:leading-9 md:md:text-left text-left">
         My name is Sara Ringkow Petersen, a 22-year-old based in <span class="text-hover-header font-bold">Copenhagen</span>. I’m currently seeking an <span
           class="text-hover-header font-bold">internship</span
         > as a UX or web designer, where I can apply my skills and contribute to projects that prioritize inclusive and user-centered digital experiences.
@@ -33,9 +33,6 @@ import Button from "../components/Button.astro";
         having been diagnosed with autism at a later age, drives my commitment to inclusive design&mdash; making digital platforms better for everyone,
         especially those with special needs.
       </p>
-      <div class="ornament flex md:justify-start justify-center items-center pt-12">
-        <img src="/illustrations/ornament3.svg" alt="ornament" class="w-[60%] md:w-[60%]" />
-      </div>
     </div>
     <div id="pfp" class="right-content flex justify-center md:justify-center pt-10 md:pt-20 pb-32">
       <img
@@ -45,58 +42,103 @@ import Button from "../components/Button.astro";
       />
     </div>
   </div>
-  <div id="languages" class="max-w-7xl mx-auto pt-20 md:pt-48 md:pb-20 pb-16 relative z-[10]">
-    <h3 class="text-3xl md:text-4xl text-font-color md:text-left text-center pb-10">LANGUAGES</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-white text-center">
-      <!-- Danish -->
-      <div class="language-card bg-gradient-to-r from-gray-700 via-gray-600 to-[#4d5a71] text-font-color rounded-lg p-8 shadow-lg">
-        <h4 class="text-2xl md:text-3xl font-bold">Danish</h4>
-        <p class="mt-4 text-lg">Native language</p>
+  <div id="languages" class="max-w-7xl mx-8 md:max-w-6xl md:mx-auto md:pb-40 pb-32 pt-8 text-left relative">
+    <h3 class="text-3xl md:text-4xl text-font-color pb-10 uppercase">Languages</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-white">
+      <!-- Language 1 -->
+      <div
+        class="language-card relative z-[10] rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105 hover:bg-[#d32f2f] duration-300 ease-in-out"
+      >
+        <div class="absolute inset-0 bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-500 opacity-70 rounded-lg"></div>
+        <h4 class="text-2xl md:text-3xl font-bold z-[20] relative">Japanese</h4>
+        <p class="mt-4 text-lg z-[20] relative">
+          <span class="font-bold">Beginner:</span><br />Can read, write, speak and understand, to a certain extent <em class="text-zinc-400">(A1)</em>
+        </p>
       </div>
-      <!-- English -->
-      <div class="language-card bg-gradient-to-r from-gray-700 via-gray-600 to-[#4d5a71] text-font-color rounded-lg p-8 shadow-lg">
-        <h4 class="text-2xl md:text-3xl font-bold">English</h4>
-        <p class="mt-4 text-lg">Moderate (C1 level)</p>
+      <!-- Language 2 -->
+      <div
+        class="language-card relative z-[10] rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105 hover:bg-[#d32f2f] duration-300 ease-in-out"
+      >
+        <div class="absolute inset-0 bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-500 opacity-70 rounded-lg"></div>
+        <h4 class="text-2xl md:text-3xl font-bold z-[20] relative">English</h4>
+        <p class="mt-4 text-lg z-[20] relative">
+          <span class="font-bold">Intermediate:</span><br /> Can read, write, speak and understand relatively well
+          <em class="text-zinc-400"> (B2)</em>
+        </p>
       </div>
-      <!-- Japanese -->
-      <div class="language-card bg-gradient-to-r from-gray-700 via-gray-600 to-[#4d5a71] text-font-color rounded-lg p-8 shadow-lg">
-        <h4 class="text-2xl md:text-3xl font-bold">Japanese</h4>
-        <p class="mt-4 text-lg">Beginner (A1 level)</p>
+      <!-- Language 3 -->
+      <div
+        class="language-card relative z-[10] rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105 hover:bg-[#d32f2f] duration-300 ease-in-out"
+      >
+        <div class="absolute inset-0 bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-500 opacity-70 rounded-lg"></div>
+        <h4 class="text-2xl md:text-3xl font-bold z-[20] relative">Danish</h4>
+        <p class="mt-4 text-lg z-[20] relative">
+          <span class="font-bold">Native language:</span><br /> Fluent in speaking, reading, and writing <em class="text-zinc-400">(C2)</em>
+        </p>
       </div>
     </div>
   </div>
-  <div id="hobbies" class="max-w-7xl mx-auto md:pb-40 pb-32 pt-8 md:text-left text-center relative z-[20]">
+
+  <div id="hobbies" class="max-w-7xl mx-8 md:max-w-6xl md:mx-auto md:pb-40 pb-32 pt-8 text-left relative">
     <h3 class="text-3xl md:text-4xl text-font-color pb-10 uppercase">Hobbies & interests</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-white">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-font-color">
       <!-- Hobby 1 -->
-      <div class="hobby-card bg-gradient-to-r from-gray-700 via-gray-600 to-[#4d5a71] text-font-color rounded-lg p-8 shadow-lg relative z-[10]">
-        <h4 class="text-2xl md:text-3xl font-bold">Gaming</h4>
-        <p class="mt-4 text-lg">I love exploring new games and learning about different genres.</p>
+      <div
+        class="hobby-card relative z-[10] rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105 hover:bg-[#d32f2f] duration-300 ease-in-out"
+      >
+        <div class="absolute inset-0 bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-500 opacity-70 rounded-lg"></div>
+        <h4 class="text-2xl md:text-3xl font-bold z-[20] relative">Gaming</h4>
+        <p class="mt-4 text-lg z-[20] relative">
+          I love exploring new games and learning about different genres. It helps me focus on something else other than work.
+        </p>
+        <p class="mt-4 text-sm z-[20] relative italic">(Examples: Super Mario series, Sims, various indie and open-world RPG games etc.)</p>
       </div>
       <!-- Hobby 2 -->
-      <div class="hobby-card bg-gradient-to-r from-gray-700 via-gray-600 to-[#4d5a71] text-font-color rounded-lg p-8 shadow-lg relative z-[10]">
-        <h4 class="text-2xl md:text-3xl font-bold">Reading</h4>
-        <p class="mt-4 text-lg">I enjoy reading crime- and fantasy novels. It's a great way for me to escape the daily struggles.</p>
+      <div
+        class="hobby-card relative z-[10] rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105 hover:bg-[#d32f2f] duration-300 ease-in-out"
+      >
+        <div class="absolute inset-0 bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-500 opacity-70 rounded-lg"></div>
+        <h4 class="text-2xl md:text-3xl font-bold z-[20] relative">Reading</h4>
+        <p class="mt-4 text-lg z-[20] relative">I enjoy reading crime- and fantasy novels. It's a great way for me to escape the daily struggles.</p>
+        <p class="mt-4 text-sm z-[20] relative italic">
+          (Examples: ACOTAR, Fourth Wing, A good girls guide to murder, various dark fantasy/romance novels, etc.)
+        </p>
       </div>
       <!-- Hobby 3 -->
-      <div class="hobby-card bg-gradient-to-r from-gray-700 via-gray-600 to-[#4d5a71] text-font-color rounded-lg p-8 shadow-lg relative z-[10]">
-        <h4 class="text-2xl md:text-3xl font-bold">Creative design</h4>
-        <p class="mt-4 text-lg">I like designing digital art, creating keychains, making bead-plates, and many other things.</p>
+      <div
+        class="hobby-card relative z-[10] rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105 hover:bg-[#d32f2f] duration-300 ease-in-out"
+      >
+        <div class="absolute inset-0 bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-500 opacity-70 rounded-lg"></div>
+        <h4 class="text-2xl md:text-3xl font-bold z-[20] relative">Being creative</h4>
+        <p class="mt-4 text-lg z-[20] relative">I like creating keychains, making bead-plates, and many other things to keep myself busy.</p>
+        <p class="mt-4 text-sm z-[20] relative italic">(Examples: keychains, bead-plates, drawing, painting, writing, etc.)</p>
       </div>
       <!-- Hobby 4 -->
-      <div class="hobby-card bg-gradient-to-r from-gray-700 via-gray-600 to-[#4d5a71] text-font-color rounded-lg p-8 shadow-lg relative z-[10]">
-        <h4 class="text-2xl md:text-3xl font-bold">Learning</h4>
-        <p class="mt-4 text-lg">I'm always learning new things and expanding my knowledge.</p>
+      <div
+        class="hobby-card relative z-[10] rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105 hover:bg-[#d32f2f] duration-300 ease-in-out"
+      >
+        <div class="absolute inset-0 bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-500 opacity-70 rounded-lg"></div>
+        <h4 class="text-2xl md:text-3xl font-bold z-[20] relative">Learning</h4>
+        <p class="mt-4 text-lg z-[20] relative">I'm always learning new things and expanding my knowledge.</p>
+        <p class="mt-4 text-sm z-[20] relative italic">(Examples: Software- and web-development, creative stuff, etc.)</p>
       </div>
       <!-- Hobby 5 -->
-      <div class="hobby-card bg-gradient-to-r from-gray-700 via-gray-600 to-[#4d5a71] text-font-color rounded-lg p-8 shadow-lg relative z-[10]">
-        <h4 class="text-2xl md:text-3xl font-bold">Working out</h4>
-        <p class="mt-4 text-lg">I enjoy working out and staying fit.</p>
+      <div
+        class="hobby-card relative z-[10] rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105 hover:bg-[#d32f2f] duration-300 ease-in-out"
+      >
+        <div class="absolute inset-0 bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-500 opacity-70 rounded-lg"></div>
+        <h4 class="text-2xl md:text-3xl font-bold z-[20] relative">Working out</h4>
+        <p class="mt-4 text-lg z-[20] relative">I enjoy working out and staying fit.</p>
+        <p class="mt-4 text-sm z-[20] relative italic">(Examples: HIIT, strengh training, etc)</p>
       </div>
       <!-- Hobby 6 -->
-      <div class="hobby-card bg-gradient-to-r from-gray-700 via-gray-600 to-[#4d5a71] text-font-color rounded-lg p-8 shadow-lg relative z-[10]">
-        <h4 class="text-2xl md:text-3xl font-bold">Photography</h4>
-        <p class="mt-4 text-lg">I love taking photos and capturing moments of nature, places, and people.</p>
+      <div
+        class="hobby-card relative z-[10] rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105 hover:bg-[#d32f2f] duration-300 ease-in-out"
+      >
+        <div class="absolute inset-0 bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-500 opacity-70 rounded-lg"></div>
+        <h4 class="text-2xl md:text-3xl font-bold z-[20] relative">Photography</h4>
+        <p class="mt-4 text-lg z-[20] relative">I love taking photos and capturing moments of various things around me.</p>
+        <p class="mt-4 text-sm z-[20] relative italic">(Examples: Nature, people, places, etc.)</p>
       </div>
     </div>
   </div>
@@ -104,7 +146,7 @@ import Button from "../components/Button.astro";
   <div class="background-bubbles">
     <div class="bubbles1"></div>
   </div>
-  <div id="timeline" class="timeline max-w-3xl mx-auto flex justify-center md:justify-center md:max-w-6xl pt-4 md:pt-48 pb-20 md:pb-60">
+  <div id="timeline" class="timeline max-w-7xl mx-8 md:max-w-6xl md:mx-auto flex justify-center md:justify-center pt-4 md:pt-48 pb-20 md:pb-60">
     <div class="left-content text-font-color">
       <h3 class="text-3xl md:text-4xl ml-4 pb-10 md:ml-0 md:pb-8">TIMELINE</h3>
 
@@ -114,17 +156,10 @@ import Button from "../components/Button.astro";
             class="absolute w-3 h-3 bg-font-color rounded-full mt-1.5 -start-1.5 border border-font-color dark:border-font-color dark:bg-font-color"
           >
           </div>
-          <time class="mb-1 text-xl font-bold leading-none text-font-color md:text-2xl">August 2008 - June 2015</time>
-          <h4 class="timeline-title text-md font-regular text-font-color dark:text-white md:text-xl">0-6th grade at Hedegårdsskolen*</h4>
-          <p class="text-gray-500 dark:text-gray-400 md:text-lg text-sm">*Switched school in near the end of 6th grade</p>
-        </li>
-        <li class="mb-16 ms-4">
-          <div
-            class="absolute w-3 h-3 bg-font-color rounded-full mt-1.5 -start-1.5 border border-font-color dark:border-font-color dark:bg-font-color"
-          >
-          </div>
-          <time class="mb-1 text-xl font-bold leading-none text-font-color md:text-2xl">June 2015 - June 2018</time>
-          <h4 class="timeline-title text-md font-regular text-font-color dark:text-white md:text-xl">6-9th grade at Ballerup Ny Skole</h4>
+          <time class="mb-1 text-xl font-bold leading-none text-font-color md:text-2xl">2017 - 2018</time>
+          <h4 class="timeline-title text-md font-regular text-font-color dark:text-white md:text-xl">
+            Advertisement distributor at FK Distribution A/S
+          </h4>
         </li>
         <li class="mb-16 ms-4">
           <div
@@ -139,14 +174,33 @@ import Button from "../components/Button.astro";
             class="absolute w-3 h-3 bg-font-color rounded-full mt-1.5 -start-1.5 border border-font-color dark:border-font-color dark:bg-font-color"
           >
           </div>
+          <time class="mb-1 text-xl font-bold leading-none text-font-color md:text-2xl">February 2018 - May 2019</time>
+          <h4 class="timeline-title text-md font-regular text-font-color dark:text-white md:text-xl">Shop-assistant u. 18 in Netto, Vanløse</h4>
+        </li>
+        <li class="mb-16 ms-4">
+          <div
+            class="absolute w-3 h-3 bg-font-color rounded-full mt-1.5 -start-1.5 border border-font-color dark:border-font-color dark:bg-font-color"
+          >
+          </div>
           <time class="mb-1 text-xl font-bold leading-none text-font-color md:text-2xl">August 2019 - June 2021</time>
           <h4 class="timeline-title text-md font-regular text-font-color dark:text-white md:text-xl">HF at Egedal Gymnasium & HF</h4>
+        </li>
+        <li class="mb-16 ms-4">
+          <div
+            class="absolute w-3 h-3 bg-font-color rounded-full mt-1.5 -start-1.5 border border-font-color dark:border-font-color dark:bg-font-color"
+          >
+          </div>
+          <time class="mb-1 text-xl font-bold leading-none text-font-color md:text-2xl">June 2021 - December 2022*</time>
+          <h4 class="timeline-title text-md font-regular text-font-color md:text-xl">Assistant in webshop in Lloyd Concept Store CPH</h4>
+          <p class="text-[#acacac] md:text-lg text-sm">
+            * Went on a 6-month leave during my time there, <br class="md:hidden block" /> due to my stay at Bosei (folk high school)
+          </p>
         </li>
         <li class="mb-16 ms-4">
           <div class="absolute w-3 h-3 bg-font-color rounded-full mt-1.5 -start-1.5 border border-font-color dark:border-font-color dark:bg-gray-300">
           </div>
           <time class="mb-1 text-xl font-bold leading-none text-font-color md:text-2xl">January 2022 - June 2022 (gap-year)</time>
-          <h4 class="timeline-title text-md font-regular text-font-color dark:text-white md:text-xl">
+          <h4 class="timeline-title text-md font-regular text-font-color md:text-xl">
             Folk high school stay at Bosei Sports <br class="md:hidden block" /> Folk High School
           </h4>
         </li>
@@ -156,10 +210,10 @@ import Button from "../components/Button.astro";
           >
           </div>
           <time class="mb-1 text-xl font-bold leading-none text-font-color md:text-2xl">August 2022 - May 2023</time>
-          <h4 class="timeline-title text-md font-regular text-font-color dark:text-white md:text-xl">
+          <h4 class="timeline-title text-md font-regular text-font-color md:text-xl">
             Singular courses in History (dropped)* <br class="md:hidden block" /> & Japanese (lvl. 0-B) at Frederiksberg VUC & STX
           </h4>
-          <p class="text-gray-400 dark:text-gray-400 md:text-lg text-sm">*Had to drop it due to work & just continue with one course</p>
+          <p class="text-[#acacac] md:text-lg text-sm">*Had to drop it due to work & just continue with one course</p>
         </li>
         <li class="mb-16 ms-4">
           <div
@@ -179,7 +233,7 @@ import Button from "../components/Button.astro";
     <div class="bubbles1"></div>
   </div>
   <div id="skills" class="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-center mb-8">
-    <div class="text-center md:md:text-left mb-8 md:mb-0 md:mr-8 pr-0 md:pr-12 pb-12">
+    <div class="text-left md:md:text-left mb-8 md:mb-0 md:mr-8 pr-0 md:pr-12 pb-12">
       <h3 class="text-3xl md:text-4xl pb-4 text-font-color">SKILLS</h3>
       <h4 class="text-xl text-font-color">
         Hover over the different app-icons to <br />learn more about my competencies <br />
@@ -294,8 +348,8 @@ import Button from "../components/Button.astro";
     <div class="projects-container">
       <div class="flex justify-center">
         <div class="container mx-auto px-4 py-4">
-          <h3 class="text-3xl md:text-4xl font-bold md:text-left text-center pb-[10px] text-font-color">HIGHLIGHTED PROJECTS</h3>
-          <h4 class="text-lg text-font-color mb-8 md:text-left text-center">
+          <h3 class="text-3xl md:text-4xl font-bold md:text-left text-left pb-[10px] text-font-color">HIGHLIGHTED PROJECTS</h3>
+          <h4 class="text-lg text-font-color mb-8 md:text-left text-left">
             Hover over the different images and click <br class="md:hidden block" /> them to see more
           </h4>
           <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -314,10 +368,10 @@ import Button from "../components/Button.astro";
                     <p class="text-font-color">First project: 1st semester</p>
                     <div class="flex flex-row flex-wrap">
                       <div class="pt-5 pl-2 pr-2">
-                        <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-sm">HTML</p>
+                        <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-sm">HTML</p>
                       </div>
                       <div class="pt-5 pl-2 pr-2">
-                        <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-sm">CSS</p>
+                        <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-sm">CSS</p>
                       </div>
                     </div>
                   </div>
@@ -338,10 +392,10 @@ import Button from "../components/Button.astro";
                     <p class="text-font-color">Second project: 1st semester</p>
                     <div class="flex flex-row flex-wrap">
                       <div class="pt-5 pl-2 pr-2">
-                        <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">HTML</p>
+                        <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">HTML</p>
                       </div>
                       <div class="pt-5 pl-2 pr-2">
-                        <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">CSS</p>
+                        <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">CSS</p>
                       </div>
                     </div>
                   </div>
@@ -358,13 +412,13 @@ import Button from "../components/Button.astro";
                     <p class="text-font-color">First case-project: 1st semester</p>
                     <div class="flex flex-row flex-wrap">
                       <div class="pt-5 pl-2 pr-2">
-                        <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">HTML</p>
+                        <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">HTML</p>
                       </div>
                       <div class="pt-5 pl-2 pr-2">
-                        <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">CSS</p>
+                        <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">CSS</p>
                       </div>
                       <div class="pt-5 pl-2 pr-2">
-                        <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
+                        <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
                       </div>
                     </div>
                   </div>
@@ -385,13 +439,13 @@ import Button from "../components/Button.astro";
                     <p class="text-font-color">Exam-project: 1st semester</p>
                     <div class="flex flex-row flex-wrap">
                       <div class="pt-5 pl-2 pr-2">
-                        <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">HTML</p>
+                        <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">HTML</p>
                       </div>
                       <div class="pt-5 pl-2 pr-2">
-                        <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">CSS</p>
+                        <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">CSS</p>
                       </div>
                       <div class="pt-5 pl-2 pr-2">
-                        <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
+                        <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
                       </div>
                     </div>
                   </div>
@@ -410,13 +464,13 @@ import Button from "../components/Button.astro";
                     <p class="text-font-color">Case project: 2nd semester</p>
                     <div class="flex flex-row flex-wrap">
                       <div class="pt-5 pl-2 pr-2">
-                        <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
+                        <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
                       </div>
                       <div class="pt-5 pl-2 pr-2">
-                        <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JSON</p>
+                        <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JSON</p>
                       </div>
                       <div class="pt-5 pl-2 pr-2">
-                        <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
+                        <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
                       </div>
                     </div>
                   </div>
@@ -440,10 +494,10 @@ import Button from "../components/Button.astro";
                       <p class="text-font-color">Case-project: 2nd semester</p>
                       <div class="flex flex-row flex-wrap">
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
                         </div>
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
                         </div>
                       </div>
                     </div>
@@ -459,13 +513,13 @@ import Button from "../components/Button.astro";
                       <p class="text-font-color">Exam-project: 2nd semester</p>
                       <div class="flex flex-row flex-wrap">
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
                         </div>
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JSON</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JSON</p>
                         </div>
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
                         </div>
                       </div>
                     </div>
@@ -483,13 +537,13 @@ import Button from "../components/Button.astro";
                       </p>
                       <div class="flex flex-row flex-wrap">
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
                         </div>
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Tailwind</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Tailwind</p>
                         </div>
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
                         </div>
                       </div>
                     </div>
@@ -497,18 +551,25 @@ import Button from "../components/Button.astro";
                 </a>
               </div>
               <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                <a href="https://tiktok-datavisualisering.netlify.app/" target="_blank" aria-label="View project: TikTok's tilbagefald">
-                  <img src="/other/tiktok_infografik.webp" alt="TikTok-infografik" class="w-full h-48 object-cover brightness-150" />
+                <a href="https://sd-uperfekterperfekt.netlify.app/" target="_blank" aria-label="View project: Uperfekt er perfekt">
+                  <img
+                    src="/other/uperfekt.webp"
+                    alt="Screenshot of the assignment: Københavner-billeder"
+                    class="w-full h-48 object-cover brightness-150"
+                  />
                   <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
                     <div class="absolute bottom-0 left-0 right-0 p-4">
-                      <h4 class="text-2xl font-bold text-font-color">TikTok's tilbagefald</h4>
+                      <h4 class="text-2xl font-bold text-font-color">Uperfekt er perfekt</h4>
                       <p class="text-font-color">Mini-project: 3rd semester</p>
                       <div class="flex flex-row flex-wrap">
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
                         </div>
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Tailwind</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Tailwind</p>
+                        </div>
+                        <div class="pt-5 pl-2 pr-2">
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
                         </div>
                       </div>
                     </div>
@@ -524,32 +585,6 @@ import Button from "../components/Button.astro";
           <div class="container mx-auto px-4 py-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
               <!-- Three medium items -->
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                <a href="https://sd-uperfekterperfekt.netlify.app/" target="_blank" aria-label="View project: Uperfekt er perfekt">
-                  <img
-                    src="/other/uperfekt.webp"
-                    alt="Screenshot of the assignment: Københavner-billeder"
-                    class="w-full h-48 object-cover brightness-150"
-                  />
-                  <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
-                    <div class="absolute bottom-0 left-0 right-0 p-4">
-                      <h4 class="text-2xl font-bold text-font-color">Uperfekt er perfekt</h4>
-                      <p class="text-font-color">Mini-project: 3rd semester</p>
-                      <div class="flex flex-row flex-wrap">
-                        <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
-                        </div>
-                        <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Tailwind</p>
-                        </div>
-                        <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
 
               <div class="relative overflow-hidden rounded-2xl shadow-lg group">
                 <a href="https://singleusesucks-plasticchange.netlify.app/" target="_blank" aria-label="View project: #SingleUseSucks">
@@ -562,13 +597,13 @@ import Button from "../components/Button.astro";
                       </p>
                       <div class="flex flex-row flex-wrap">
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
                         </div>
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Tailwind</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Tailwind</p>
                         </div>
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
                         </div>
                       </div>
                     </div>
@@ -584,13 +619,13 @@ import Button from "../components/Button.astro";
                       <p class="text-font-color">Mini-project: 3rd semester</p>
                       <div class="flex flex-row flex-wrap">
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
                         </div>
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Tailwind</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Tailwind</p>
                         </div>
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
                         </div>
                       </div>
                     </div>
@@ -606,13 +641,35 @@ import Button from "../components/Button.astro";
                       <p class="text-font-color">Side-project: private work</p>
                       <div class="flex flex-row flex-wrap">
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
                         </div>
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Tailwind</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Tailwind</p>
                         </div>
                         <div class="pt-5 pl-2 pr-2">
-                          <p class="rounded-full px-4 p-3 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                <a href="https://hojskolendk002.netlify.app/" target="_blank" aria-label="View project: HÖJSKOLENDK">
+                  <img src="/other/hojskolendk.webp" alt="Screenshot of the assignment: HÖJSKOLENDK" class="w-full h-48 object-cover" />
+                  <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                      <h4 class="text-2xl font-bold text-font-color">HÖJSKOLENDK</h4>
+                      <p class="text-font-color">Case-project: 3rd semester</p>
+                      <div class="flex flex-row flex-wrap">
+                        <div class="pt-5 pl-2 pr-2">
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Astro</p>
+                        </div>
+                        <div class="pt-5 pl-2 pr-2">
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">Tailwind</p>
+                        </div>
+                        <div class="pt-5 pl-2 pr-2">
+                          <p class="rounded-full px-4 p-2 font-semibold shadow-md uppercase bg-hover-header text-font-color text-xs">JS</p>
                         </div>
                       </div>
                     </div>
@@ -625,114 +682,103 @@ import Button from "../components/Button.astro";
       </div>
     </div>
   </div>
-
-  <div id="contact-header" class="flex flex-col items-center mx-auto justify-center px-6 pt-24 text-font-color md:pt-60 z-[1]">
-    <h1 class="text-4xl md:text-5xl font-bold text-center pb-[30px] pt-[16px]">LET'S TALK!</h1>
-    <div class="ornament2 flex justify-center items-center pt-4">
-      <img src="/illustrations/ornament2.svg" alt="ornament" class="w-[60%] md:w-[40%]" />
-    </div>
+  <div class="flex justify-center pt-24 md:pt-40">
+    <img src="/illustrations/ornament2.svg" alt="an ornament in the form of two different-sized lines" class="w-[400px]" />
   </div>
-  <div id="contact" class="flex flex-col items-center pt-20 md:pt-24">
-    <h2 class="md:text-3xl text-2xl font-bold text-center pb-4 md:pb-8 text-font-color z-[1]">SOCIAL MEDIA</h2>
-    <div class="flex justify-center space-x-5">
-      <a
-        class="group relative w-[50px] h-[50px] sm:w-[70px] sm:h-[70px] transition-transform duration-300 transform hover:scale-105 cursor-none"
-        href="https://www.facebook.com/profile.php?id=61558070190613"
-        target="_blank"
-      >
-        <img
-          src="/illustrations/facebook2.svg"
-          alt="facebook"
-          class="absolute inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition duration-500 ease-in-out"
-        />
-        <img
-          src="/illustrations/facebook2_red.svg"
-          alt="facebook"
-          class="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
-        />
-      </a>
-      <a
-        class="group relative w-[50px] h-[50px] sm:w-[70px] sm:h-[70px] transition-transform duration-300 transform hover:scale-105 cursor-none"
-        href="https://www.instagram.com/srp_portfolio/"
-        target="_blank"
-      >
-        <img
-          src="/illustrations/instagram2.svg"
-          alt="instagram"
-          class="absolute inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition duration-500 ease-in-out"
-        />
-        <img
-          src="/illustrations/instagram2_red.svg"
-          alt="instagram"
-          class="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
-        />
-      </a>
-      <a
-        class="group relative w-[50px] h-[50px] sm:w-[70px] sm:h-[70px] transition-transform duration-300 transform hover:scale-105 cursor-none"
-        href="https://www.linkedin.com/in/sara-ringkow-petersen-49830b264/"
-        target="_blank"
-      >
-        <img
-          src="/illustrations/linkedin2.svg"
-          alt="linkedin"
-          class="absolute inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition duration-500 ease-in-out"
-        />
-        <img
-          src="/illustrations/linkedin2_red.svg"
-          alt="linkedin"
-          class="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
-        />
-      </a>
-      <a
-        class="group relative w-[50px] h-[50px] sm:w-[70px] sm:h-[70px] transition-transform duration-300 transform hover:scale-105 cursor-none"
-        href="https://dk.pinterest.com/sararingkow/"
-        target="_blank"
-      >
-        <img
-          src="/illustrations/pinterest2.svg"
-          alt="pinterest"
-          class="absolute inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition duration-500 ease-in-out"
-        />
-        <img
-          src="/illustrations/pinterest2_red.svg"
-          alt="pinterest"
-          class="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
-        />
-      </a>
-    </div>
+  <div id="contact-header" class="pt-12 md:pt-24 flex flex-col items-center mx-auto justify-center px-6 text-font-color z-[1]">
+    <h1 class="text-4xl md:text-5xl font-bold text-left pb-[30px] md:pt-[16px] pt-[20px]">LET'S TALK!</h1>
   </div>
-  <div id="phone_mail" class="forms_container flex justify-center pt-20 md:pt-28">
+  <div id="phone_mail" class="forms_container flex justify-center pt-8 md:pt-28">
     <section class="max-w-5xl mx-auto px-6">
-      <div class="flex flex-col items-center md:flex-row md:items-center md:justify-center">
+      <div class="flex flex-col md:flex-row md:items-start items-center">
+        <!-- Profile Picture -->
         <img
           class="w-[150px] h-[150px] md:w-[250px] md:h-[250px] object-cover rounded-full shadow-xl mb-8 md:mb-0 brightness-[108%] contrast-[85%]"
           src="/other/pfp3.webp"
           alt="profile picture"
         />
-        <div class="md:ml-10 text-center md:md:text-left pl-10">
-          <h2 class="text-font-color font-boldt md:text-3xl text-2xl pb-[20px]">CONTACT INFORMATION</h2>
-          <p class="some1 text-font-color">
-            <b>Phone: </b><a href="tel:+4542428807" class="hover:text-hover-header transition duration-500 cursor-none">+45 42 42 88 07</a>
-          </p>
-          <p class="some1 text-font-color">
-            <b>Mail: </b><a href="mailto:sara.ringkow@gmail.com" class="hover:text-hover-header transition duration-300 cursor-none"
-              >sara.ringkow@gmail.com</a
-            >
-            <span class="text-main">/</span>
-            <a href="mailto:sape0003@stud.kea.dk" class="hover:text-hover-header transition duration-500 cursor-none">sape0003@stud.kea.dk</a>
-          </p>
+
+        <!-- Contact Info & Social Media -->
+        <div class="md:ml-10 flex flex-col md:text-left text-center">
+          <!-- Contact Information -->
+          <div class="mb-8">
+            <h2 class="text-font-color font-bold md:text-3xl text-2xl pb-4">CONTACT INFORMATION</h2>
+            <p class="some1 text-font-color">
+              <b>Phone: </b><a href="tel:+4542428807" class="hover:text-hover-header transition duration-500 cursor-none">+45 42 42 88 07</a>
+            </p>
+            <p class="some1 text-font-color">
+              <b>Mail: </b><a href="mailto:sara.ringkow@gmail.com" class="hover:text-hover-header transition duration-300 cursor-none"
+                >sara.ringkow@gmail.com</a
+              >
+              <span class="text-main">/</span>
+              <a href="mailto:sape0003@stud.kea.dk" class="hover:text-hover-header transition duration-500 cursor-none">sape0003@stud.kea.dk</a>
+            </p>
+          </div>
+          <hr class="border-[0.5px] border-font-color mb-8 md:w-[250px] w-full" style="text-shadow: 1px 2px 4px rgba(15, 23, 42, 1);" />
+
+          <!-- Social Media Section -->
+          <div id="contact">
+            <div class="flex gap-3 md:justify-startjustify-center">
+              <a
+                class="group relative w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] transition-transform duration-300 transform hover:scale-105 cursor-none drop-shadow-md"
+                href="https://www.facebook.com/profile.php?id=61558070190613"
+                target="_blank"
+              >
+                <img
+                  src="/illustrations/facebook2.svg"
+                  alt="facebook"
+                  class="absolute inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition duration-500 ease-in-out"
+                />
+                <img
+                  src="/illustrations/facebook2_red.svg"
+                  alt="facebook"
+                  class="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
+                />
+              </a>
+              <a
+                class="mr-3 group relative w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] transition-transform duration-300 transform hover:scale-105 cursor-none drop-shadow-md"
+                href="https://www.instagram.com/srp_portfolio/"
+                target="_blank"
+              >
+                <img
+                  src="/illustrations/instagram2.svg"
+                  alt="instagram"
+                  class="absolute inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition duration-500 ease-in-out"
+                />
+                <img
+                  src="/illustrations/instagram2_red.svg"
+                  alt="instagram"
+                  class="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
+                />
+              </a>
+              <a
+                class="group relative w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] transition-transform duration-300 transform hover:scale-105 cursor-none drop-shadow-md"
+                href="https://www.linkedin.com/in/sara-ringkow-petersen-49830b264/"
+                target="_blank"
+              >
+                <img
+                  src="/illustrations/linkedin2.svg"
+                  alt="linkedin"
+                  class="absolute inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition duration-500 ease-in-out"
+                />
+                <img
+                  src="/illustrations/linkedin2_red.svg"
+                  alt="linkedin"
+                  class="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </div>
+
   <div id="cv" class="flex flex-col items-center pb-20 md:pb-24 pt-20">
     <h2 class="md:text-3xl text-2xl text-center pt-8 md:pt-12 md:pb-8 pb-4 text-font-color">
       WANNA KNOW <br class="md:hidden block" /> MORE ABOUT ME?
     </h2>
     <Button class="text-center transition duration-300 transform hover:scale-105">CHECK OUT MY PERSONAL CV HERE</Button>
-    <div class="ornament3 flex justify-center items-center pt-20 md:pt-24">
-      <img src="/illustrations/ornament.svg" alt="ornament" class="w-[60%] md:w-[40%]" />
-    </div>
   </div>
 
   <script>
@@ -876,6 +922,19 @@ import Button from "../components/Button.astro";
   <style>
     .hidden {
       opacity: 0;
+    }
+
+    .language-card::before,
+    .hobby-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      opacity: 0.7; /* Apply opacity to the background only */
+      border-radius: inherit; /* Ensures border-radius is applied to the background as well */
     }
   </style>
 </MainLayout>
