@@ -37,6 +37,7 @@
   li,
   li a {
     font-size: 1rem; /* 16px */
+    cursor: pointer;
   }
 
   h4 {
@@ -48,6 +49,6 @@
   }
 
   .some1 a {
-    @apply drop-shadow-md;
+    @apply drop-shadow-md cursor-pointer;
   }
 }
