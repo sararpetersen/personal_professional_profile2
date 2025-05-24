@@ -10,21 +10,20 @@ import Button from "../components/Button.astro";
   ogtitle="Frontpage - SRP Profile"
   ogdescription="An alternate portfolio for Sara Ringkow Petersen"
 >
-  <div id="cursor"></div>
   <div class="background-lines">
     <div class="line1"></div>
     <div class="line2"></div>
   </div>
-  <div class="top-content text-font-color max-w-3xl mx-8 md:max-w-6xl md:mx-auto pb-96 pt-80 md:pb-96 md:pt-80">
-    <h1 id="h1" class="title text-5xl md:text-8xl md:text-left text-center pb-12">SARA RINGKOW PETERSEN</h1>
+  <div class="top-content text-font-color mx-8 max-w-7xl md:mx-auto pb-96 pt-80 md:pb-96 md:pt-80">
+    <h1 id="h1" class="title text-5xl md:text-8xl md:text-left text-center pb-12 uppercase">Sara Ringkow Petersen</h1>
     <h2 id="h2" class="subtitle font-normal text-3xl md:text-5xl md:text-left text-center tracking-wide">UX/web designer</h2>
   </div>
 
   <div class="main-content1 max-w-7xl mx-8 md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-20 md:pb-32">
     <div id="info" class="left-content text-font-color">
-      <h3 class="text-3xl md:text-4xl pb-4 md:text-left text-left">WHO AM I?</h3>
+      <h3 class="text-3xl md:text-4xl pb-4 md:text-left text-left uppercase">Who am I?</h3>
       <p class="starting-text leading-8 md:leading-9 md:md:text-left text-left">
-        My name is Sara Ringkow Petersen, a 22-year-old based in <span class="text-hover-header font-bold">Copenhagen</span>. I’m currently seeking an <span
+        My name is Sara Ringkow Petersen, a 23-year-old based in <span class="text-hover-header font-bold">Copenhagen</span>. I’m currently seeking an <span
           class="text-hover-header font-bold">internship</span
         > as a UX or web designer, where I can apply my skills and contribute to projects that prioritize inclusive and user-centered digital experiences.
         <br /><br />I’m dedicated to creating <span class="text-hover-header font-bold">accessible, user-friendly digital solutions</span> by blending
@@ -36,8 +35,8 @@ import Button from "../components/Button.astro";
     </div>
     <div id="pfp" class="right-content flex justify-center md:justify-center pt-10 md:pt-20 pb-32">
       <img
-        src="/other/pfp.webp"
-        alt="me"
+        src="/other/pfp3.webp"
+        alt="A portrait of Sara"
         class="w-[200px] h-[200px] md:w-[400px] md:h-[400px] object-cover rounded-full shadow-md brightness-[108%] contrast-[85%]"
       />
     </div>
@@ -222,7 +221,7 @@ import Button from "../components/Button.astro";
           </div>
           <time class="mb-1 text-xl font-bold leading-none text-font-color md:text-2xl">August 2023 - present</time>
           <h4 class="timeline-title text-md font-regular text-font-color dark:text-white md:text-xl">
-            Multimedia-design student at <br class="md:hidden block" /> KEA - Københavns Erhvervsakademi (3rd semester)
+            Multimedia-design student at <br class="md:hidden block" /> KEA - Københavns Erhvervsakademi (4th and final semester)
           </h4>
         </li>
       </ol>
@@ -354,7 +353,9 @@ import Button from "../components/Button.astro";
           </h4>
           <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
             <!-- Large item -->
-            <div class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">
+            <div
+              class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group border-l-4 border border-[#b0b0b0] hover:border-[#888888]"
+            >
               <a
                 href="https://sararingkow.dk/kea/02_web/01_website/website/index.html"
                 target="_blank"
@@ -485,7 +486,7 @@ import Button from "../components/Button.astro";
           <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
               <!-- Three medium items -->
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <div class="relative overflow-hidden rounded-2xl shadow-lg group border-l-4 border border-[#b0b0b0] hover:border-[#888888]">
                 <a href="https://itmv-t9.netlify.app/" target="_blank" aria-label="View project: I Tråd Med Verden">
                   <img src="/other/itmv.png" alt="Screenshot of the assignment: I Tråd Med Verden" class="w-full h-48 object-cover" />
                   <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
@@ -504,7 +505,7 @@ import Button from "../components/Button.astro";
                   </div>
                 </a>
               </div>
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <div class="relative overflow-hidden rounded-2xl shadow-lg group border-l-4 border border-[#b0b0b0] hover:border-[#888888]">
                 <a href="https://volander-art.netlify.app/" target="_blank" aria-label="View project: Volander Art">
                   <img src="/other/2nd_semester_exam.png" alt="Screenshot of the assignment: Volander Art" class="w-full h-48 object-cover" />
                   <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
@@ -526,7 +527,7 @@ import Button from "../components/Button.astro";
                   </div>
                 </a>
               </div>
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <div class="relative overflow-hidden rounded-2xl shadow-lg group border-l-4 border border-[#b0b0b0] hover:border-[#888888]">
                 <a href="https://kbh-billeder.netlify.app/" target="_blank" aria-label="View project: Københavner-billeder">
                   <img src="/other/kbh_billeder.webp" alt="Screenshot of the assignment: Københavner-billeder" class="w-full h-48 object-cover" />
                   <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
@@ -550,7 +551,7 @@ import Button from "../components/Button.astro";
                   </div>
                 </a>
               </div>
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <div class="relative overflow-hidden rounded-2xl shadow-lg group border-l-4 border border-[#b0b0b0] hover:border-[#888888]">
                 <a href="https://sd-uperfekterperfekt.netlify.app/" target="_blank" aria-label="View project: Uperfekt er perfekt">
                   <img
                     src="/other/uperfekt.webp"
@@ -586,7 +587,7 @@ import Button from "../components/Button.astro";
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
               <!-- Three medium items -->
 
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <div class="relative overflow-hidden rounded-2xl shadow-lg group border-l-4 border border-[#b0b0b0] hover:border-[#888888]">
                 <a href="https://singleusesucks-plasticchange.netlify.app/" target="_blank" aria-label="View project: #SingleUseSucks">
                   <img src="/other/singleusesucks.png" alt="Screenshot of the assignment: #SingleUseSucks" class="w-full h-48 object-cover" />
                   <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
@@ -610,7 +611,7 @@ import Button from "../components/Button.astro";
                   </div>
                 </a>
               </div>
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <div class="relative overflow-hidden rounded-2xl shadow-lg group border-l-4 border border-[#b0b0b0] hover:border-[#888888]">
                 <a href="https://font-access.netlify.app/" target="_blank">
                   <img src="/other/access.webp" alt="Screenshot of the assignment: ACCESS" class="w-full h-48 object-cover" />
                   <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
@@ -632,7 +633,7 @@ import Button from "../components/Button.astro";
                   </div>
                 </a>
               </div>
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <div class="relative overflow-hidden rounded-2xl shadow-lg group border-l-4 border border-[#b0b0b0] hover:border-[#888888]">
                 <a href="https://srp-portfolio.netlify.app/" target="_blank" aria-label="View project: New portfolio-site">
                   <img src="/other/new_portfolio.webp" alt="Screenshot of the assignment: New portfolio-site" class="w-full h-48 object-cover" />
                   <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
@@ -654,7 +655,7 @@ import Button from "../components/Button.astro";
                   </div>
                 </a>
               </div>
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <div class="relative overflow-hidden rounded-2xl shadow-lg group border-l-4 border border-[#b0b0b0] hover:border-[#888888]">
                 <a href="https://hojskolendk002.netlify.app/" target="_blank" aria-label="View project: HÖJSKOLENDK">
                   <img src="/other/hojskolendk.webp" alt="Screenshot of the assignment: HÖJSKOLENDK" class="w-full h-48 object-cover" />
                   <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
@@ -686,7 +687,7 @@ import Button from "../components/Button.astro";
     <img src="/illustrations/ornament2.svg" alt="an ornament in the form of two different-sized lines" class="w-[400px]" />
   </div>
   <div id="contact-header" class="pt-12 md:pt-24 flex flex-col items-center mx-auto justify-center px-6 text-font-color z-[1]">
-    <h1 class="text-4xl md:text-5xl font-bold text-left pb-[30px] md:pt-[16px] pt-[20px]">LET'S TALK!</h1>
+    <h1 class="text-4xl md:text-5xl font-bold text-left pb-[30px] md:pt-[16px] pt-[20px] uppercase">Let's get in touch!</h1>
   </div>
   <div id="phone_mail" class="forms_container flex justify-center pt-8 md:pt-28">
     <section class="max-w-5xl mx-auto px-6">
@@ -694,21 +695,27 @@ import Button from "../components/Button.astro";
         <!-- Profile Picture -->
         <img
           class="w-[150px] h-[150px] md:w-[250px] md:h-[250px] object-cover rounded-full shadow-xl mb-8 md:mb-0 brightness-[108%] contrast-[85%]"
-          src="/other/pfp3.webp"
-          alt="profile picture"
+          src="/other/pfp.webp"
+          alt="A portrait of Sara"
         />
 
         <!-- Contact Info & Social Media -->
         <div class="md:ml-10 flex flex-col md:text-left text-center">
           <!-- Contact Information -->
           <div class="mb-8">
-            <h2 class="text-font-color font-bold md:text-3xl text-2xl pb-4">CONTACT INFORMATION</h2>
+            <h2 class="text-font-color font-bold md:text-3xl text-2xl pb-4 uppercase">Contact-information</h2>
             <p class="some1 text-font-color">
-              <b>Phone: </b><a href="tel:+4542428807" class="hover:text-hover-header transition duration-500 cursor-none">+45 42 42 88 07</a>
+              <b>Phone: </b><a
+                href="tel:+4542428807"
+                aria-label="Call Sara on +45 42 42 88 07"
+                class="hover:text-hover-header transition duration-500 cursor-none">+45 42 42 88 07</a
+              >
             </p>
             <p class="some1 text-font-color">
-              <b>Mail: </b><a href="mailto:sara.ringkow@gmail.com" class="hover:text-hover-header transition duration-300 cursor-none"
-                >sara.ringkow@gmail.com</a
+              <b>Mail: </b><a
+                href="mailto:sara.ringkow@gmail.com"
+                aria-label="Send an email to sara.ringkow@gmail.com"
+                class="hover:text-hover-header transition duration-300 cursor-none">sara.ringkow@gmail.com</a
               >
               <span class="text-main">/</span>
               <a href="mailto:sape0003@stud.kea.dk" class="hover:text-hover-header transition duration-500 cursor-none">sape0003@stud.kea.dk</a>
@@ -722,6 +729,7 @@ import Button from "../components/Button.astro";
               <a
                 class="group relative w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] transition-transform duration-300 transform hover:scale-105 cursor-none drop-shadow-md"
                 href="https://www.facebook.com/profile.php?id=61558070190613"
+                aria-label="View Sara's Facebook-profile"
                 target="_blank"
               >
                 <img
@@ -738,6 +746,7 @@ import Button from "../components/Button.astro";
               <a
                 class="mr-3 group relative w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] transition-transform duration-300 transform hover:scale-105 cursor-none drop-shadow-md"
                 href="https://www.instagram.com/srp_portfolio/"
+                aria-label="View Sara's Instagram-profile"
                 target="_blank"
               >
                 <img
@@ -754,6 +763,7 @@ import Button from "../components/Button.astro";
               <a
                 class="group relative w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] transition-transform duration-300 transform hover:scale-105 cursor-none drop-shadow-md"
                 href="https://www.linkedin.com/in/sara-ringkow-petersen-49830b264/"
+                aria-label="View Sara's LinkedIn-profile"
                 target="_blank"
               >
                 <img
@@ -775,10 +785,12 @@ import Button from "../components/Button.astro";
   </div>
 
   <div id="cv" class="flex flex-col items-center pb-20 md:pb-24 pt-20">
-    <h2 class="md:text-3xl text-2xl text-center pt-8 md:pt-12 md:pb-8 pb-4 text-font-color">
-      WANNA KNOW <br class="md:hidden block" /> MORE ABOUT ME?
+    <h2 class="md:text-3xl text-2xl text-center pt-8 md:pt-12 md:pb-8 pb-4 text-font-color uppercase">
+      Wanna <br class="md:hidden block" /> more about me?
     </h2>
-    <Button class="text-center transition duration-300 transform hover:scale-105">CHECK OUT MY PERSONAL CV HERE</Button>
+    <Button aria-label="Check out my resume" class="text-center transition duration-300 transform hover:scale-105 uppercase"
+      >Check out my resume here</Button
+    >
   </div>
 
   <script>
@@ -870,53 +882,6 @@ import Button from "../components/Button.astro";
     inView(elementmedanimation17, () => {
       elementmedanimation17.classList.add("animate__animated", "animate__fadeInLeft");
     });
-
-    // Custom cursor
-    (function () {
-      var mousePos;
-      var moved = false;
-
-      document.onmousemove = handleMouseMove;
-      setInterval(getMousePosition, 100);
-
-      function handleMouseMove(event) {
-        var eventDoc, doc, body;
-
-        moved = true;
-
-        event = event || window.event;
-        if (event.pageX == null && event.clientX != null) {
-          eventDoc = (event.target && event.target.ownerDocument) || document;
-          doc = eventDoc.documentElement;
-          body = eventDoc.body;
-
-          event.pageX =
-            event.clientX + ((doc && doc.scrollLeft) || (body && body.scrollLeft) || 0) - ((doc && doc.clientLeft) || (body && body.clientLeft) || 0);
-          event.pageY =
-            event.clientY + ((doc && doc.scrollTop) || (body && body.scrollTop) || 0) - ((doc && doc.clientTop) || (body && body.clientTop) || 0);
-        }
-
-        mousePos = {
-          x: event.pageX,
-          y: event.pageY,
-        };
-      }
-
-      function getMousePosition() {
-        var pos = mousePos;
-
-        if (!pos) {
-          // We haven't seen any movement yet
-        } else if (moved === true) {
-          // Use pos.x and pos.y
-          console.log("Pos:", pos.x, pos.y);
-          moved = false;
-          var cursor = document.querySelector("#cursor");
-          cursor.style.left = pos.x + "px";
-          cursor.style.top = pos.y + "px";
-        }
-      }
-    })();
   </script>
 
   <style>
