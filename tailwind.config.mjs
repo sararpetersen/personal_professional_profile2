@@ -8,7 +8,7 @@ export default {
         "font-color_dark": "#171717",
         "bg-color": "#171717",
         "bg-color_dark": "#2f2f2f",
-        "hover-header": "#D70000",
+        "hover-header": "#FF1F1F",
       },
     },
   },
