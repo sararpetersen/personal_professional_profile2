@@ -8,7 +8,7 @@ import "../styles/global.css";
       <!-- Added items-center -->
       <div id="logo" class="relative font-bold transition-opacity duration-300 ease-in-out group w-20 h-20">
         <!-- Fixed width and height -->
-        <a href="#top" class="relative inline-block w-full h-full cursor-none">
+        <a href="#top" class="relative inline-block w-full h-full">
           <!-- Default Logo -->
           <img
             src="/illustrations/logo.svg"
@@ -28,49 +28,55 @@ import "../styles/global.css";
         <ul class="flex flex-wrap -mb-px">
           <li class="some1 me-2">
             <a
+              aria-label="Go to about-section"
               href="#info"
-              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 cursor-none"
-              >WHO AM I?</a
+              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 uppercase focus:outline-none focus:ring-2 focus:ring-red-400"
+              >Who am I?</a
             >
           </li>
           <li class="some1 me-2">
             <a
+              aria-label="Go to section for languages and hobbies"
               href="#languages"
-              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 cursor-none"
-              aria-current="page">LANGUAGES & HOBBIES</a
+              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 uppercase focus:outline-none focus:ring-2 focus:ring-red-400"
+              aria-current="page">Languages & hobbies</a
             >
           </li>
 
           <li class="some1 me-2">
             <a
+              aria-label="Go to timeline-section"
               href="#timeline"
-              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 cursor-none"
-              aria-current="page">TIMELINE</a
+              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 uppercase focus:outline-none focus:ring-2 focus:ring-red-400"
+              aria-current="page">Timeline</a
             >
           </li>
           <li class="some1 me-2">
             <a
+              aria-label="Go to skills-section"
               href="#skills"
-              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 cursor-none"
-              >SKILLS</a
+              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 uppercase focus:outline-none focus:ring-2 focus:ring-red-400"
+              >Skills</a
             >
           </li>
           <li class="some1 me-2">
             <a
+              aria-label="Go to projects-section"
               href="#projects"
-              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 cursor-none"
-              >HIGHLIGHTED PROJECTS</a
+              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 uppercase focus:outline-none focus:ring-2 focus:ring-red-400"
+              >Highlighted projects</a
             >
           </li>
           <li class="some1 me-2">
             <a
-              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 cursor-none"
-              href="#contact-header">CONTACT</a
+              aria-label="Go to contact-section"
+              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 uppercase focus:outline-none focus:ring-2 focus:ring-red-400"
+              href="#contact-header">contact</a
             >
           </li>
         </ul>
       </div>
-      <button id="burgermenu" class="lg:hidden cursor-none" x-on:click="showmenu = ! showmenu">
+      <button id="burgermenu" aria-label="Open mobile-menu" class="lg:hidden" x-on:click="showmenu = ! showmenu">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -85,33 +91,43 @@ import "../styles/global.css";
     </div>
     <nav
       id="mobilmenu"
+      aria-label="Mobile-menu"
       class="flex flex-col content-center pt-4"
       x-show="showmenu"
       x-transition=""
       x-on:click="showmenu = false"
       x-on:click.outside="showmenu = false"
       style="display: none;"
+      x-cloak
     >
       <ul>
-        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500">
-          <a class="cursor-none" href="#info">WHO AM I?</a>
+        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500 uppercase">
+          <a aria-label="Go to about-section" class="focus:outline-none focus:ring-2 focus:ring-red-400" href="#info">Who am I?</a>
         </li>
-        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500">
-          <a class="cursor-none" href="#languages">LANGUAGES & HOBBIES</a>
+        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500 uppercase">
+          <a aria-label="Go to section for languages and hobbies" class="focus:outline-none focus:ring-2 focus:ring-red-400" href="#languages"
+            >Languages & hobbies</a
+          >
         </li>
-        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500">
-          <a class="cursor-none" href="#timeline">TIMELINE</a>
+        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500 uppercase">
+          <a aria-label="Go to timeline-section" class="focus:outline-none focus:ring-2 focus:ring-red-400" href="#timeline">Timeline</a>
         </li>
-        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500">
-          <a class="cursor-none" href="#skills">SKILLS</a>
+        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500 uppercase">
+          <a aria-label="Go to skills-section" class="focus:outline-none focus:ring-2 focus:ring-red-400" href="#skills">Skills</a>
         </li>
-        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500">
-          <a class="cursor-none" href="#projects">HIGHLIGHTED PROJECTS</a>
+        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500 uppercase">
+          <a aria-label="Go to projects-section" class="focus:outline-none focus:ring-2 focus:ring-red-400" href="#projects">Highlighted projects</a>
         </li>
-        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500">
-          <a class="cursor-none" href="#contact-header">CONTACT</a>
+        <li class="some1 text-center py-3 hover:text-hover-header transition duration-500 uppercase">
+          <a aria-label="Go to contact-section" class="focus:outline-none focus:ring-2 focus:ring-red-400" href="#contact-header">Contact</a>
         </li>
       </ul>
     </nav>
   </div>
 </header>
+
+<style>
+  [x-cloak] {
+    display: none !important;
+  }
+</style>
