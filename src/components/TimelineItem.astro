@@ -1,16 +1,21 @@
 ---
 interface Props {
+  category: "School" | "Work";
   period: string;
   titleLines: string[];
   description: string;
 }
 
-const { period, titleLines, description } = Astro.props;
+const { category, period, titleLines, description } = Astro.props;
+const categoryClass = `timeline-card-${category.toLowerCase()}`;
 ---
 
-<li class="timeline-card">
-  <time class="mb-2 block text-xl font-bold leading-none text-blue-300 md:text-2xl">{period}</time>
-  <h4 class="timeline-title text-xl font-regular text-pale-50 md:text-xl">
+<li class={`timeline-card ${categoryClass}`}>
+  <div class="timeline-card-meta">
+    <p class="timeline-period mb-1 block text-[11px] font-semibold uppercase tracking-widest">{period}</p>
+    <span class={`timeline-category timeline-category-${category.toLowerCase()}`}>{category}</span>
+  </div>
+  <h5 class="timeline-title mb-1 text-[15px] font-bold leading-snug">
     {
       titleLines.map((line, index) => (
         <>
@@ -20,6 +25,6 @@ const { period, titleLines, description } = Astro.props;
         </>
       ))
     }
-  </h4>
-  <p class="text-blue-100 text-sm md:text-base leading-relaxed pt-2">{description}</p>
+  </h5>
+  <p class="timeline-description pt-2 text-sm leading-relaxed">{description}</p>
 </li>

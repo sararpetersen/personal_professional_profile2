@@ -46,7 +46,7 @@
         </svg>
         <a
           href="mailto:sara.ringkow@gmail.com"
-          class="footer-contact-link text-pale-50 py-1 transition duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
+          class="footer-contact-link focus-token text-pale-50 py-1 transition duration-300 ease-in-out"
           aria-label="Send an email to 'sara.ringkow@gmail.com'">sara.ringkow@gmail.com</a
         >
       </div>
@@ -68,7 +68,7 @@
         </svg>
         <a
           href="tel:+4542428807"
-          class="footer-contact-link text-pale-50 py-1 transition duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
+          class="footer-contact-link focus-token text-pale-50 py-1 transition duration-300 ease-in-out"
           aria-label="Call '+45 42 42 88 07'">+45 42 42 88 07</a
         >
       </div>
@@ -77,22 +77,22 @@
 
   <!-- Bottom strip: copyright -->
   <div class="container mx-auto mt-8 pt-4 footer-rule">
-    <p class="text-xs text-left">&copy; 2026 Sara Ringkow Petersen. All rights reserved.</p>
+    <p class="text-xs text-left">&copy; 2026 · SRP Portfolio - Sara Ringkow Petersen. All rights reserved.</p>
   </div>
 </div>
 
 <style>
   .site-footer {
-    background: #0b1118;
-    border-top: 1px solid rgba(192, 215, 225, 0.14);
+    background: var(--dark-bg);
+    border-top: 1px solid rgba(123, 123, 123, 0.24);
   }
 
   .footer-rule {
-    border-top: 1px solid rgba(192, 215, 225, 0.14);
+    border-top: 1px solid rgba(123, 123, 123, 0.24);
   }
 
   .footer-rule p {
-    color: rgba(246, 243, 238, 0.58);
+    color: rgba(220, 214, 208, 0.64);
   }
 
   .footer-contact-link {
@@ -107,7 +107,7 @@
     bottom: 0;
     height: 2px;
     border-radius: 9999px;
-    background: #c0d7e1;
+    background: var(--brand-primary-soft);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.25s ease;
@@ -115,7 +115,7 @@
 
   .footer-contact-link:hover,
   .footer-contact-link:focus-visible {
-    color: #c0d7e1;
+    color: var(--brand-primary-soft);
   }
 
   .footer-contact-link:hover::after,

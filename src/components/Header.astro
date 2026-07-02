@@ -2,7 +2,7 @@
 
 ---
 
-<header id="header" class="fixed w-full p-4 md:px-16 z-10">
+<header id="header" class="fixed w-full p-4 md:px-16 z-10 bg-gray-800">
   <div x-data="{ showmenu: false }">
     <div id="navbar" class="flex flex-row justify-between items-center">
       <div id="logo">
@@ -18,13 +18,13 @@
           /></a
         >
       </div>
-      <nav id="desktopmenu" aria-label="Main navigation" class="hidden lg:block text-sm font-medium text-pale-50">
+      <nav id="desktopmenu" aria-label="Main navigation" class="hidden lg:block text-pale-50">
         <ul class="flex items-center gap-8">
-          <li><a href="#info" class="nav-link uppercase">Who am I?</a></li>
-          <li><a href="#timeline" class="nav-link uppercase">Timeline</a></li>
-          <li><a href="#skills" class="nav-link uppercase">Skills</a></li>
-          <li><a href="#projects" class="nav-link uppercase">Selected Cases</a></li>
-          <li><a href="#contact" class="nav-link uppercase">Contact</a></li>
+          <li><a href="#info" class="nav-link">Who am I?</a></li>
+          <li><a href="#timeline" class="nav-link">Timeline</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Selected Cases</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
       <button
@@ -43,7 +43,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="size-8 hover:text-blue-200 transition duration-300"
+          class="burger-icon size-8 transition duration-300"
         >
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
         </svg>
@@ -55,7 +55,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="size-8 hover:text-blue-200 transition duration-300"
+          class="burger-icon size-8 transition duration-300"
         >
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
@@ -73,20 +73,20 @@
       x-on:keydown.escape.window="showmenu = false"
     >
       <ul>
-        <li class="text-center py-3 border-b border-blue-200/20 transition duration-300">
-          <a href="#info" class="hover:text-blue-200 transition duration-300">WHO AM I?</a>
+        <li class="mobile-nav-item text-center py-3 transition duration-300">
+          <a href="#info" class="mobile-nav-link transition duration-300">Who am I?</a>
         </li>
-        <li class="text-center py-3 border-b border-blue-200/20 transition duration-300">
-          <a href="#timeline" class="hover:text-blue-200 transition duration-300">TIMELINE</a>
+        <li class="mobile-nav-item text-center py-3 transition duration-300">
+          <a href="#timeline" class="mobile-nav-link transition duration-300">Timeline</a>
         </li>
-        <li class="text-center py-3 border-b border-blue-200/20 transition duration-300">
-          <a href="#skills" class="hover:text-blue-200 transition duration-300">SKILLS</a>
+        <li class="mobile-nav-item text-center py-3 transition duration-300">
+          <a href="#skills" class="mobile-nav-link transition duration-300">Skills</a>
         </li>
-        <li class="text-center py-3 border-b border-blue-200/20 transition duration-300">
-          <a href="#projects" class="hover:text-blue-200 transition duration-300">MY PROJECTS</a>
+        <li class="mobile-nav-item text-center py-3 transition duration-300">
+          <a href="#projects" class="mobile-nav-link transition duration-300">Selected Cases</a>
         </li>
-        <li class="text-center py-3 border-b border-blue-200/20 transition duration-300">
-          <a href="#contact" class="hover:text-blue-200 transition duration-300">CONTACT</a>
+        <li class="mobile-nav-item text-center py-3 transition duration-300">
+          <a href="#contact" class="mobile-nav-link transition duration-300">Contact</a>
         </li>
       </ul>
     </nav>
@@ -110,7 +110,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #c0d7e1;
+    background-color: var(--brand-primary-soft);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease-in-out;
@@ -118,7 +118,7 @@
 
   .nav-link:hover,
   .nav-link:focus-visible {
-    color: #c0d7e1;
+    color: var(--brand-primary-soft);
   }
 
   .nav-link:hover::after,
@@ -127,19 +127,31 @@
     transform: scaleX(1);
   }
 
+  .burger-icon:hover,
+  .burger-icon:focus-visible,
+  .mobile-nav-link:hover,
+  .mobile-nav-link:focus-visible {
+    color: var(--brand-primary-soft);
+  }
+
+  .mobile-nav-item {
+    border-bottom: 1px solid color-mix(in srgb, var(--brand-primary-soft) 20%, transparent);
+  }
+
   /* Border-only header treatment for the dark background */
   #header {
-    background-color: rgba(16, 24, 32, 0.86);
+    background-color: var(--dark-bg);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(192, 215, 225, 0.12);
+    border-bottom: 1px solid rgba(123, 123, 123, 0.24);
     transition:
       background-color 0.3s ease,
       border-color 0.3s ease;
+    font-size: 16px;
   }
 
   #header.header-scrolled {
-    background-color: rgba(16, 24, 32, 0.96);
-    border-bottom-color: rgba(192, 215, 225, 0.24);
+    background-color: rgba(26, 26, 26, 0.96);
+    border-bottom-color: rgba(163, 163, 163, 0.34);
   }
 </style>
 

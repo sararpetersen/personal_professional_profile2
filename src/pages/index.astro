@@ -5,35 +5,43 @@ import Button from "../components/Button.astro";
 import CaseCard from "../components/CaseCard.astro";
 import TimelineItem from "../components/TimelineItem.astro";
 
-const timelineItems = [
+const educationTimelineItems: Array<{ category: "School" | "Work"; period: string; titleLines: string[]; description: string }> = [
   {
+    category: "School",
     period: "August 2019 - June 2021",
     titleLines: ["HF | Egedal Gymnasium & HF"],
-    description:
-      "Completed high school with a focus on art, social studies and psychology, which sparked my interest in creativity, people and communication.",
+    description: "Completed high school with a focus on art, social studies and psychology.",
   },
   {
+    category: "School",
     period: "August 2023 - June 2025",
     titleLines: ["Multimedia Design | Copenhagen School of", "Design and Technology (KEA)"],
     description: "Worked with UX/UI, digital design and coding, and gained hands-on experience with design tools, prototyping and web projects.",
   },
   {
+    category: "School",
+    period: "August 2025 - Present",
+    titleLines: ["Digital Concept Development | Academy of", "Technologies and Business (Zealand)"],
+    description: "Currently studying how to turn ideas into user-focused digital concepts, with a strong focus on strategic and behavioural design.",
+  },
+];
+
+const workTimelineItems: Array<{ category: "School" | "Work"; period: string; titleLines: string[]; description: string }> = [
+  {
+    category: "Work",
     period: "January 2025 - April 2025",
     titleLines: ["Junior Creative/Intern | Kadaver ApS"],
     description: "Worked on website redesigns, developed sitemaps and information architecture, and created maintenance documentation for clients.",
   },
   {
-    period: "Present",
-    titleLines: ["Digital Concept Development | Academy of", "Technologies and Business (Zealand)"],
-    description: "Currently studying how to turn ideas into user-focused digital concepts, with a strong focus on strategic and behavioural design.",
-  },
-  {
     period: "January 2026 - June 2026",
+    category: "Work",
     titleLines: ["Student Buddy | Academy of Technologies", "and Business (Zealand)"],
     description:
       "Supporting international students through onboarding, social and academic integration, and acting as a go-to contact for everyday questions.",
   },
   {
+    category: "Work",
     period: "May 2026 - October 2026",
     titleLines: ["Software Developer Intern | Folkæt"],
     description:
@@ -117,38 +125,54 @@ const caseStudies = [
 ];
 ---
 
-<MainLayout title="Sara Ringkow Petersen | Digital Resume">
+<MainLayout
+  title="SRP Portfolio | Personal Professional Profile"
+  description="Sara Ringkow Petersen's digital resume, showcasing her skills, experience, and selected cases from her studies."
+  ogtitle="Personal Professional Profile – SRP Portfolio"
+  ogdescription="Take a look at Sara Ringkow Petersen's personal professional profile – a digital resume, showcasing skills, experience, and selected cases from her studies."
+  ogimage="/other/hero_image.webp"
+>
   <!-- SECTION: Hero -->
   <div
-    class="hero-section top-content text-text-dark max-w-7xl mx-auto px-6 md:px-8 pb-20 pt-32 md:pb-28 md:pt-40 grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+    class="hero-section top-content text-pale-50 max-w-7xl mx-auto px-6 md:px-8 pb-20 pt-32 md:pb-28 md:pt-40 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
   >
     <div>
-      <h1 id="h1" class="title text-5xl md:text-8xl text-center md:text-left pb-12 uppercase">Sara Ringkow Petersen</h1>
-      <h2 id="h2" class="subtitle text-3xl md:text-5xl italic font-light text-center md:text-left tracking-wide text-text-secondary">
+      <h1 id="h1" class="hero-title-entrance title text-display-mobile md:text-display-desktop text-center md:text-left pb-12 uppercase text-pale-50">
+        Sara Ringkow Petersen
+      </h1>
+      <h2
+        id="h2"
+        class="hero-title-entrance subtitle text-h2-mobile md:text-h2-desktop italic font-light text-center md:text-left tracking-wide text-pale-50"
+      >
         Multimedia Designer & Concept Developer
       </h2>
     </div>
-    <div class="hero-image-wrap">
-      <img src="/other/hero_image.webp" alt="Sara Ringkow Petersen" class="hero-image" loading="eager" />
+    <div class="hero-image-entrance">
+      <div class="hero-image-wrap">
+        <img src="/other/hero_image.webp" alt="Sara Ringkow Petersen" class="hero-image" loading="eager" />
+      </div>
     </div>
   </div>
 
   <!-- SECTION: About -->
   <div class="main-content1 max-w-7xl mx-8 md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-30 md:pb-60">
-    <div id="info" class="left-content text-text-dark">
-      <h3 class="section-heading text-3xl md:text-4xl pb-4">Who am I?</h3>
-      <p class="text-lg leading-6 md:leading-9">
-        My name is Sara Ringkow Petersen, a Multimedia Designer and Concept Developer based in <span class="text-warm-accent font-bold"
-          >Copenhagen</span
-        >. I design and build accessible websites, interfaces, and concepts&mdash; focusing on structure, clarity, and the people who use them. I'm
-        currently interning at <span class="text-warm-accent font-bold">Folkæt</span>, alongside studying a top-up Bachelor's in Digital Concept
+    <div id="info" class="left-content text-pale-50">
+      <h3 class="section-heading text-h3-mobile md:text-h3-desktop pb-4">Who am I?</h3>
+      <p class="text-p-mobile md:text-p-desktop">
+        My name is Sara Ringkow Petersen, a Multimedia Designer and Concept Developer based in <span class="accent-text font-bold">Copenhagen</span>.
+        I design and build accessible websites, interfaces, and concepts&mdash; focusing on structure, clarity, and the people who use them. I'm
+        currently interning at <span class="accent-text font-bold">Folkæt</span>, alongside studying a top-up Bachelor's in Digital Concept
         Development.
-        <br /><br />I'm dedicated to creating <span class="text-warm-accent font-bold">accessible, user-friendly digital solutions</span> by blending my
-        technical skills in HTML, CSS, JavaScript, and frameworks like Astro and Tailwind with a creative approach. I'm experienced in design tools like
-        Figma and project management methods such as SCRUM and Trello. As someone late-diagnosed with <span class="text-warm-accent font-bold"
-          >autism and ADD</span
-        >, I know what it's like to use digital platforms that weren't built with you in mind&mdash; that perspective drives my commitment to
-        inclusive design, making digital platforms better for everyone, especially those with special needs.
+      </p>
+      <p class="text-p-mobile md:text-p-desktop mt-5">
+        I'm dedicated to creating <span class="accent-text font-bold">accessible, user-friendly digital solutions</span> by blending my technical skills
+        in HTML, CSS, JavaScript, and frameworks like Astro and Tailwind with a creative approach. I'm experienced in design tools like Figma and project
+        management methods such as SCRUM and Trello.
+      </p>
+      <p class="text-p-mobile md:text-p-desktop mt-5">
+        As someone late-diagnosed with <span class="accent-text font-bold">autism and ADD</span>, I know what it's like to use digital platforms that
+        weren't built with you in mind&mdash; that perspective drives my commitment to inclusive design, making digital platforms better for everyone,
+        especially those with special needs.
       </p>
     </div>
     <div id="pfp" class="right-content flex justify-center md:justify-center pt-10 md:pt-20 pb-32">
@@ -162,22 +186,32 @@ const caseStudies = [
 
   <!-- SECTION: Timeline -->
   <div id="timeline" class="timeline max-w-3xl mx-auto flex justify-center md:justify-center md:max-w-6xl pb-20 md:pb-60">
-    <div class="left-content text-text-dark">
-      <h3 class="section-heading text-3xl md:text-4xl text-left ml-4 pb-10 md:ml-0 md:pb-8">The highlights of my journey</h3>
+    <div class="left-content text-pale-50">
+      <h3 class="section-heading text-h3-mobile md:text-h3-desktop text-left ml-4 pb-10 md:ml-0 md:pb-8">The highlights of my journey</h3>
 
-      <ol class="timeline-grid">
-        {timelineItems.map((item) => <TimelineItem {...item} />)}
-      </ol>
+      <div class="timeline-columns">
+        <section class="timeline-column" aria-labelledby="timeline-school">
+          <h4 id="timeline-school" class="timeline-column-title">School</h4>
+          <ol class="timeline-grid">
+            {educationTimelineItems.map((item) => <TimelineItem {...item} />)}
+          </ol>
+        </section>
+
+        <section class="timeline-column" aria-labelledby="timeline-work">
+          <h4 id="timeline-work" class="timeline-column-title">Work</h4>
+          <ol class="timeline-grid">
+            {workTimelineItems.map((item) => <TimelineItem {...item} />)}
+          </ol>
+        </section>
+      </div>
     </div>
   </div>
 
   <!-- SECTION: Skills -->
   <div id="skills" class="skills max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-center mb-8">
     <div class="text-center md:text-left mb-8 md:mb-0 md:mr-8 pr-0 md:pr-12 pb-12">
-      <h3 class="section-heading text-3xl md:text-4xl pb-4 text-text-dark">Skills</h3>
-      <h4 class="text-xl text-text-secondary">
-        Hover or tap the different app-icons to <br />learn more about my competencies
-      </h4>
+      <h3 class="section-heading text-h3-mobile md:text-h3-desktop pb-4 text-pale-50">Skills</h3>
+      <h4 class="text-h4-mobile md:text-h4-desktop muted-text max-w-lg">Hover or tap the different app-icons to learn more about my competencies</h4>
     </div>
     <div class="icon-container">
       <!-- Skill icon row 1 -->
@@ -185,7 +219,7 @@ const caseStudies = [
         <div class="icon-wrapper top-tooltip">
           <img
             id="figma"
-            class="max-w-full rounded-lg w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:transition duration-300 hover:opacity-70"
+            class="max-w-full w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] transition duration-300"
             src="/other/figma-logo.webp"
             alt="Logo of Figma"
           />
@@ -194,47 +228,45 @@ const caseStudies = [
             <ol>
               <li>1. Styles</li>
               <li>2. Components</li>
-              <li>3. Auto-layout</li>
-              <li>4. Design-systems</li>
-              <li>5. Wireframes</li>
-              <li>6. Prototypes</li>
+              <li>3. Design-systems</li>
+              <li>4. Wireframes</li>
+              <li>5. Prototypes</li>
             </ol>
           </div>
         </div>
         <div class="icon-wrapper top-tooltip">
           <img
             id="vscode"
-            class="max-w-full rounded-lg w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:transition duration-300 hover:opacity-70"
+            class="max-w-full w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] transition duration-300"
             src="/other/vs_code.webp"
-            alt="Logo of VS Code"
+            alt="Logo of Visual Studio Code"
           />
           <div class="tooltip absolute rounded p-2 mt-1">
-            <p class="font-bold">VS Code:</p>
+            <p class="font-bold">Visual Studio Code:</p>
             <ol>
               <li>1. HTML</li>
               <li>2. CSS</li>
               <li>3. JavaScript</li>
               <li>4. Astro</li>
               <li>5. Tailwind</li>
-              <li>6. Git & GitHub</li>
             </ol>
           </div>
         </div>
         <div class="icon-wrapper top-tooltip">
           <img
-            id="microsoft"
-            class="max-w-full rounded-lg w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:transition duration-300 hover:opacity-70"
-            src="/other/mc_365.webp"
-            alt="Logo of Microsoft Office 365"
+            id="canva"
+            class="max-w-full w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] transition duration-300"
+            src="/other/canva-logo.webp"
+            alt="Logo of Canva"
           />
           <div class="tooltip absolute rounded p-2 mt-1">
-            <p class="font-bold">Microsoft Office 365:</p>
+            <p class="font-bold">Canva:</p>
             <ol>
-              <li>1. Word</li>
-              <li>2. PowerPoint</li>
-              <li>3. Teams</li>
-              <li>4. Outlook</li>
-              <li>5. OneDrive</li>
+              <li>1. Visual content</li>
+              <li>2. Presentations</li>
+              <li>3. Social media graphics</li>
+              <li>4. Templates</li>
+              <li>5. Brand assets</li>
             </ol>
           </div>
         </div>
@@ -245,9 +277,9 @@ const caseStudies = [
         <div class="icon-wrapper">
           <img
             id="creativecloud"
-            class="max-w-full rounded-lg w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:transition duration-300 hover:opacity-70"
+            class="max-w-full w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] transition duration-300"
             src="/other/adobe_logo.webp"
-            alt="Logo of Creative Cloud"
+            alt="Logo of Adobe Creative Cloud"
           />
           <div class="tooltip absolute rounded p-2 mt-1">
             <p class="font-bold">Creative Cloud:</p>
@@ -267,7 +299,7 @@ const caseStudies = [
           >
             <img
               id="claude"
-              class="w-full h-full hover:transition duration-300 hover:opacity-70"
+              class="w-full h-full transition duration-300"
               src="/other/claude-logo.svg"
               alt="Logo of Claude AI"
             />
@@ -290,7 +322,7 @@ const caseStudies = [
   <div id="projects" class="projects_container pt-20 md:pt-60">
     <div class="flex justify-center">
       <div class="container mx-auto px-4 py-4">
-        <h3 class="section-heading text-3xl md:text-4xl text-left mb-8 text-text-dark">Selected cases</h3>
+        <h3 class="section-heading text-h3-mobile md:text-h3-desktop text-left mb-8 text-pale-50">Selected cases</h3>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {
@@ -308,14 +340,14 @@ const caseStudies = [
   <!-- SECTION: Social Links -->
   <div class="some">
     <div class="flex flex-col items-center pt-20 md:pt-60">
-      <h3 class="section-heading text-3xl md:text-4xl text-center pb-4 md:pb-8 text-text-dark z-[1]">Find me on social media</h3>
+      <h3 class="section-heading text-h3-mobile md:text-h3-desktop text-center pb-4 md:pb-8 text-pale-50 z-[1]">Find me on social media</h3>
       <div class="flex justify-center space-x-5">
         <a
           href="https://www.linkedin.com/in/sara-ringkow-petersen-49830b264/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Go to my LinkedIn profile"
-          class="social-link flex items-center justify-center w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] text-text-dark"
+          class="social-link flex items-center justify-center w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] text-pale-50"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -336,7 +368,7 @@ const caseStudies = [
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Go to my GitHub page"
-          class="social-link flex items-center justify-center w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] text-text-dark"
+          class="social-link flex items-center justify-center w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] text-pale-50"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -355,7 +387,7 @@ const caseStudies = [
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Go to my Instagram profile"
-          class="social-link flex items-center justify-center w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] text-text-dark"
+          class="social-link flex items-center justify-center w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] text-pale-50"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -383,22 +415,16 @@ const caseStudies = [
           alt="Portrait of Sara Ringkow Petersen"
         />
         <div class="md:ml-4 text-center md:text-left pl-0 md:pl-20">
-          <h3 class="section-heading text-text-dark text-3xl md:text-4xl pb-4 md:pb-8">Let's get in touch!</h3>
-          <p class="text-lg">
+          <h3 class="section-heading text-pale-50 text-h3-mobile md:text-h3-desktop pb-4 md:pb-8">Let's get in touch!</h3>
+          <p class="text-p-mobile md:text-p-desktop">
             <strong>Email:</strong>
-            <a
-              href="mailto:sara.ringkow@gmail.com"
-              class="contact-link py-1 transition duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
+            <a href="mailto:sara.ringkow@gmail.com" class="contact-link focus-token py-1 transition duration-300 ease-in-out"
               >sara.ringkow@gmail.com</a
             >
           </p>
-          <p class="text-lg">
+          <p class="text-p-mobile md:text-p-desktop">
             <strong>Phone:</strong>
-            <a
-              href="tel:+4542428807"
-              class="contact-link py-1 transition duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
-              >+45 42428807</a
-            >
+            <a href="tel:+4542428807" class="contact-link focus-token py-1 transition duration-300 ease-in-out">+45 42428807</a>
           </p>
         </div>
       </div>
@@ -407,8 +433,8 @@ const caseStudies = [
 
   <!-- SECTION: CV Downloads -->
   <div id="cv" class="cv flex flex-col items-center pb-12 md:pb-40">
-    <h3 class="section-heading text-2xl md:text-4xl text-center pb-4 md:pb-8 text-text-dark">Wanna know more about me?</h3>
-    <div class="flex flex-wrap justify-center gap-4">
+    <h3 class="section-heading text-h3-mobile md:text-h3-desktop text-center pb-4 md:pb-8 text-pale-50">Wanna know more about me?</h3>
+    <div class="button-container flex flex-wrap justify-center gap-4">
       <Button href="/pdfs/CV_sararpetersen_(DA).pdf">MIT CV (DK)</Button>
       <Button href="/pdfs/CV_sararpetersen_(EN).pdf">MY RESUME (EN)</Button>
     </div>
@@ -423,94 +449,227 @@ const caseStudies = [
       const isMobileViewport = window.matchMedia("(max-width: 767px)").matches;
 
       if (!reduceMotion) {
-        // Single-fire fadeInUp per element, in the order registered, each delayed a little
-        // further than the last — same registerInView pattern the portfolio uses.
-        const registerInView = (selector: string, delayMs = 0) => {
-          const element = document.querySelector(selector);
-          if (!element) return;
-
+        const heroTitles = document.querySelectorAll<HTMLElement>(".hero-title-entrance");
+        heroTitles.forEach((title, index) => {
           let stop = () => {};
-          stop = inView(element, () => {
-            const normalizedDelay = isMobileViewport ? Math.min(delayMs, 220) : delayMs;
-            (element as HTMLElement).classList.add("animate__animated", "animate__fadeInUp");
-            (element as HTMLElement).style.animationDelay = `${normalizedDelay}ms`;
-            (element as HTMLElement).style.animationDuration = isMobileViewport ? "1s" : "1.6s";
-            (element as HTMLElement).style.animationFillMode = "both";
+          stop = inView(title, () => {
+            const delayMs = 180 + index * 260;
+            title.classList.add("animate__animated", "animate__fadeInUp");
+            title.style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 320) : delayMs}ms`;
+            title.style.animationDuration = isMobileViewport ? "1.25s" : "1.85s";
+            title.style.animationFillMode = "both";
             stop();
           });
-        };
-
-        [
-          "#h1",
-          "#h2",
-          "#info .section-heading",
-          "#info p",
-          "#pfp img",
-          "#timeline .section-heading",
-          "#skills .section-heading",
-          "#skills h4",
-          "#projects .section-heading",
-          ".some h3",
-          "#contact .section-heading",
-          "#contact img",
-          "#cv .section-heading",
-          "#cv .flex",
-        ].forEach((selector, index) => {
-          registerInView(selector, index * 60);
         });
 
-        // The hero image has its own ambient drift animation (see .hero-image-wrap.drift
-        // in global.css), so it's kept out of registerInView on purpose: adding
-        // animate__fadeInUp and an infinite animation to the same element at once means
-        // one silently overrides the other on the shared `animation` property. Play the
-        // entrance first, then only start the drift loop once it's actually finished.
+        const heroEntrance = document.querySelector<HTMLElement>(".hero-image-entrance");
         const heroImage = document.querySelector<HTMLElement>(".hero-image-wrap");
-        if (heroImage) {
-          let stopHero = () => {};
-          stopHero = inView(heroImage, () => {
-            heroImage.classList.add("animate__animated", "animate__fadeInUp");
-            heroImage.style.animationDuration = isMobileViewport ? "1s" : "1.8s";
-            heroImage.style.animationFillMode = "both";
-            heroImage.addEventListener(
-              "animationend",
-              () => {
-                // Swapping animation-name from fadeInUp to heroImageDrift drops fadeInUp's
-                // fill-mode hold on opacity (heroImageDrift never touches opacity at all), so
-                // without this the element falls straight back to the has-js opacity: 0
-                // pre-hide rule the instant drift takes over. Lock it in explicitly instead —
-                // an inline style beats that stylesheet rule regardless of which animation,
-                // if any, is currently running.
-                heroImage.style.opacity = "1";
-                heroImage.classList.add("drift");
-              },
-              { once: true },
-            );
-            stopHero();
+        if (heroEntrance && heroImage) {
+          let stopHeroImage = () => {};
+          stopHeroImage = inView(heroEntrance, () => {
+            heroEntrance.classList.add("animate__animated", "animate__fadeInUp");
+            heroEntrance.style.animationDelay = isMobileViewport ? "260ms" : "420ms";
+            heroEntrance.style.animationDuration = isMobileViewport ? "1.25s" : "1.75s";
+            heroEntrance.style.animationFillMode = "both";
+            heroEntrance.addEventListener("animationend", () => heroImage.classList.add("drift"), { once: true });
+            stopHeroImage();
           });
         }
 
-        // forEach groups: a handful of repeated items per section, each a little more
-        // delayed than the last, on a shorter duration so a long list doesn't take forever
-        // to finish revealing itself.
-        const registerGroup = (elements: NodeListOf<Element>, delayStep: number, durationDesktop: string, durationMobile: string) => {
-          elements.forEach((el, index) => {
-            let stop = () => {};
-            stop = inView(el, () => {
-              const delayMs = index * delayStep;
-              (el as HTMLElement).classList.add("animate__animated", "animate__fadeInUp");
-              (el as HTMLElement).style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
-              (el as HTMLElement).style.animationDuration = isMobileViewport ? durationMobile : durationDesktop;
-              (el as HTMLElement).style.animationFillMode = "both";
-              stop();
-            });
+        const aboutHeadings = document.querySelectorAll<HTMLElement>("#info .section-heading");
+        aboutHeadings.forEach((heading, index) => {
+          let stop = () => {};
+          stop = inView(heading, () => {
+            const delayMs = index * 0;
+            heading.classList.add("animate__animated", "animate__fadeInUp");
+            heading.style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
+            heading.style.animationDuration = isMobileViewport ? "1s" : "1.4s";
+            heading.style.animationFillMode = "both";
+            stop();
           });
-        };
+        });
 
-        registerGroup(document.querySelectorAll(".timeline-card"), 60, "1.4s", "0.95s");
-        registerGroup(document.querySelectorAll(".icon-wrapper"), 60, "1.3s", "0.95s");
-        registerGroup(document.querySelectorAll(".case-stagger"), 80, "1.3s", "0.95s");
-        registerGroup(document.querySelectorAll(".some a"), 60, "1.3s", "0.95s");
-        registerGroup(document.querySelectorAll("#contact p"), 60, "1.3s", "0.95s");
+        const aboutParagraphs = document.querySelectorAll<HTMLElement>("#info p");
+        aboutParagraphs.forEach((paragraph, index) => {
+          let stop = () => {};
+          stop = inView(paragraph, () => {
+            const delayMs = index * 110;
+            paragraph.classList.add("animate__animated", "animate__fadeInUp");
+            paragraph.style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
+            paragraph.style.animationDuration = isMobileViewport ? "1s" : "1.4s";
+            paragraph.style.animationFillMode = "both";
+            stop();
+          });
+        });
+
+        const aboutImages = document.querySelectorAll<HTMLElement>("#pfp img");
+        aboutImages.forEach((image, index) => {
+          let stop = () => {};
+          stop = inView(image, () => {
+            const delayMs = index * 0;
+            image.classList.add("animate__animated", "animate__fadeInUp");
+            image.style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
+            image.style.animationDuration = isMobileViewport ? "1.05s" : "1.45s";
+            image.style.animationFillMode = "both";
+            stop();
+          });
+        });
+
+        const timelineHeadings = document.querySelectorAll<HTMLElement>("#timeline .section-heading");
+        timelineHeadings.forEach((heading, index) => {
+          let stop = () => {};
+          stop = inView(heading, () => {
+            const delayMs = index * 0;
+            heading.classList.add("animate__animated", "animate__fadeInUp");
+            heading.style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
+            heading.style.animationDuration = isMobileViewport ? "1s" : "1.4s";
+            heading.style.animationFillMode = "both";
+            stop();
+          });
+        });
+
+        const timelineColumnTitles = document.querySelectorAll<HTMLElement>(".timeline-column-title");
+        timelineColumnTitles.forEach((title, index) => {
+          let stop = () => {};
+          stop = inView(title, () => {
+            const delayMs = index * 100;
+            title.classList.add("animate__animated", "animate__fadeInUp");
+            title.style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
+            title.style.animationDuration = isMobileViewport ? "0.95s" : "1.25s";
+            title.style.animationFillMode = "both";
+            stop();
+          });
+        });
+
+        const timelineCards = document.querySelectorAll<HTMLElement>(".timeline-card");
+        timelineCards.forEach((card, index) => {
+          let stop = () => {};
+          stop = inView(card, () => {
+            const delayMs = index * 90;
+            card.classList.add("animate__animated", "animate__fadeInUp");
+            card.style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
+            card.style.animationDuration = isMobileViewport ? "1s" : "1.45s";
+            card.style.animationFillMode = "both";
+            stop();
+          });
+        });
+
+        const skillTextItems = document.querySelectorAll<HTMLElement>("#skills .section-heading, #skills h4");
+        skillTextItems.forEach((item, index) => {
+          let stop = () => {};
+          stop = inView(item, () => {
+            const delayMs = index * 90;
+            item.classList.add("animate__animated", "animate__fadeInUp");
+            item.style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
+            item.style.animationDuration = isMobileViewport ? "1s" : "1.35s";
+            item.style.animationFillMode = "both";
+            stop();
+          });
+        });
+
+        const skillIcons = document.querySelectorAll<HTMLElement>(".icon-wrapper");
+        skillIcons.forEach((icon, index) => {
+          let stop = () => {};
+          stop = inView(icon, () => {
+            const delayMs = index * 60;
+            icon.classList.add("animate__animated", "animate__fadeInUp");
+            icon.style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
+            icon.style.animationDuration = isMobileViewport ? "0.95s" : "1.3s";
+            icon.style.animationFillMode = "both";
+            stop();
+          });
+        });
+
+        const projectHeadings = document.querySelectorAll<HTMLElement>("#projects .section-heading");
+        projectHeadings.forEach((heading, index) => {
+          let stop = () => {};
+          stop = inView(heading, () => {
+            const delayMs = index * 0;
+            heading.classList.add("animate__animated", "animate__fadeInUp");
+            heading.style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
+            heading.style.animationDuration = isMobileViewport ? "1s" : "1.35s";
+            heading.style.animationFillMode = "both";
+            stop();
+          });
+        });
+
+        const caseCards = document.querySelectorAll<HTMLElement>(".case-stagger");
+        caseCards.forEach((card, index) => {
+          let stop = () => {};
+          stop = inView(card, () => {
+            const delayMs = index * 80;
+            card.classList.add("animate__animated", "animate__fadeInUp");
+            card.style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
+            card.style.animationDuration = isMobileViewport ? "0.95s" : "1.3s";
+            card.style.animationFillMode = "both";
+            stop();
+          });
+        });
+
+        const socialHeadings = document.querySelectorAll<HTMLElement>(".some h3");
+        socialHeadings.forEach((heading, index) => {
+          let stop = () => {};
+          stop = inView(heading, () => {
+            const delayMs = index * 0;
+            heading.classList.add("animate__animated", "animate__fadeInUp");
+            heading.style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
+            heading.style.animationDuration = isMobileViewport ? "1s" : "1.35s";
+            heading.style.animationFillMode = "both";
+            stop();
+          });
+        });
+
+        const socialLinks = document.querySelectorAll<HTMLElement>(".some a");
+        socialLinks.forEach((link, index) => {
+          let stop = () => {};
+          stop = inView(link, () => {
+            const delayMs = index * 60;
+            link.classList.add("animate__animated", "animate__fadeInUp");
+            link.style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
+            link.style.animationDuration = isMobileViewport ? "0.95s" : "1.3s";
+            link.style.animationFillMode = "both";
+            stop();
+          });
+        });
+
+        const contactItems = document.querySelectorAll<HTMLElement>("#contact img, #contact .section-heading, #contact p");
+        contactItems.forEach((item, index) => {
+          let stop = () => {};
+          stop = inView(item, () => {
+            const delayMs = index * 90;
+            item.classList.add("animate__animated", "animate__fadeInUp");
+            item.style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
+            item.style.animationDuration = isMobileViewport ? "1s" : "1.35s";
+            item.style.animationFillMode = "both";
+            stop();
+          });
+        });
+
+        const cvHeadings = document.querySelectorAll<HTMLElement>("#cv .section-heading");
+        cvHeadings.forEach((heading, index) => {
+          let stop = () => {};
+          stop = inView(heading, () => {
+            const delayMs = index * 0;
+            heading.classList.add("animate__animated", "animate__fadeInUp");
+            heading.style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
+            heading.style.animationDuration = isMobileViewport ? "1s" : "1.35s";
+            heading.style.animationFillMode = "both";
+            stop();
+          });
+        });
+
+        const cvButtons = document.querySelectorAll<HTMLElement>("#cv .button-container a");
+        cvButtons.forEach((button, index) => {
+          let stop = () => {};
+          stop = inView(button, () => {
+            const delayMs = index * 80;
+            button.classList.add("animate__animated", "animate__fadeInUp");
+            button.style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
+            button.style.animationDuration = isMobileViewport ? "0.95s" : "1.3s";
+            button.style.animationFillMode = "both";
+            stop();
+          });
+        });
       }
 
       const iconWrappers = document.querySelectorAll(".icon-wrapper");
@@ -541,7 +700,7 @@ const caseStudies = [
       bottom: 0;
       height: 2px;
       border-radius: 9999px;
-      background: #c0d7e1;
+      background: var(--brand-primary-soft);
       transform: scaleX(0);
       transform-origin: right;
       transition: transform 0.25s ease;
@@ -549,7 +708,7 @@ const caseStudies = [
 
     .contact-link:hover,
     .contact-link:focus-visible {
-      color: #c0d7e1;
+      color: var(--brand-primary-soft);
     }
 
     .contact-link:hover::after,

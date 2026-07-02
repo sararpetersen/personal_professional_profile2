@@ -50,7 +50,7 @@ export default {
           300: "#f3b9ae",
           400: "#e99180",
           500: "#dc6d57",
-          600: "#bb4a34", // legacy warm accent
+          600: "#bb4a34", // main vermilion
           700: "#a8412d",
           800: "#8b3929",
           900: "#743428",

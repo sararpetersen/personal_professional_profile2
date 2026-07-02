@@ -2,12 +2,7 @@
 
 ---
 
-<button
-  id="a11y-fab"
-  aria-label="Open accessibility settings"
-  aria-expanded="false"
-  aria-controls="a11y-panel"
->
+<button id="a11y-fab" aria-label="Open accessibility settings" aria-expanded="false" aria-controls="a11y-panel">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="28" height="28" fill="currentColor" aria-hidden="true">
     <path
       d="M64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM225.5 233.9C213.3 228.7 199.2 234.3 194 246.5C188.8 258.7 194.4 272.8 206.6 278L218.5 283.1C235.8 290.5 253.7 296 272.1 299.4L272.1 349.5C272.1 353.8 271.4 358.1 270 362.1L241.3 448.2C237.1 460.8 243.9 474.4 256.5 478.6C269.1 482.8 282.7 476 286.9 463.4L311.3 390.2C312.6 386.4 316.1 383.8 320.1 383.8C324.1 383.8 327.7 386.4 328.9 390.2L353.3 463.4C357.5 476 371.1 482.8 383.7 478.6C396.3 474.4 403 461 398.8 448.4L370.1 362.3C368.7 358.2 368 354 368 349.7L368 299.6C386.4 296.1 404.3 290.7 421.6 283.3L433.5 278.2C445.7 273 451.3 258.9 446.1 246.7C440.9 234.5 426.8 228.9 414.6 234.1L402.7 239C376.6 250.2 348.5 256 320 256C291.5 256 263.5 250.2 237.3 239L225.4 233.9zM320 224C342.1 224 360 206.1 360 184C360 161.9 342.1 144 320 144C297.9 144 280 161.9 280 184C280 206.1 297.9 224 320 224z"
@@ -47,20 +42,6 @@
         <button id="a11y-text-large" class="a11y-choice" aria-pressed="false">
           <span class="a11y-size-preview text-lg font-bold">A</span>
           <span>Large</span>
-        </button>
-      </div>
-    </section>
-
-    <section class="a11y-section" aria-labelledby="a11y-font-label">
-      <h3 id="a11y-font-label" class="a11y-section-label">Reading Font</h3>
-      <div class="a11y-choice-group">
-        <button id="a11y-font-default" class="a11y-choice" aria-pressed="true">
-          <span class="a11y-size-preview font-garamond">Aa</span>
-          <span>Default</span>
-        </button>
-        <button id="a11y-font-readable" class="a11y-choice" aria-pressed="false">
-          <span class="a11y-size-preview font-sans">Aa</span>
-          <span>Readable</span>
         </button>
       </div>
     </section>
@@ -112,10 +93,10 @@
     justify-content: center;
     width: 3.35rem;
     height: 3.35rem;
-    border: 1px solid rgba(192, 215, 225, 0.34);
     border-radius: 9999px;
-    background: #c0d7e1;
-    color: #101820;
+    background: #6b6b6b;
+    color: #f0f0f0;
+    border: 1px solid #333333;
     box-shadow: 0 10px 26px rgba(0, 0, 0, 0.34);
     transition:
       background-color 0.2s ease,
@@ -125,8 +106,8 @@
 
   #a11y-fab:hover,
   #a11y-fab:focus-visible {
-    background: #95bccb;
-    border-color: #95bccb;
+    background: #4b4b4b;
+    border-color: #333333;
     transform: translateY(-2px);
   }
 
@@ -135,7 +116,7 @@
   .a11y-choice:focus-visible,
   .a11y-switch:focus-visible,
   .a11y-reset-btn:focus-visible {
-    outline: 2px solid #f3b9ae;
+    outline: 2px solid var(--vermilion);
     outline-offset: 3px;
   }
 
@@ -164,8 +145,8 @@
     width: min(21rem, 100vw);
     height: 100%;
     overflow-y: auto;
-    background: #101820;
-    border-left: 1px solid rgba(192, 215, 225, 0.22);
+    background: var(--dark-surface);
+    border-left: 1px solid rgba(123, 123, 123, 0.3);
     box-shadow: -12px 0 34px rgba(0, 0, 0, 0.45);
     transform: translateX(100%);
     transition: transform 0.28s ease;
@@ -184,13 +165,13 @@
     justify-content: space-between;
     gap: 1rem;
     padding: 1.1rem 1.25rem;
-    background: #101820;
-    border-bottom: 1px solid rgba(192, 215, 225, 0.18);
+    background: var(--dark-surface);
+    border-bottom: 1px solid rgba(123, 123, 123, 0.3);
   }
 
   #a11y-panel-title {
     margin: 0;
-    color: #fffdfc;
+    color: var(--text-on-dark);
     font-family: "Cormorant Garamond", serif;
     font-size: 1.65rem;
     font-style: italic;
@@ -203,17 +184,17 @@
     justify-content: center;
     width: 2rem;
     height: 2rem;
-    border: 1px solid rgba(192, 215, 225, 0.25);
+    border: 1px solid rgba(123, 123, 123, 0.36);
     border-radius: 9999px;
     background: transparent;
-    color: #fffdfc;
+    color: var(--text-on-dark);
     transition:
       background-color 0.2s ease,
       transform 0.2s ease;
   }
 
   #a11y-close:hover {
-    background: rgba(192, 215, 225, 0.16);
+    background: rgba(163, 163, 163, 0.16);
     transform: translateY(-1px);
   }
 
@@ -233,7 +214,7 @@
 
   .a11y-section-label {
     margin: 0;
-    color: #95bccb;
+    color: var(--brand-primary-strong);
     font-family: "Almarai", sans-serif;
     font-size: 0.72rem;
     font-weight: 700;
@@ -250,10 +231,10 @@
   .a11y-choice,
   .a11y-toggle-row,
   .a11y-reset-btn {
-    border: 1px solid rgba(192, 215, 225, 0.22);
+    border: 1px solid rgba(123, 123, 123, 0.34);
     border-radius: 0.75rem;
-    background: rgba(22, 34, 48, 0.82);
-    color: #fffdfc;
+    background: rgba(18, 18, 18, 0.82);
+    color: var(--text-on-dark);
   }
 
   .a11y-choice {
@@ -273,14 +254,14 @@
   }
 
   .a11y-choice:hover {
-    border-color: #95bccb;
+    border-color: var(--brand-primary-strong);
     transform: translateY(-1px);
   }
 
   .a11y-choice[aria-pressed="true"] {
-    background: #c0d7e1;
-    border-color: #c0d7e1;
-    color: #101820;
+    background: var(--brand-primary-soft);
+    border-color: var(--brand-primary-soft);
+    color: var(--dark-surface);
     font-weight: 700;
   }
 
@@ -303,13 +284,13 @@
   }
 
   .a11y-toggle-name {
-    color: #fffdfc;
+    color: var(--text-on-dark);
     font-size: 0.88rem;
     font-weight: 700;
   }
 
   .a11y-toggle-desc {
-    color: #c7d0da;
+    color: var(--text-muted-on-dark);
     font-size: 0.74rem;
     line-height: 1.35;
   }
@@ -326,7 +307,7 @@
   }
 
   .a11y-switch[aria-checked="true"] {
-    background: #c0d7e1;
+    background: var(--brand-primary-soft);
   }
 
   .a11y-switch-thumb {
@@ -336,14 +317,14 @@
     width: 1.08rem;
     height: 1.08rem;
     border-radius: 9999px;
-    background: #fffdfc;
+    background: var(--text-on-dark);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
     transition: transform 0.2s ease;
   }
 
   .a11y-switch[aria-checked="true"] .a11y-switch-thumb {
     transform: translateX(1.28rem);
-    background: #101820;
+    background: var(--dark-surface);
   }
 
   .a11y-reset-btn {
@@ -357,14 +338,14 @@
   }
 
   .a11y-reset-btn:hover {
-    border-color: #95bccb;
-    background: rgba(192, 215, 225, 0.12);
+    border-color: var(--brand-primary-strong);
+    background: rgba(163, 163, 163, 0.12);
     transform: translateY(-1px);
   }
 
   .a11y-note {
     margin: 0;
-    color: #95bccb;
+    color: var(--brand-primary-strong);
     font-size: 0.75rem;
     text-align: center;
   }
@@ -407,8 +388,8 @@
   const syncUI = () => {
     document.getElementById("a11y-text-normal")?.setAttribute("aria-pressed", String(!root.classList.contains("text-large")));
     document.getElementById("a11y-text-large")?.setAttribute("aria-pressed", String(root.classList.contains("text-large")));
-    document.getElementById("a11y-font-default")?.setAttribute("aria-pressed", String(!root.classList.contains("readable-font")));
-    document.getElementById("a11y-font-readable")?.setAttribute("aria-pressed", String(root.classList.contains("readable-font")));
+    root.classList.remove("readable-font");
+    localStorage.removeItem("readableFontEnabled");
 
     settings.forEach(({ id, className, target, attr }) => {
       document.getElementById(id)?.setAttribute(attr, String(target.classList.contains(className)));
@@ -468,18 +449,6 @@
     syncUI();
   });
 
-  document.getElementById("a11y-font-default")?.addEventListener("click", () => {
-    root.classList.remove("readable-font");
-    localStorage.setItem("readableFontEnabled", "false");
-    syncUI();
-  });
-
-  document.getElementById("a11y-font-readable")?.addEventListener("click", () => {
-    root.classList.add("readable-font");
-    localStorage.setItem("readableFontEnabled", "true");
-    syncUI();
-  });
-
   settings.forEach(({ id, className, key, target }) => {
     document.getElementById(id)?.addEventListener("click", () => {
       const enabled = target.classList.toggle(className);
@@ -491,7 +460,9 @@
   document.getElementById("a11y-reset")?.addEventListener("click", () => {
     root.classList.remove("text-large", "readable-font");
     body.classList.remove("reduce-motion", "calm-mode", "focus-mode");
-    ["largeTextEnabled", "readableFontEnabled", "reduceMotionEnabled", "calmModeEnabled", "focusModeEnabled"].forEach((key) => localStorage.removeItem(key));
+    ["largeTextEnabled", "readableFontEnabled", "reduceMotionEnabled", "calmModeEnabled", "focusModeEnabled"].forEach((key) =>
+      localStorage.removeItem(key),
+    );
     syncUI();
   });
 

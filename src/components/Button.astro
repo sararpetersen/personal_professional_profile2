@@ -10,7 +10,7 @@ const { href = "/pdfs/CV_sararpetersen_(DA).pdf" } = Astro.props as Props;
   href={href}
   target="_blank"
   rel="noopener noreferrer"
-  class="btn-primary relative z-[1] text-blue-950 bg-blue-200 border-2 border-blue-200 hover:bg-blue-300 hover:border-blue-300 transition-colors duration-300 font-bold uppercase rounded-s text-sm md:text-base tracking-wide px-6 py-3 md:px-8 md:py-4 text-center inline-flex items-center justify-center me-2 mb-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-vermilion-300 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-950"
+  class="btn-primary relative z-[1] transition-colors duration-300 font-bold uppercase rounded-s tracking-wide px-6 py-3 md:px-8 md:py-4 text-center inline-flex items-center justify-center me-2 mb-2"
 >
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 md:size-6 mr-2">
     <path
@@ -26,6 +26,19 @@ const { href = "/pdfs/CV_sararpetersen_(DA).pdf" } = Astro.props as Props;
   .btn-primary {
     position: relative;
     overflow: hidden;
+    border: 2px solid var(--brand-primary-soft);
+    background: var(--brand-primary-soft);
+    color: var(--dark-surface-strong);
+  }
+
+  .btn-primary:hover {
+    border-color: var(--brand-primary-strong);
+    background: var(--brand-primary-strong);
+  }
+
+  .btn-primary:focus-visible {
+    outline: 2px solid var(--vermilion);
+    outline-offset: 4px;
   }
 
   .btn-primary::before {
@@ -36,10 +49,12 @@ const { href = "/pdfs/CV_sararpetersen_(DA).pdf" } = Astro.props as Props;
     bottom: 0.4rem;
     height: 2px;
     border-radius: 9999px;
-    background: linear-gradient(90deg, transparent, rgba(187, 74, 52, 0.88), transparent);
+    background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--vermilion) 88%, transparent), transparent);
     opacity: 0.7;
     transform: scaleX(0.45);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
   }
 
   .btn-primary:hover::before,
