@@ -250,11 +250,9 @@ body.reduce-motion .tooltip {
 .hero-image-wrap {
   position: relative;
   justify-self: center;
-  width: min(100%, 19rem);
+  width: min(100%, 30rem);
   aspect-ratio: 3 / 4;
   padding: 0.78rem;
-  border: 1px solid rgba(192, 215, 225, 0.72);
-  border-left-width: 4px;
   border-radius: 2.35rem;
   background: rgba(31, 43, 50, 0.96);
   box-shadow:
@@ -361,7 +359,7 @@ body.calm-mode .text-blue-300 {
 
 @media (max-width: 1023px) {
   .hero-image-wrap {
-    width: min(58vw, 13.5rem);
+    width: min(78vw, 22rem);
     opacity: 0.9;
   }
 }
