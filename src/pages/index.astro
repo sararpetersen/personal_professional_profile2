@@ -469,9 +469,22 @@ const caseStudies = [
           let stopHero = () => {};
           stopHero = inView(heroImage, () => {
             heroImage.classList.add("animate__animated", "animate__fadeInUp");
-            heroImage.style.animationDuration = isMobileViewport ? "1s" : "1.6s";
+            heroImage.style.animationDuration = isMobileViewport ? "1s" : "1.8s";
             heroImage.style.animationFillMode = "both";
-            heroImage.addEventListener("animationend", () => heroImage.classList.add("drift"), { once: true });
+            heroImage.addEventListener(
+              "animationend",
+              () => {
+                // Swapping animation-name from fadeInUp to heroImageDrift drops fadeInUp's
+                // fill-mode hold on opacity (heroImageDrift never touches opacity at all), so
+                // without this the element falls straight back to the has-js opacity: 0
+                // pre-hide rule the instant drift takes over. Lock it in explicitly instead —
+                // an inline style beats that stylesheet rule regardless of which animation,
+                // if any, is currently running.
+                heroImage.style.opacity = "1";
+                heroImage.classList.add("drift");
+              },
+              { once: true },
+            );
             stopHero();
           });
         }
