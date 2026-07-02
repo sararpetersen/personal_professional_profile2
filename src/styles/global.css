@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 html.text-large {
@@ -116,6 +117,7 @@ body {
   background-image: linear-gradient(180deg, rgba(18, 18, 18, 0.98), rgba(10, 10, 10, 0.98));
   color: var(--text-on-dark);
   height: 100%;
+  overflow-x: clip;
 }
 
 body.calm-mode {
@@ -326,12 +328,26 @@ body.reduce-motion .tooltip {
   margin-inline: auto;
 }
 
+@media (max-width: 1279px) {
+  #skills .section-heading,
+  #contact .section-heading,
+  #cv .section-heading {
+    margin-inline: auto;
+    text-align: center;
+  }
+}
+
 #h2 {
   color: var(--text-on-dark);
 }
 
 .hero-section {
   position: relative;
+  overflow: hidden;
+}
+
+.hero-title-entrance {
+  overflow-wrap: anywhere;
 }
 
 .hero-image-entrance {
@@ -459,9 +475,104 @@ body.calm-mode .accent-text {
   color: var(--text-on-dark);
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1279px) {
+  .hero-section {
+    max-width: 44rem;
+  }
+
+  .hero-section .title {
+    max-width: 100%;
+    font-size: clamp(3rem, 10.6vw, 5.6rem);
+    line-height: 1.04;
+  }
+
+  .hero-section .subtitle {
+    max-width: 34rem;
+    margin-inline: auto;
+    font-size: clamp(2.25rem, 7vw, 3.8rem);
+    line-height: 1.12;
+  }
+
   .hero-image-wrap {
-    width: min(78vw, 22rem);
+    width: min(76vw, 24rem);
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-section .title,
+  .hero-section .subtitle {
+    overflow-wrap: normal;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .hero-section {
+    gap: 2rem;
+    padding-top: 8rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  .hero-section .title {
+    font-size: clamp(4rem, 9.2vw, 4.9rem);
+    line-height: 1.04;
+    padding-bottom: 2rem;
+  }
+
+  .hero-section .subtitle {
+    font-size: clamp(2.6rem, 6vw, 3.15rem);
+  }
+
+  .hero-image-wrap {
+    width: min(58vw, 20rem);
+  }
+
+  .main-content1 {
+    gap: 2rem;
+    padding-bottom: 8rem !important;
+  }
+
+  #pfp {
+    padding-top: 2rem !important;
+    padding-bottom: 0 !important;
+  }
+
+  .about-portrait {
+    width: 18rem !important;
+    height: 20rem !important;
+  }
+
+  #timeline {
+    padding-bottom: 8rem !important;
+  }
+
+  .timeline-columns {
+    gap: 1.25rem;
+  }
+
+  .timeline-card {
+    padding: 1.25rem;
+  }
+
+  #projects {
+    padding-top: 8rem !important;
+  }
+
+  #projects .container {
+    padding-inline: 2rem;
+  }
+
+  .some-inner {
+    padding-top: 8rem !important;
+  }
+
+  .contact-section {
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
+  }
+
+  #cv {
+    padding-inline: 1.5rem;
+    padding-bottom: 8rem !important;
   }
 }
 
@@ -651,7 +762,7 @@ body.calm-mode .case-overlay {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(1rem, 1.7vw, 1.25rem);
   font-style: italic;
-  font-weight: 300;
+  font-weight: 100;
   letter-spacing: 0;
   line-height: 1.2;
   text-overflow: ellipsis;
@@ -683,7 +794,7 @@ body.calm-mode .case-overlay {
   font-weight: 600;
   letter-spacing: 0.08em;
   line-height: 1;
-  padding: 0.32rem 0.58rem;
+  padding: 0.9rem;
   text-overflow: ellipsis;
   text-transform: uppercase;
 }
@@ -752,6 +863,18 @@ body.calm-mode .case-overlay {
   overflow: visible;
 }
 
+.skill-device-note {
+  display: none;
+  margin: 1rem auto 0;
+  max-width: 28rem;
+  color: var(--text-muted-on-dark);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: center;
+  opacity: 0.5;
+}
+
 .social-link,
 #logo a {
   display: inline-flex;
@@ -785,6 +908,7 @@ body.calm-mode .case-overlay {
   position: relative;
   display: inline-block;
   border-radius: 0.75rem;
+  z-index: 1;
   /* transform lives here, not on the icon itself, so it doesn't fight the icon's own
      infinite float animation (both would be racing to set `transform` on one element) */
   transition:
@@ -796,12 +920,13 @@ body.calm-mode .case-overlay {
 .icon-wrapper:focus-within {
   transform: scale(1.1);
   box-shadow: 0 0.6rem 1.1rem rgba(0, 0, 0, 0.28);
+  z-index: 30;
 }
 
 /* Default behavior: tooltips appear below the images */
 .tooltip {
   visibility: hidden;
-  width: 195px;
+  width: min(195px, calc(100vw - 2rem));
   height: auto;
   background-color: var(--dark-gradient-start);
   color: var(--text-on-dark);
@@ -810,6 +935,7 @@ body.calm-mode .case-overlay {
   border-radius: 6px;
   padding: 12px;
   position: absolute;
+  z-index: 40;
   top: 100%; /* Default: Below */
   left: 50%;
   transform: translateX(-50%);
@@ -831,4 +957,29 @@ body.calm-mode .case-overlay {
 .icon-wrapper.tooltip-active .tooltip {
   visibility: visible;
   opacity: 1;
+}
+
+.icon-wrapper.tooltip-active {
+  z-index: 30;
+}
+
+@media (max-width: 1279px) {
+  .skill-device-note {
+    display: block;
+  }
+
+  #figma,
+  #vscode,
+  #canva,
+  #creativecloud,
+  #claude {
+    cursor: default;
+  }
+
+  .tooltip,
+  .icon-wrapper:hover .tooltip,
+  .icon-wrapper:focus-within .tooltip,
+  .icon-wrapper.tooltip-active .tooltip {
+    display: none;
+  }
 }

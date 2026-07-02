@@ -2,7 +2,7 @@
 
 ---
 
-<header id="header" class="fixed w-full p-4 md:px-16 z-10 bg-gray-800">
+<header id="header" class="fixed w-full p-4 md:px-16 z-[99] bg-gray-800">
   <div x-data="{ showmenu: false }">
     <div id="navbar" class="flex flex-row justify-between items-center">
       <div id="logo">
@@ -74,19 +74,19 @@
     >
       <ul>
         <li class="mobile-nav-item text-center py-3 transition duration-300">
-          <a href="#info" class="mobile-nav-link transition duration-300">Who am I?</a>
+          <a href="#info" class="mobile-nav-link">Who am I?</a>
         </li>
         <li class="mobile-nav-item text-center py-3 transition duration-300">
-          <a href="#timeline" class="mobile-nav-link transition duration-300">Timeline</a>
+          <a href="#timeline" class="mobile-nav-link">Timeline</a>
         </li>
         <li class="mobile-nav-item text-center py-3 transition duration-300">
-          <a href="#skills" class="mobile-nav-link transition duration-300">Skills</a>
+          <a href="#skills" class="mobile-nav-link">Skills</a>
         </li>
         <li class="mobile-nav-item text-center py-3 transition duration-300">
-          <a href="#projects" class="mobile-nav-link transition duration-300">Selected Cases</a>
+          <a href="#projects" class="mobile-nav-link">Selected Cases</a>
         </li>
-        <li class="mobile-nav-item text-center py-3 transition duration-300">
-          <a href="#contact" class="mobile-nav-link transition duration-300">Contact</a>
+        <li class="mobile-nav-item_last text-center py-3 transition duration-300">
+          <a href="#contact" class="mobile-nav-link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -103,7 +103,15 @@
     padding: 0.5rem 0;
   }
 
-  .nav-link::after {
+  .mobile-nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 0.35rem 0;
+    transition: color 0.25s ease;
+  }
+
+  .nav-link::after,
+  .mobile-nav-link::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -117,25 +125,31 @@
   }
 
   .nav-link:hover,
-  .nav-link:focus-visible {
-    color: var(--brand-primary-soft);
-  }
-
-  .nav-link:hover::after,
-  .nav-link:focus-visible::after {
-    transform-origin: left;
-    transform: scaleX(1);
-  }
-
-  .burger-icon:hover,
-  .burger-icon:focus-visible,
+  .nav-link:focus-visible,
   .mobile-nav-link:hover,
   .mobile-nav-link:focus-visible {
     color: var(--brand-primary-soft);
   }
 
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after,
+  .mobile-nav-link:hover::after,
+  .mobile-nav-link:focus-visible::after {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  .burger-icon:hover,
+  .burger-icon:focus-visible {
+    color: var(--brand-primary-soft);
+  }
+
   .mobile-nav-item {
     border-bottom: 1px solid color-mix(in srgb, var(--brand-primary-soft) 20%, transparent);
+  }
+
+  .mobile-nav-item_last {
+    border-bottom: none;
   }
 
   /* Border-only header treatment for the dark background */

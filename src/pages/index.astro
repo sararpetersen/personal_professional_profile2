@@ -134,15 +134,18 @@ const caseStudies = [
 >
   <!-- SECTION: Hero -->
   <div
-    class="hero-section top-content text-pale-50 max-w-7xl mx-auto px-6 md:px-8 pb-20 pt-32 md:pb-28 md:pt-40 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+    class="hero-section top-content text-pale-50 max-w-7xl mx-auto px-6 md:px-8 pb-20 pt-40 md:pb-28 grid grid-cols-1 xl:grid-cols-2 gap-12 items-center"
   >
     <div>
-      <h1 id="h1" class="hero-title-entrance title text-display-mobile md:text-display-desktop text-center md:text-left pb-12 uppercase text-pale-50">
+      <h1
+        id="h1"
+        class="hero-title-entrance title text-display-mobile xl:text-display-desktop text-center xl:text-left md:pb-12 pb-6 uppercase text-pale-50"
+      >
         Sara Ringkow Petersen
       </h1>
       <h2
         id="h2"
-        class="hero-title-entrance subtitle text-h2-mobile md:text-h2-desktop italic font-light text-center md:text-left tracking-wide text-pale-50"
+        class="hero-title-entrance subtitle text-h2-mobile xl:text-h2-desktop italic font-light text-center xl:text-left tracking-wide text-pale-50"
       >
         Multimedia Designer & Concept Developer
       </h2>
@@ -155,7 +158,7 @@ const caseStudies = [
   </div>
 
   <!-- SECTION: About -->
-  <div class="main-content1 max-w-7xl mx-8 md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-30 md:pb-60">
+  <div class="main-content1 max-w-7xl mx-6 md:mx-8 xl:max-w-6xl xl:mx-auto grid grid-cols-1 xl:grid-cols-2 gap-8 pb-30 md:pb-60">
     <div id="info" class="left-content text-pale-50">
       <h3 class="section-heading text-h3-mobile md:text-h3-desktop pb-4">Who am I?</h3>
       <p class="text-p-mobile md:text-p-desktop">
@@ -175,22 +178,22 @@ const caseStudies = [
         especially those with special needs.
       </p>
     </div>
-    <div id="pfp" class="right-content flex justify-center md:justify-center pt-10 md:pt-20 pb-32">
+    <div id="pfp" class="right-content flex justify-center pt-10 xl:pt-20 pb-32">
       <img
         src="/other/pfp2.webp"
         alt="Portrait of Sara Ringkow Petersen"
-        class="portrait-image w-[200px] h-[200px] md:w-[350px] md:h-[400px] object-cover"
+        class="portrait-image about-portrait w-[200px] h-[200px] xl:w-[350px] xl:h-[400px] object-cover"
       />
     </div>
   </div>
 
   <!-- SECTION: Timeline -->
-  <div id="timeline" class="timeline max-w-3xl mx-auto flex justify-center md:justify-center md:max-w-6xl pb-20 md:pb-60">
+  <div id="timeline" class="timeline max-w-3xl mx-auto px-6 md:px-8 flex justify-center md:justify-center md:max-w-6xl pb-20 md:pb-60">
     <div class="left-content text-pale-50">
-      <h3 class="section-heading text-h3-mobile md:text-h3-desktop text-left ml-4 pb-10 md:ml-0 md:pb-8">The highlights of my journey</h3>
+      <h3 class="section-heading text-h3-mobile md:text-h3-desktop text-left pb-6">The highlights of my journey</h3>
 
       <div class="timeline-columns">
-        <section class="timeline-column" aria-labelledby="timeline-school">
+        <section class="timeline-column md:pb-0 pb-4" aria-labelledby="timeline-school">
           <h4 id="timeline-school" class="timeline-column-title">School</h4>
           <ol class="timeline-grid">
             {educationTimelineItems.map((item) => <TimelineItem {...item} />)}
@@ -208,14 +211,15 @@ const caseStudies = [
   </div>
 
   <!-- SECTION: Skills -->
-  <div id="skills" class="skills max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-center mb-8">
-    <div class="text-center md:text-left mb-8 md:mb-0 md:mr-8 pr-0 md:pr-12 pb-12">
+  <div id="skills" class="skills max-w-7xl mx-auto px-6 xl:px-0 flex flex-col xl:flex-row justify-center items-center xl:items-center mb-8">
+    <div class="text-center xl:text-left mb-8 xl:mb-0 xl:mr-8 pr-0 xl:pr-12 pb-12">
       <h3 class="section-heading text-h3-mobile md:text-h3-desktop pb-4 text-pale-50">Skills</h3>
-      <h4 class="text-h4-mobile md:text-h4-desktop muted-text max-w-lg">Hover or tap the different app-icons to learn more about my competencies</h4>
+      <h4 class="text-h4-mobile md:text-h4-desktop muted-text max-w-lg">Hover the different app-icons to learn more about my competencies</h4>
+      <p class="skill-device-note">Tooltips are available on desktop only.</p>
     </div>
     <div class="icon-container">
       <!-- Skill icon row 1 -->
-      <div class="app_icons1 flex flex-wrap justify-center gap-6 mb-8 md:gap-20">
+      <div class="app_icons1 flex flex-wrap justify-center gap-6 mb-8 xl:gap-20">
         <div class="icon-wrapper top-tooltip">
           <img
             id="figma"
@@ -273,7 +277,7 @@ const caseStudies = [
       </div>
 
       <!-- Skill icon row 2 -->
-      <div class="app_icons2 flex flex-wrap justify-center gap-6 mb-8 md:gap-20">
+      <div class="app_icons2 flex flex-wrap justify-center gap-6 mb-8 xl:gap-20">
         <div class="icon-wrapper">
           <img
             id="creativecloud"
@@ -317,9 +321,9 @@ const caseStudies = [
   <div id="projects" class="projects_container pt-20 md:pt-60">
     <div class="flex justify-center">
       <div class="container mx-auto px-4 py-4">
-        <h3 class="section-heading text-h3-mobile md:text-h3-desktop text-left mb-8 text-pale-50">Selected cases</h3>
+        <h3 class="section-heading text-h3-mobile md:text-h3-desktop text-left pb-6 text-pale-50">Selected cases</h3>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {
             caseStudies.map((project) => (
               <div class="case-stagger">
@@ -334,8 +338,8 @@ const caseStudies = [
 
   <!-- SECTION: Social Links -->
   <div class="some">
-    <div class="flex flex-col items-center pt-20 md:pt-60">
-      <h3 class="section-heading text-h3-mobile md:text-h3-desktop text-center pb-4 md:pb-8 text-pale-50 z-[1]">Find me on social media</h3>
+    <div class="some-inner flex flex-col items-center pt-20 md:pt-60">
+      <h3 class="section-heading text-h3-mobile md:text-h3-desktop text-center pb-4 text-pale-50 z-[1]">Find me on social media</h3>
       <div class="flex justify-center space-x-5">
         <a
           href="https://www.linkedin.com/in/sara-ringkow-petersen-49830b264/"
@@ -402,15 +406,15 @@ const caseStudies = [
 
   <!-- SECTION: Contact -->
   <div id="contact" class="forms_container flex justify-center">
-    <section class="pt-20 md:pt-40 pb-20 md:pb-40 max-w-5xl mx-auto p-6">
-      <div class="flex flex-col items-center md:flex-row md:items-center md:justify-center">
+    <section class="contact-section pt-20 md:pt-40 pb-20 md:pb-40 max-w-5xl mx-auto p-6">
+      <div class="flex flex-col items-center xl:flex-row xl:items-center xl:justify-center">
         <img
-          class="portrait-image w-[150px] h-[150px] md:w-[250px] md:h-[250px] object-cover mb-6 md:mb-0"
+          class="portrait-image w-[150px] h-[150px] xl:w-[250px] xl:h-[250px] object-cover mb-6 xl:mb-0"
           src="/other/pfp.webp"
           alt="Portrait of Sara Ringkow Petersen"
         />
-        <div class="md:ml-4 text-center md:text-left pl-0 md:pl-20">
-          <h3 class="section-heading text-pale-50 text-h3-mobile md:text-h3-desktop pb-6">Let's get in touch!</h3>
+        <div class="xl:ml-4 text-center xl:text-left pl-0 xl:pl-20">
+          <h3 class="section-heading text-pale-50 text-h3-mobile md:text-h3-desktop pb-4">Let's get in touch!</h3>
           <p class="text-p-mobile md:text-p-desktop">
             <strong>Email:</strong>
             <a href="mailto:sara.ringkow@gmail.com" class="contact-link focus-token py-1 transition duration-300 ease-in-out"
@@ -428,7 +432,7 @@ const caseStudies = [
 
   <!-- SECTION: CV Downloads -->
   <div id="cv" class="cv flex flex-col items-center pb-12 md:pb-40">
-    <h3 class="section-heading text-h3-mobile md:text-h3-desktop text-center pb-4 md:pb-8 text-pale-50">Wanna know more about me?</h3>
+    <h3 class="section-heading text-h3-mobile md:text-h3-desktop text-center pb-6 text-pale-50">Wanna know more about me?</h3>
     <div class="button-container flex flex-wrap justify-center gap-4">
       <Button href="/pdfs/CV_sararpetersen_(DA).pdf">MIT CV (DK)</Button>
       <Button href="/pdfs/CV_sararpetersen_(EN).pdf">MY RESUME (EN)</Button>
@@ -670,6 +674,10 @@ const caseStudies = [
       const iconWrappers = document.querySelectorAll(".icon-wrapper");
       iconWrappers.forEach((wrapper) => {
         wrapper.addEventListener("click", (event) => {
+          if (window.matchMedia("(max-width: 1279px)").matches) {
+            iconWrappers.forEach((w) => w.classList.remove("tooltip-active"));
+            return;
+          }
           const isActive = wrapper.classList.contains("tooltip-active");
           iconWrappers.forEach((w) => w.classList.remove("tooltip-active"));
           if (!isActive) wrapper.classList.add("tooltip-active");
