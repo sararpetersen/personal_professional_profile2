@@ -268,8 +268,16 @@ body.reduce-motion .tooltip {
     0 22px 54px rgba(0, 0, 0, 0.36),
     inset 0 0 0 1px rgba(255, 253, 252, 0.08);
   transform: rotate(1.5deg);
-  animation: heroImageDrift 11s ease-in-out infinite;
   overflow: hidden;
+  /* No infinite animation declared here on purpose: this element also gets
+     animate__fadeInUp added by the page script, and `animation` is a single-value
+     property — whichever rule wins the cascade, the other's animation silently never
+     runs. The heroImageDrift loop is started via JS instead, only once fadeInUp has
+     actually finished (see the "animationend" handler in the page script). */
+}
+
+.hero-image-wrap.drift {
+  animation: heroImageDrift 11s ease-in-out infinite;
 }
 
 .hero-image-wrap::after {
@@ -369,14 +377,14 @@ body.calm-mode .text-blue-300 {
 @media (max-width: 1023px) {
   .hero-image-wrap {
     width: min(78vw, 22rem);
-    opacity: 0.9;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   body::before,
   body::after,
-  .hero-image-wrap {
+  .hero-image-wrap,
+  .hero-image-wrap.drift {
     animation: none;
   }
 }

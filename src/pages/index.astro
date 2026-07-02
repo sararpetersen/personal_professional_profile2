@@ -443,7 +443,6 @@ const caseStudies = [
         [
           "#h1",
           "#h2",
-          ".hero-image-wrap",
           "#info .section-heading",
           "#info p",
           "#pfp img",
@@ -459,6 +458,23 @@ const caseStudies = [
         ].forEach((selector, index) => {
           registerInView(selector, index * 60);
         });
+
+        // The hero image has its own ambient drift animation (see .hero-image-wrap.drift
+        // in global.css), so it's kept out of registerInView on purpose: adding
+        // animate__fadeInUp and an infinite animation to the same element at once means
+        // one silently overrides the other on the shared `animation` property. Play the
+        // entrance first, then only start the drift loop once it's actually finished.
+        const heroImage = document.querySelector<HTMLElement>(".hero-image-wrap");
+        if (heroImage) {
+          let stopHero = () => {};
+          stopHero = inView(heroImage, () => {
+            heroImage.classList.add("animate__animated", "animate__fadeInUp");
+            heroImage.style.animationDuration = isMobileViewport ? "1s" : "1.6s";
+            heroImage.style.animationFillMode = "both";
+            heroImage.addEventListener("animationend", () => heroImage.classList.add("drift"), { once: true });
+            stopHero();
+          });
+        }
 
         // forEach groups: a handful of repeated items per section, each a little more
         // delayed than the last, on a shorter duration so a long list doesn't take forever
