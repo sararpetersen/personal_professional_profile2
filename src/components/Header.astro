@@ -1,8 +1,7 @@
 ---
-import "../styles/global.css";
+
 ---
 
-<<<<<<< HEAD
 <header id="header" class="fixed w-full p-4 md:px-16 z-10">
   <div x-data="{ showmenu: false }">
     <div id="navbar" class="flex flex-row justify-between items-center">
@@ -39,94 +38,12 @@ import "../styles/global.css";
         <svg
           x-show="!showmenu"
           x-cloak
-=======
-<header class="text-font-color fixed backdrop-blur-md shadow-lg top-0 left-0 w-full z-50">
-  <div x-data="{ showmenu: false }" class="p-2">
-    <div id="navbar" class="flex flex-row justify-between items-center">
-      <!-- Added items-center -->
-      <div id="logo" class="relative font-bold transition-opacity duration-300 ease-in-out group w-20 h-20">
-        <!-- Fixed width and height -->
-        <a href="#top" class="relative inline-block w-full h-full">
-          <!-- Default Logo -->
-          <img
-            src="/illustrations/logo.svg"
-            alt="logo"
-            class="opacity-100 group-hover:opacity-0 transition-opacity duration-300 ease-in-out object-contain w-full h-full"
-          />
-          <!-- Hover Logo -->
-          <img
-            src="/illustrations/logo_grey.svg"
-            alt="logo grey"
-            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out object-contain w-full h-full"
-          />
-        </a>
-      </div>
-
-      <div id="desktopmenu" class="hidden lg:block text-font-medium text-center">
-        <ul class="flex flex-wrap -mb-px">
-          <li class="some1">
-            <a
-              aria-label="Go to about-section"
-              href="#info"
-              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 uppercase focus:outline-none focus:ring-2 focus:ring-red-400"
-              >Who am I?</a
-            >
-          </li>
-          <li class="some1">
-            <a
-              aria-label="Go to section for languages and hobbies"
-              href="#languages"
-              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 uppercase focus:outline-none focus:ring-2 focus:ring-red-400"
-              aria-current="page">Languages & hobbies</a
-            >
-          </li>
-
-          <li class="some1">
-            <a
-              aria-label="Go to timeline-section"
-              href="#timeline"
-              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 uppercase focus:outline-none focus:ring-2 focus:ring-red-400"
-              aria-current="page">Timeline</a
-            >
-          </li>
-          <li class="some1">
-            <a
-              aria-label="Go to skills-section"
-              href="#skills"
-              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 uppercase focus:outline-none focus:ring-2 focus:ring-red-400"
-              >Skills</a
-            >
-          </li>
-          <li class="some1">
-            <a
-              aria-label="Go to projects-section"
-              href="#projects"
-              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 uppercase focus:outline-none focus:ring-2 focus:ring-red-400"
-              >Highlighted projects</a
-            >
-          </li>
-          <li class="some1">
-            <a
-              aria-label="Go to contact-section"
-              class="text-md inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-hover-header transition duration-500 uppercase focus:outline-none focus:ring-2 focus:ring-red-400"
-              href="#contact-header">contact</a
-            >
-          </li>
-        </ul>
-      </div>
-      <button id="burgermenu" aria-label="Open mobile-menu" class="lg:hidden" x-on:click="showmenu = ! showmenu">
-        <svg
->>>>>>> 067b36d51b3ade09beb97778b7c0c6f4e6646680
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-<<<<<<< HEAD
           class="size-8 hover:text-blue-200 transition duration-300"
-=======
-          class="size-8 hover:text-hover-header transition duration-500"
->>>>>>> 067b36d51b3ade09beb97778b7c0c6f4e6646680
         >
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
         </svg>
@@ -146,18 +63,13 @@ import "../styles/global.css";
     </div>
     <nav
       id="mobilmenu"
-<<<<<<< HEAD
       aria-label="Mobile navigation"
-=======
-      aria-label="Mobile-menu"
->>>>>>> 067b36d51b3ade09beb97778b7c0c6f4e6646680
       class="flex flex-col content-center pt-4"
       x-show="showmenu"
       x-cloak
       x-transition
       x-on:click="showmenu = false"
       x-on:click.outside="showmenu = false"
-<<<<<<< HEAD
       x-on:keydown.escape.window="showmenu = false"
     >
       <ul>
@@ -175,31 +87,6 @@ import "../styles/global.css";
         </li>
         <li class="text-center py-3 border-b border-blue-200/20 transition duration-300">
           <a href="#contact" class="hover:text-blue-200 transition duration-300">CONTACT</a>
-=======
-      style="display: none;"
-      x-cloak
-    >
-      <ul>
-        <li class="some1 text-center py-1 hover:text-hover-header transition duration-500 uppercase">
-          <a aria-label="Go to about-section" class="focus:outline-none focus:ring-2 focus:ring-red-400" href="#info">Who am I?</a>
-        </li>
-        <li class="some1 text-center py-1 hover:text-hover-header transition duration-500 uppercase">
-          <a aria-label="Go to section for languages and hobbies" class="focus:outline-none focus:ring-2 focus:ring-red-400" href="#languages"
-            >Languages & hobbies</a
-          >
-        </li>
-        <li class="some1 text-center py-1 hover:text-hover-header transition duration-500 uppercase">
-          <a aria-label="Go to timeline-section" class="focus:outline-none focus:ring-2 focus:ring-red-400" href="#timeline">Timeline</a>
-        </li>
-        <li class="some1 text-center py-1 hover:text-hover-header transition duration-500 uppercase">
-          <a aria-label="Go to skills-section" class="focus:outline-none focus:ring-2 focus:ring-red-400" href="#skills">Skills</a>
-        </li>
-        <li class="some1 text-center py-1 hover:text-hover-header transition duration-500 uppercase">
-          <a aria-label="Go to projects-section" class="focus:outline-none focus:ring-2 focus:ring-red-400" href="#projects">Highlighted projects</a>
-        </li>
-        <li class="some1 text-center py-1 hover:text-hover-header transition duration-500 uppercase">
-          <a aria-label="Go to contact-section" class="focus:outline-none focus:ring-2 focus:ring-red-400" href="#contact-header">Contact</a>
->>>>>>> 067b36d51b3ade09beb97778b7c0c6f4e6646680
         </li>
       </ul>
     </nav>
@@ -210,7 +97,6 @@ import "../styles/global.css";
   [x-cloak] {
     display: none !important;
   }
-<<<<<<< HEAD
 
   .nav-link {
     position: relative;
@@ -269,6 +155,3 @@ import "../styles/global.css";
   window.addEventListener("scroll", updateHeaderStyle, { passive: true });
   updateHeaderStyle();
 </script>
-=======
-</style>
->>>>>>> 067b36d51b3ade09beb97778b7c0c6f4e6646680

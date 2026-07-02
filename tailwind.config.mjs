@@ -4,7 +4,6 @@ export default {
   theme: {
     extend: {
       colors: {
-<<<<<<< HEAD
         blue: {
           50: "#f2f8f9",
           100: "#deebef",
@@ -140,13 +139,6 @@ export default {
         "desktop-bottom": "90px",
         "mobil-top": "85px",
         "desktop-top": "90px",
-=======
-        "font-color": "#f6f6f6",
-        "font-color_dark": "#171717",
-        "bg-color": "#171717",
-        "bg-color_dark": "#2f2f2f",
-        "hover-header": "#FF1F1F",
->>>>>>> 067b36d51b3ade09beb97778b7c0c6f4e6646680
       },
     },
   },

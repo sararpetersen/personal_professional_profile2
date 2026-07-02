@@ -191,12 +191,11 @@ const prototypeCases = [
             <p class="font-bold">Figma:</p>
             <ol>
               <li>1. Styles</li>
-              <li>2. Variables</li>
-              <li>3. Components</li>
-              <li>4. Auto-layout</li>
-              <li>5. Design-systems</li>
-              <li>6. Wireframes</li>
-              <li>7. Prototypes</li>
+              <li>2. Components</li>
+              <li>3. Auto-layout</li>
+              <li>4. Design-systems</li>
+              <li>5. Wireframes</li>
+              <li>6. Prototypes</li>
             </ol>
           </div>
         </div>
@@ -204,7 +203,7 @@ const prototypeCases = [
           <img
             id="vscode"
             class="max-w-full rounded-lg w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:transition duration-300 hover:opacity-70"
-            src="/other/vscode-logo.webp"
+            src="/other/vs_code.webp"
             alt="Logo of VS Code"
           />
           <div class="tooltip absolute rounded p-2 mt-1">
@@ -223,7 +222,7 @@ const prototypeCases = [
           <img
             id="microsoft"
             class="max-w-full rounded-lg w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:transition duration-300 hover:opacity-70"
-            src="/other/microsoft-365-logo.webp"
+            src="/other/mc_365.webp"
             alt="Logo of Microsoft Office 365"
           />
           <div class="tooltip absolute rounded p-2 mt-1">
@@ -245,7 +244,7 @@ const prototypeCases = [
           <img
             id="creativecloud"
             class="max-w-full rounded-lg w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:transition duration-300 hover:opacity-70"
-            src="/other/adobe-logo.webp"
+            src="/other/adobe_logo.webp"
             alt="Logo of Creative Cloud"
           />
           <div class="tooltip absolute rounded p-2 mt-1">
@@ -385,7 +384,7 @@ const prototypeCases = [
       <div class="flex flex-col items-center md:flex-row md:items-center md:justify-center">
         <img
           class="w-[150px] h-[150px] md:w-[250px] md:h-[250px] object-cover rounded-full shadow-xl mb-6 md:mb-0 ring-4 ring-card-cream border border-pale-divider"
-          src="/other/pfp.jpeg"
+          src="/other/pfp.webp"
           alt="Portrait of Sara Ringkow Petersen"
         />
         <div class="md:ml-4 text-center md:text-left pl-0 md:pl-20">
@@ -451,23 +450,4 @@ const prototypeCases = [
       initHomePageInteractions();
     }
   </script>
-
-  <style>
-    .hidden {
-      opacity: 0;
-    }
-
-    .language-card::before,
-    .hobby-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-      opacity: 0.7; /* Apply opacity to the background only */
-      border-radius: inherit; /* Ensures border-radius is applied to the background as well */
-    }
-  </style>
 </MainLayout>
