@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git config *)",
+      "Read(//Users/sararingkow/Desktop/School/MMD \\(KEA\\)/MMD E24 \\(DiDe\\)/12a_praktik1/Opgaver/Til hovedopgaven/Personlig Professionel Profil \\(PPP\\)/VS Code/personal_professional_profile2/**)",
+      "Bash(find . -maxdepth 2 -name \".git\" -type d)",
+      "Bash(timeout 15 git fetch --dry-run)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(git lfs *)",
+      "Bash(echo \"test\")",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git reset *)",
+      "Read(//Users/sararingkow/**)",
+      "Bash(xargs -I{} du -k \"{}\")",
+      "mcp__c7776cb4-272b-4fab-93d7-04a42e3cd494__get_metadata",
+      "mcp__c7776cb4-272b-4fab-93d7-04a42e3cd494__get_screenshot",
+      "mcp__c7776cb4-272b-4fab-93d7-04a42e3cd494__get_design_context",
+      "Bash(curl -s -o /private/tmp/claude-501/-Users-sararingkow-Desktop-School-MMD--KEA--MMD-E24--DiDe--12a-praktik1-Opgaver-Til-hovedopgaven-Personlig-Professionel-Profil--PPP--VS-Code-personal-professional-profile2-personal-professional-profil-712lrv/c8d7e529-53cf-4609-b53e-e87faa68a7bf/scratchpad/styleguide.png \"https://www.figma.com/api/mcp/asset/a2725f71-927b-4149-a25d-7cc15792d52a\")"
+    ]
+  }
+}

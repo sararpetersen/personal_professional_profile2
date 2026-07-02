@@ -2,14 +2,15 @@
 
 ---
 
-<button id="scrollToTopBtn" title="Go to top">Top</button>
+<button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+  </svg>
+</button>
 
 <style>
   #scrollToTopBtn {
-    background-color: #fa1a19;
-    font-family: "Almarai", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
+    background-color: #bb4a34;
     position: fixed;
     bottom: 20px;
     right: 30px;
@@ -17,18 +18,19 @@
     color: #f5f5f5;
     outline: none;
     cursor: pointer;
-    padding: 15px 15px;
-    border-radius: 250px;
-    box-shadow:
-      0 4px 6px -1px rgb(0 0 0 / 0.1),
-      0 2px 4px -2px rgb(0 0 0 / 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 9999px;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+    transition: background-color 0.3s ease-in-out, transform 0.25s ease;
   }
 
   #scrollToTopBtn:hover {
-    transition: all 0.3s ease-in-out;
-    background-color: #d21313;
-    color: #f5f5f5;
-    cursor: none;
+    background-color: #e63946;
+    transform: translateY(-0.18rem);
   }
 </style>
 

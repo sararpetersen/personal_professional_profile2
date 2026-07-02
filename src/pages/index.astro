@@ -2,108 +2,192 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import "../styles/global.css";
 import Button from "../components/Button.astro";
+import CaseCard from "../components/CaseCard.astro";
+import TimelineItem from "../components/TimelineItem.astro";
+
+const timelineItems = [
+  {
+    period: "August 2019 - June 2021",
+    titleLines: ["HF | Egedal Gymnasium & HF"],
+    description:
+      "Completed high school with a focus on art, social studies and psychology, which sparked my interest in creativity, people and communication.",
+  },
+  {
+    period: "August 2023 - June 2025",
+    titleLines: ["Multimedia Design | Copenhagen School of", "Design and Technology (KEA)"],
+    description: "Worked with UX/UI, digital design and coding, and gained hands-on experience with design tools, prototyping and web projects.",
+  },
+  {
+    period: "January 2025 - April 2025",
+    titleLines: ["Junior Creative/Intern | Kadaver ApS"],
+    description: "Worked on website redesigns, developed sitemaps and information architecture, and created maintenance documentation for clients.",
+  },
+  {
+    period: "Present",
+    titleLines: ["Digital Concept Development | Academy of", "Technologies and Business (Zealand)"],
+    description: "Currently studying how to turn ideas into user-focused digital concepts, with a strong focus on strategic and behavioural design.",
+  },
+  {
+    period: "January 2026 - June 2026",
+    titleLines: ["Student Buddy | Academy of Technologies", "and Business (Zealand)"],
+    description:
+      "Supporting international students through onboarding, social and academic integration, and acting as a go-to contact for everyday questions.",
+  },
+  {
+    period: "May 2026 - October 2026",
+    titleLines: ["Software Developer Intern | Folkæt"],
+    description:
+      "Working on the further development of interactive quizzes and improving user-flows, contributing to digital solutions with a focus on user-experience and engagement.",
+  },
+];
+
+const featuredCases = [
+  {
+    href: "https://cp-danmark.netlify.app/",
+    image: "/projects/cpdanmark.webp",
+    alt: "CP Danmark",
+    period: "4th semester (final exam project)",
+    title: "CP Danmark",
+    tools: ["Astro", "Tailwind", "JSON", "JS"],
+    large: true,
+  },
+  {
+    href: "https://singleusesucks-plasticchange.netlify.app/",
+    image: "/projects/singleusesucks.webp",
+    alt: "#SingleUseSucks",
+    period: "3rd semester",
+    title: "#SingleUseSucks",
+    tools: ["Astro", "Tailwind", "JS"],
+  },
+  {
+    href: "https://vinens-essens.netlify.app/",
+    image: "/projects/vinens_essens.webp",
+    alt: "Vinens Essens",
+    period: "3rd semester (exam project)",
+    title: "Vinens Essens",
+    tools: ["Astro", "Tailwind", "JS"],
+  },
+  {
+    href: "https://kadaver.netlify.app/",
+    image: "/projects/kadaver.webp",
+    alt: "Kadaver ApS",
+    period: "4th semester (internship)",
+    title: "Kadaver ApS",
+    tools: ["Astro", "Tailwind", "JSON", "JS"],
+  },
+  {
+    href: "https://superheltedagen.netlify.app/",
+    image: "/projects/superheltedagen.webp",
+    alt: "Superheltedagen 2025",
+    period: "4th semester (internship)",
+    title: "Superheltedagen 2025",
+    tools: ["Astro", "Tailwind", "JS"],
+  },
+];
+
+const prototypeCases = [
+  {
+    href: "https://www.figma.com/proto/j8ikUOD43BsmBWApV5u2Sf/VibeLoop---fiktiv-app--DKON-?page-id=418%3A1048&node-id=418-1049&p=f&viewport=263%2C242%2C0.3&t=Ez2EYHzL6NBRdH57-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=418%3A1049",
+    image: "/projects/vibeloop.webp",
+    alt: "VibeLoop",
+    period: "1st semester",
+    title: "VibeLoop",
+    tools: ["Figma"],
+    imageClass: "w-full h-full object-cover",
+  },
+  {
+    href: "https://www.figma.com/proto/ByBTPA755agBPbGNJD1p3r/K%C3%B8ge-Bibliotekerne--omr%C3%A5de-1----eksamensprojekt-S2025?page-id=1%3A9&node-id=65-332&p=f&viewport=410%2C455%2C0.2&t=geq9HU7hLmrlwuxS-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=65%3A332",
+    image: "/projects/ungeforum.webp",
+    alt: "UngeForum",
+    period: "1st semester (exam project)",
+    title: "UngeForum",
+    tools: ["Figma"],
+  },
+  {
+    href: "https://www.figma.com/proto/MuEI8pa56V3bRisJsX6sfQ/DKON-S2025V---strategic-design?node-id=1-2&page-id=0%3A1&starting-point-node-id=1%3A2&t=o9Y7CgAUqiPJMUGi-1",
+    image: "/projects/pinterest_ai.webp",
+    alt: "Pinterest AI Verification",
+    period: "2nd semester",
+    title: "Pinterest AI Verification",
+    tools: ["Figma"],
+  },
+  {
+    href: "https://www.figma.com/proto/Cv3KaH0NEpxZLYGoj1r95S/DKON-S2025V---behavioural-design--Duolingo-?team_id=1410188849314875629&node-id=14-55&page-id=14%3A54&t=5KZaIubN7GIb9ahE-1",
+    image: "/projects/pace_duolingo.webp",
+    alt: "Pace (Duolingo redesign)",
+    period: "2nd semester",
+    title: "Pace (Duolingo redesign)",
+    tools: ["Figma"],
+  },
+];
 ---
 
-<MainLayout title="Frontpage">
-  <div id="cursor"></div>
-  <div class="background-lines">
-    <div class="line1"></div>
-    <div class="line2"></div>
+<MainLayout title="Sara Ringkow Petersen | Digital Resume">
+  <!-- SECTION: Hero -->
+  <div class="fade-in-section top-content text-text-dark max-w-7xl mx-auto px-6 md:px-8 pb-96 pt-80 md:pb-96 md:pt-80">
+    <h1 id="h1" class="title text-5xl md:text-8xl text-center md:text-left pb-12 uppercase">Sara Ringkow Petersen</h1>
+    <h2 id="h2" class="subtitle text-3xl md:text-5xl italic font-light text-center md:text-left tracking-wide text-text-secondary">
+      Multimedia Designer & Concept Developer
+    </h2>
   </div>
-  <div class="top-content text-font-color max-w-7xl mx-auto pb-96 pt-80 md:pb-96 md:pt-80">
-    <h1 id="h1" class="title text-5xl md:text-8xl text-center md:text-left pb-12">SARA RINGKOW PETERSEN</h1>
-    <h2 id="h2" class="subtitle text-3xl md:text-5xl text-center md:text-left tracking-wide">UX/web designer</h2>
-  </div>
-  <div class="main-content1 max-w-7xl mx-8 md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-30 md:pb-60">
-    <div id="info" class="left-content text-font-color">
-      <h3 class="text-3xl md:text-4xl pb-4">WHO AM I?</h3>
+
+  <!-- SECTION: About -->
+  <div class="fade-in-section main-content1 max-w-7xl mx-8 md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-30 md:pb-60">
+    <div id="info" class="left-content text-text-dark">
+      <h3 class="section-heading text-3xl md:text-4xl pb-4">Who am I?</h3>
       <p class="text-lg md:text-xl leading-6 md:leading-9">
-        My name is Sara Ringkow Petersen, a 22-year-old based in <span class="text-hover-header font-bold">Copenhagen</span>. I’m currently seeking an <span
-          class="text-hover-header font-bold">internship</span
-        > as a UX or web designer, where I can apply my skills and contribute to projects that prioritize inclusive and user-centered digital experiences.
-        <br /><br />I’m dedicated to creating <span class="text-hover-header font-bold">accessible, user-friendly digital solutions</span> by blending
-        my technical skills in HTML, CSS, JavaScript, and frameworks like Astro and Tailwind with a creative approach. I’m experienced in design tools
-        like Figma and project management methods such as SCRUM and Trello. My <span class="text-hover-header font-bold">personal</span> experience, having
-        been diagnosed with autism at a later age, drives my commitment to inclusive design–– making digital platforms better for everyone, especially
-        those with special needs.
+        My name is Sara Ringkow Petersen, a Multimedia Designer and Concept Developer based in <span class="text-warm-accent font-bold"
+          >Copenhagen</span
+        >. I design and build accessible websites, interfaces, and concepts&mdash; focusing on structure, clarity, and the people who use them. I'm
+        currently interning at <span class="text-warm-accent font-bold">Folkæt</span>, alongside studying a top-up Bachelor's in Digital Concept
+        Development.
+        <br /><br />I'm dedicated to creating <span class="text-warm-accent font-bold">accessible, user-friendly digital solutions</span> by blending my
+        technical skills in HTML, CSS, JavaScript, and frameworks like Astro and Tailwind with a creative approach. I'm experienced in design tools like
+        Figma and project management methods such as SCRUM and Trello. As someone late-diagnosed with <span class="text-warm-accent font-bold"
+          >autism and ADD</span
+        >, I know what it's like to use digital platforms that weren't built with you in mind&mdash; that perspective drives my commitment to
+        inclusive design, making digital platforms better for everyone, especially those with special needs.
       </p>
     </div>
     <div id="pfp" class="right-content flex justify-center md:justify-center pt-10 md:pt-20 pb-32">
-      <img src="/other/pfp.jpeg" alt="me" class="w-[200px] h-[200px] md:w-[350px] md:h-[400px] object-cover rounded-full shadow-md" />
+      <img
+        src="/other/pfp2.webp"
+        alt="Portrait of Sara Ringkow Petersen"
+        class="w-[200px] h-[200px] md:w-[350px] md:h-[400px] object-cover rounded-full shadow-md ring-4 ring-card-cream border border-pale-divider"
+      />
     </div>
   </div>
-  <div class="background-bubbles">
-    <div class="bubbles1"></div>
-  </div>
-  <div id="timeline" class="timeline max-w-3xl mx-auto flex justify-center md:justify-center md:max-w-6xl pb-20 md:pb-60">
-    <div class="left-content text-font-color">
-      <h3 class="text-3xl md:text-4xl text-left ml-4 pb-10 md:ml-0 md:pb-8">TIMELINE</h3>
 
-      <ol class="relative border-s border-gray-200 dark:border-gray-400">
-        <li class="mb-16 ms-4">
-          <div
-            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-gray-200 dark:border-gray-200 dark:bg-gray-200 hidden md:block"
-          >
-          </div>
-          <time class="mb-1 text-xl font-bold leading-none text-gray-200 md:text-2xl">August 2019 - June 2021</time>
-          <h4 class="timeline-title text-xl font-regular text-gray-900 dark:text-white md:text-xl">HF at Egedal Gymnasium & HF</h4>
-        </li>
-        <li class="mb-16 ms-4">
-          <div
-            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-gray-200 dark:border-gray-200 dark:bg-gray-300 hidden md:block"
-          >
-          </div>
-          <time class="mb-1 text-xl font-bold leading-none text-gray-200 md:text-2xl">January 2022 - June 2022 (gap-year)</time>
-          <h4 class="timeline-title text-xl font-regular text-gray-900 dark:text-white md:text-xl">
-            Folk high school stay at Bosei Sports <br class="md:hidden block" /> Folk High School
-          </h4>
-        </li>
-        <li class="mb-16 ms-4">
-          <div
-            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-gray-200 dark:border-gray-200 dark:bg-gray-200 hidden md:block"
-          >
-          </div>
-          <time class="mb-1 text-xl font-bold leading-none text-gray-200 md:text-2xl">August 2022 - May 2023</time>
-          <h4 class="timeline-title text-xl font-regular text-gray-900 dark:text-white md:text-xl">
-            Singular courses in Japanese (lvl. 0-B) <br class="md:hidden block" /> at Frederiksberg VUC & STX
-          </h4>
-        </li>
-        <li class="mb-16 ms-4">
-          <div
-            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-gray-200 dark:border-gray-200 dark:bg-gray-200 hidden md:block"
-          >
-          </div>
-          <time class="mb-1 text-xl font-bold leading-none text-gray-200 md:text-2xl">August 2023 - present</time>
-          <h4 class="timeline-title text-xl font-regular text-gray-900 dark:text-white md:text-xl">
-            Multimedia-design student at <br class="md:hidden block" /> KEA - Københavns Erhvervsakademi
-          </h4>
-        </li>
+  <!-- SECTION: Timeline -->
+  <div id="timeline" class="fade-in-section timeline max-w-3xl mx-auto flex justify-center md:justify-center md:max-w-6xl pb-20 md:pb-60">
+    <div class="left-content text-text-dark">
+      <h3 class="section-heading text-3xl md:text-4xl text-left ml-4 pb-10 md:ml-0 md:pb-8">The highlights of my journey</h3>
+
+      <ol class="relative border-s border-pale-divider">
+        {timelineItems.map((item) => <TimelineItem {...item} />)}
       </ol>
     </div>
   </div>
-  <div class="background-bubbles">
-    <div class="bubbles1"></div>
-  </div>
-  <div id="skills" class="skills max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-center mb-8">
+
+  <!-- SECTION: Skills -->
+  <div id="skills" class="fade-in-section skills max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-center mb-8">
     <div class="text-center md:text-left mb-8 md:mb-0 md:mr-8 pr-0 md:pr-12 pb-12">
-      <h3 class="text-3xl md:text-4xl pb-4 text-font-color">SKILLS</h3>
-      <h4 class="text-xl text-font-color">
-        Hover over the different app-icons to <br />learn more about my competencies <br />
-        <span class="font-bold">(does not work on mobile)</span>
+      <h3 class="section-heading text-3xl md:text-4xl pb-4 text-text-dark">Skills</h3>
+      <h4 class="text-xl text-text-secondary">
+        Hover or tap the different app-icons to <br />learn more about my competencies
       </h4>
     </div>
     <div class="icon-container">
-      <div class="left-content text-font-color"></div>
-      <!-- some_icons1 -->
+      <!-- Skill icon row 1 -->
       <div class="app_icons1 flex flex-wrap justify-center gap-6 mb-8 md:gap-20">
         <div class="icon-wrapper top-tooltip">
           <img
             id="figma"
-            class="max-w-full rounded-lg w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:transition duration-300 hover:opacity-70 cursor"
-            src="/other/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.webp"
-            alt="figma"
+            class="max-w-full rounded-lg w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:transition duration-300 hover:opacity-70"
+            src="/other/figma-logo.webp"
+            alt="Logo of Figma"
           />
-          <div class="tooltip hidden md:block absolute rounded p-2 mt-1">
+          <div class="tooltip absolute rounded p-2 mt-1">
             <p class="font-bold">Figma:</p>
             <ol>
               <li>1. Styles</li>
@@ -119,10 +203,10 @@ import Button from "../components/Button.astro";
           <img
             id="vscode"
             class="max-w-full rounded-lg w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:transition duration-300 hover:opacity-70"
-            src="/other/images.png"
-            alt="vs code"
+            src="/other/vscode-logo.webp"
+            alt="Logo of VS Code"
           />
-          <div class="tooltip hidden md:block absolute rounded p-2 mt-1">
+          <div class="tooltip absolute rounded p-2 mt-1">
             <p class="font-bold">VS Code:</p>
             <ol>
               <li>1. HTML</li>
@@ -130,7 +214,7 @@ import Button from "../components/Button.astro";
               <li>3. JavaScript</li>
               <li>4. Astro</li>
               <li>5. Tailwind</li>
-              <li>6. Git & Github</li>
+              <li>6. Git & GitHub</li>
             </ol>
           </div>
         </div>
@@ -138,14 +222,14 @@ import Button from "../components/Button.astro";
           <img
             id="microsoft"
             class="max-w-full rounded-lg w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:transition duration-300 hover:opacity-70"
-            src="/other/Microsoft_365_(2022).svg.png"
-            alt="microsoft 365"
+            src="/other/microsoft-365-logo.webp"
+            alt="Logo of Microsoft Office 365"
           />
-          <div class="tooltip hidden md:block absolute rounded p-2 mt-1">
+          <div class="tooltip absolute rounded p-2 mt-1">
             <p class="font-bold">Microsoft Office 365:</p>
             <ol>
               <li>1. Word</li>
-              <li>2. Powerpoint</li>
+              <li>2. PowerPoint</li>
               <li>3. Teams</li>
               <li>4. Outlook</li>
               <li>5. OneDrive</li>
@@ -154,38 +238,45 @@ import Button from "../components/Button.astro";
         </div>
       </div>
 
-      <!-- some_icons2 -->
+      <!-- Skill icon row 2 -->
       <div class="app_icons2 flex flex-wrap justify-center gap-6 mb-8 md:gap-20">
         <div class="icon-wrapper">
           <img
             id="creativecloud"
             class="max-w-full rounded-lg w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:transition duration-300 hover:opacity-70"
-            src="/other/Adobe_Creative_Cloud_rainbow_icon.svg.png"
-            alt="creative cloud"
+            src="/other/adobe-logo.webp"
+            alt="Logo of Creative Cloud"
           />
-          <div class="tooltip hidden md:block absolute rounded p-2 mt-1">
+          <div class="tooltip absolute rounded p-2 mt-1">
             <p class="font-bold">Creative Cloud:</p>
             <ol>
-              <li>1. Adobe Illustrator</li>
-              <li>2. Adobe Premiere Pro</li>
-              <li>3. Adobe Firefly</li>
+              <li>1. Adobe Photoshop</li>
+              <li>2. Adobe Illustrator</li>
+              <li>3. Adobe Lightroom</li>
+              <li>4. Adobe Premiere Pro</li>
             </ol>
           </div>
         </div>
         <div class="icon-wrapper">
-          <img
-            id="google"
-            class="max-w-full rounded-lg w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:transition duration-300 hover:opacity-70"
-            src="/other/Google_Drive_Logo_512px.png"
-            alt="google drive"
-          />
-          <div class="tooltip hidden md:block absolute rounded p-2 mt-1">
-            <p class="font-bold">Google Drive:</p>
+          <div
+            role="img"
+            aria-label="Claude"
+            class="claude-icon-frame max-w-full w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] flex items-center justify-center"
+          >
+            <img
+              id="claude"
+              class="w-full h-full hover:transition duration-300 hover:opacity-70"
+              src="/other/claude-logo.svg"
+              alt="Logo of Claude AI"
+            />
+          </div>
+          <div class="tooltip absolute rounded p-2 mt-1">
+            <p class="font-bold">Claude AI:</p>
             <ol>
-              <li>1. Docs</li>
-              <li>2. Slides</li>
-              <li>3. Forms</li>
-              <li>4. Sharing and collabs</li>
+              <li>1. Coding assistance</li>
+              <li>2. Debugging</li>
+              <li>3. Content drafting</li>
+              <li>4. Documentation</li>
             </ol>
           </div>
         </div>
@@ -193,287 +284,170 @@ import Button from "../components/Button.astro";
     </div>
   </div>
 
-  <div id="projects" class="projects_container pt-20 md:pt-60">
+  <!-- SECTION: Selected Cases -->
+  <div id="projects" class="fade-in-section projects_container pt-20 md:pt-60">
     <div class="projects">
       <div class="flex justify-center">
         <div class="container mx-auto px-4 py-4">
-          <h3 class="text-3xl md:text-4xl font-bold text-left mb-8 text-font-color">HIGHLIGHTED PROJECTS</h3>
+          <h3 class="section-heading text-3xl md:text-4xl text-left mb-8 text-text-dark">Selected cases</h3>
+
+          <!-- Case grid row 1 -->
           <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <!-- Large item -->
-            <div class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">
-              <a href="https://sararingkow.dk/kea/02_web/01_website/website/index.html" target="_blank" class="block w-full h-full">
-                <img src="/other/entrance_exam.png" alt="Nature" class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
-                  <div class="absolute bottom-0 left-0 right-0 p-4">
-                    <h4 class="text-2xl font-bold text-white">Entrance-exam</h4>
-                    <p class="text-white">First assignment: 1st semester</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-              <a href="http://sararingkow.dk/kea/03_ux/01_kodet_site/index.html" target="_blank" class="block w-full h-full">
-                <img src="/other/ux_site.png" alt="Technology" class="w-full h-48 object-cover" />
-                <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
-                  <div class="absolute bottom-0 left-0 right-0 p-4">
-                    <h4 class="text-2xl font-bold text-white">UX/UI-site</h4>
-                    <p class="text-white">Second assignment: 1st semester</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!-- Two small items -->
-            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-              <a href="https://makomiteen.netlify.app/" target="_blank">
-                <img src="/other/mak.png" alt="Food" class="w-full h-48 object-cover" />
-                <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
-                  <div class="absolute bottom-0 left-0 right-0 p-4">
-                    <h4 class="text-2xl font-bold text-white">The MAK committee</h4>
-                    <p class="text-white">First case-assignment: 1st semester</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-              <a href="https://sararingkow.dk/kea/06_eksamen/portfolio_eksamen/index.html" target="_blank" class="block w-full h-full">
-                <img src="/other/1st_portfolio.png" alt="Technology" class="w-full h-48 object-cover" />
-                <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
-                  <div class="absolute bottom-0 left-0 right-0 p-4">
-                    <h4 class="text-2xl font-bold text-white">First portfolio-site</h4>
-                    <p class="text-white">Exam-assignment: 1st semester</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <!-- Three medium items -->
-
-            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-              <a href="https://vild-mad.netlify.app/" target="_blank">
-                <img src="/other/vildmad.png" alt="Food" class="w-full h-48 object-cover" />
-                <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
-                  <div class="absolute bottom-0 left-0 right-0 p-4">
-                    <h4 class="text-2xl font-bold text-white">Vild Mad</h4>
-                    <p class="text-white">Case-assignment: 2nd semester</p>
-                  </div>
-                </div>
-              </a>
-            </div>
+            {featuredCases.map((project) => <CaseCard {...project} />)}
           </div>
         </div>
       </div>
       <div class="projects">
         <div class="flex justify-center">
           <div class="container mx-auto px-4">
+            <!-- Case grid row 2 -->
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-              <!-- Three medium items -->
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                <a href="https://t8-karrusel.netlify.app/" target="_blank" class="block w-full h-full">
-                  <img src="/other/karrusel.png" alt="Nature" class="w-full h-full object-cover" />
-                  <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
-                    <div class="absolute bottom-0 left-0 right-0 p-4">
-                      <h4 class="text-2xl font-bold text-white">Karrusel Festival</h4>
-                      <p class="text-white">Case assignment: 2nd semester</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                <a href="https://itmv-t9.netlify.app/" target="_blank">
-                  <img src="/other/itmv.png" alt="Art" class="w-full h-48 object-cover" />
-                  <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
-                    <div class="absolute bottom-0 left-0 right-0 p-4">
-                      <h4 class="text-2xl font-bold text-white">I Tråd Med Verden</h4>
-                      <p class="text-white">Case-assignment: 2nd semester</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                <a href="https://volander-art.netlify.app/" target="_blank">
-                  <img src="/other/2nd_semester_exam.png" alt="Travel" class="w-full h-48 object-cover" />
-                  <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
-                    <div class="absolute bottom-0 left-0 right-0 p-4">
-                      <h4 class="text-2xl font-bold text-white">Volander Art</h4>
-                      <p class="text-white">Exam-assignment: 2nd semester</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="relative overflow-hidden rounded-2xl shadow-lg group">
-                <a href="https://digitalskraldedag-dk.netlify.app/" target="_blank">
-                  <img src="/other/digital_cleanup_day.png" alt="Art" class="w-full h-48 object-cover" />
-                  <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-none">
-                    <div class="absolute bottom-0 left-0 right-0 p-4">
-                      <h4 class="text-2xl font-bold text-white">Digital Cleanup Day</h4>
-                      <p class="text-white">
-                        Case-assignment: 3rd semester <br />
-                        <span class="text-sm italic">(Has to be viewed in Chrome)</span>
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
+              {prototypeCases.map((project) => <CaseCard {...project} />)}
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="some">
-    <!-- Container for header and icons -->
+
+  <!-- SECTION: Social Links -->
+  <div class="fade-in-section some">
     <div class="flex flex-col items-center pt-20 md:pt-60">
-      <!-- Centered Header -->
-      <h3 class="text-3xl md:text-4xl font-bold text-center pb-4 md:pb-8 text-font-color z-[1]">FIND ME ON SOCIAL MEDIA</h3>
-      <!-- Container for the icons -->
+      <h3 class="section-heading text-3xl md:text-4xl text-center pb-4 md:pb-8 text-text-dark z-[1]">Find me on social media</h3>
       <div class="flex justify-center space-x-5">
-        <a class="cursor-none" href="https://www.facebook.com/profile.php?id=61558070190613" target="_blank">
-          <img
-            src="/illustrations/facebook2.svg"
-            alt="facebook"
-            class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:opacity-70 transition duration-300"
-          />
+        <a
+          href="https://www.linkedin.com/in/sara-ringkow-petersen-49830b264/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Go to my LinkedIn profile"
+          class="flex items-center justify-center w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] text-text-dark hover:opacity-70 transition duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-[52px] h-[52px] sm:w-[64px] sm:h-[64px]"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z"
+              clip-rule="evenodd"></path>
+            <path d="M7.2 8.809H4V19.5h3.2V8.809Z"></path>
+          </svg>
         </a>
-        <a class="cursor-none" href="https://www.instagram.com/srp_portfolio/" target="_blank">
-          <img
-            src="/illustrations/instagram2.svg"
-            alt="instagram"
-            class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:opacity-70 transition duration-300"
-          />
+        <a
+          href="https://github.com/sararpetersen"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Go to my GitHub page"
+          class="flex items-center justify-center w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] text-text-dark hover:opacity-70 transition duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="w-[52px] h-[52px] sm:w-[64px] sm:h-[64px]"
+            aria-hidden="true"
+          >
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+            ></path>
+          </svg>
         </a>
-        <a class="cursor-none" href="https://www.linkedin.com/in/sara-ringkow-petersen-49830b264/" target="_blank">
-          <img
-            src="/illustrations/linkedin2.svg"
-            alt="linkedin"
-            class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:opacity-70 transition duration-300"
-          />
-        </a>
-        <a class="cursor-none" href="https://dk.pinterest.com/sararingkow/" target="_blank">
-          <img
-            src="/illustrations/pinterest2.svg"
-            alt="pinterest"
-            class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] hover:opacity-70 transition duration-300"
-          />
+        <a
+          href="https://www.instagram.com/srp_portfolio/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Go to my Instagram profile"
+          class="flex items-center justify-center w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] text-text-dark hover:opacity-70 transition duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-[52px] h-[52px] sm:w-[64px] sm:h-[64px]"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+            ></path>
+          </svg>
         </a>
       </div>
     </div>
   </div>
-  <div id="contact" class="forms_container flex justify-center">
+
+  <!-- SECTION: Contact -->
+  <div id="contact" class="fade-in-section forms_container flex justify-center">
     <section class="pt-20 md:pt-40 pb-20 md:pb-40 max-w-5xl mx-auto p-6">
       <div class="flex flex-col items-center md:flex-row md:items-center md:justify-center">
-        <img class="w-[150px] h-[150px] md:w-[250px] md:h-[250px] object-cover rounded-full shadow-xl mb-6 md:mb-0" src="/other/pfp3.jpeg" alt="" />
+        <img
+          class="w-[150px] h-[150px] md:w-[250px] md:h-[250px] object-cover rounded-full shadow-xl mb-6 md:mb-0 ring-4 ring-card-cream border border-pale-divider"
+          src="/other/pfp.jpeg"
+          alt="Portrait of Sara Ringkow Petersen"
+        />
         <div class="md:ml-4 text-center md:text-left pl-0 md:pl-20">
-          <h3 class="text-gray-200 font-bold text-3xl md:text-4xl pb-4 md:pb-8">LET'S TALK!</h3>
-          <p class="text-font-color_dark text-md md:text-lg">Mail: sara.ringkow@gmail.com</p>
-          <p class="text-font-color_dark text-md md:text-lg">Phone: +45 42428807</p>
+          <h3 class="section-heading text-text-dark text-3xl md:text-4xl pb-4 md:pb-8">Let's get in touch!</h3>
+          <p class="text-text-secondary text-md md:text-lg">Mail: sara.ringkow@gmail.com</p>
+          <p class="text-text-secondary text-md md:text-lg">Phone: +45 42428807</p>
         </div>
       </div>
     </section>
   </div>
-  <div id="cv" class="cv flex flex-col items-center pb-12 md:pb-40">
-    <h3 class="text-2xl md:text-4xl text-center pb-4 md:pb-8 text-font-color">WANNA KNOW MORE ABOUT ME?</h3>
-    <Button class="text-center">CHECK OUT MY PERSONAL CV HERE (DK)</Button>
+
+  <!-- SECTION: CV Downloads -->
+  <div id="cv" class="fade-in-section cv flex flex-col items-center pb-12 md:pb-40">
+    <h3 class="section-heading text-2xl md:text-4xl text-center pb-4 md:pb-8 text-text-dark">Want to know more about me?</h3>
+    <div class="flex flex-wrap justify-center">
+      <Button href="/pdfs/CV_sararpetersen_(DA).pdf">MIT CV (DK)</Button>
+      <Button href="/pdfs/CV_sararpetersen_(EN).pdf">MY RESUME (EN)</Button>
+    </div>
   </div>
+
+  <!-- SECTION: Page Interactions -->
   <script>
-    import { inView } from "motion";
+    const initHomePageInteractions = () => {
+      const sections = document.querySelectorAll(".fade-in-section");
 
-    // Already animated elements
-    const elementmedanimation1 = document.querySelector("#h1");
-    inView(elementmedanimation1, () => {
-      elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
-    });
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            }
+          },
+          { rootMargin: "0px 0px -8% 0px", threshold: 0.12 },
+        );
 
-    const elementmedanimation2 = document.querySelector("#h2");
-    inView(elementmedanimation2, () => {
-      elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
-    });
-
-    const elementmedanimation3 = document.querySelector("#info");
-    inView(elementmedanimation3, () => {
-      elementmedanimation3.classList.add("animate__animated", "animate__fadeInLeft");
-    });
-
-    const elementmedanimation4 = document.querySelector("#pfp");
-    inView(elementmedanimation4, () => {
-      elementmedanimation4.classList.add("animate__animated", "animate__fadeInRight");
-    });
-
-    const elementmedanimation5 = document.querySelector("#timeline");
-    inView(elementmedanimation5, () => {
-      elementmedanimation5.classList.add("animate__animated", "animate__rotateInDownLeft");
-    });
-
-    const elementmedanimation6 = document.querySelector("#contact");
-    inView(elementmedanimation6, () => {
-      elementmedanimation6.classList.add("animate__animated", "animate__fadeInTopLeft");
-    });
-
-    // New animations for missing elements
-    const elementmedanimation7 = document.querySelector(".skills");
-    inView(elementmedanimation7, () => {
-      elementmedanimation7.classList.add("animate__animated", "animate__fadeInRight");
-    });
-
-    const elementmedanimation8 = document.querySelector(".projects_container");
-    inView(elementmedanimation8, () => {
-      elementmedanimation8.classList.add("animate__animated", "animate__fadeInLeft");
-    });
-
-    const elementmedanimation9 = document.querySelector(".some");
-    inView(elementmedanimation9, () => {
-      elementmedanimation9.classList.add("animate__animated", "animate__fadeInTopRight");
-    });
-
-    const elementmedanimation10 = document.querySelector(".cv");
-    inView(elementmedanimation10, () => {
-      elementmedanimation10.classList.add("animate__animated", "animate__zoomIn");
-    });
-
-    // CURSOR
-    (function () {
-      var mousePos;
-      var moved = false;
-
-      document.onmousemove = handleMouseMove;
-      setInterval(getMousePosition, 100);
-
-      function handleMouseMove(event) {
-        var eventDoc, doc, body;
-
-        moved = true;
-
-        event = event || window.event;
-        if (event.pageX == null && event.clientX != null) {
-          eventDoc = (event.target && event.target.ownerDocument) || document;
-          doc = eventDoc.documentElement;
-          body = eventDoc.body;
-
-          event.pageX =
-            event.clientX + ((doc && doc.scrollLeft) || (body && body.scrollLeft) || 0) - ((doc && doc.clientLeft) || (body && body.clientLeft) || 0);
-          event.pageY =
-            event.clientY + ((doc && doc.scrollTop) || (body && body.scrollTop) || 0) - ((doc && doc.clientTop) || (body && body.clientTop) || 0);
-        }
-
-        mousePos = {
-          x: event.pageX,
-          y: event.pageY,
-        };
+        sections.forEach((section) => observer.observe(section));
+      } else {
+        sections.forEach((section) => section.classList.add("is-visible"));
       }
 
-      function getMousePosition() {
-        var pos = mousePos;
+      setTimeout(() => sections.forEach((section) => section.classList.add("is-visible")), 1200);
 
-        if (!pos) {
-          // We haven't seen any movement yet
-        } else if (moved === true) {
-          // Use pos.x and pos.y
-          console.log("Pos:", pos.x, pos.y);
-          moved = false;
-          var cursor = document.querySelector("#cursor");
-          cursor.style.left = pos.x + "px";
-          cursor.style.top = pos.y + "px";
-        }
-      }
-    })();
+      const iconWrappers = document.querySelectorAll(".icon-wrapper");
+      iconWrappers.forEach((wrapper) => {
+        wrapper.addEventListener("click", (event) => {
+          const isActive = wrapper.classList.contains("tooltip-active");
+          iconWrappers.forEach((w) => w.classList.remove("tooltip-active"));
+          if (!isActive) wrapper.classList.add("tooltip-active");
+          event.stopPropagation();
+        });
+      });
+      document.addEventListener("click", () => {
+        iconWrappers.forEach((w) => w.classList.remove("tooltip-active"));
+      });
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initHomePageInteractions, { once: true });
+    } else {
+      initHomePageInteractions();
+    }
   </script>
 </MainLayout>

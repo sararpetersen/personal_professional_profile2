@@ -1,0 +1,499 @@
+---
+
+---
+
+<button
+  id="a11y-fab"
+  aria-label="Open accessibility settings"
+  aria-expanded="false"
+  aria-controls="a11y-panel"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="28" height="28" fill="currentColor" aria-hidden="true">
+    <path
+      d="M64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM225.5 233.9C213.3 228.7 199.2 234.3 194 246.5C188.8 258.7 194.4 272.8 206.6 278L218.5 283.1C235.8 290.5 253.7 296 272.1 299.4L272.1 349.5C272.1 353.8 271.4 358.1 270 362.1L241.3 448.2C237.1 460.8 243.9 474.4 256.5 478.6C269.1 482.8 282.7 476 286.9 463.4L311.3 390.2C312.6 386.4 316.1 383.8 320.1 383.8C324.1 383.8 327.7 386.4 328.9 390.2L353.3 463.4C357.5 476 371.1 482.8 383.7 478.6C396.3 474.4 403 461 398.8 448.4L370.1 362.3C368.7 358.2 368 354 368 349.7L368 299.6C386.4 296.1 404.3 290.7 421.6 283.3L433.5 278.2C445.7 273 451.3 258.9 446.1 246.7C440.9 234.5 426.8 228.9 414.6 234.1L402.7 239C376.6 250.2 348.5 256 320 256C291.5 256 263.5 250.2 237.3 239L225.4 233.9zM320 224C342.1 224 360 206.1 360 184C360 161.9 342.1 144 320 144C297.9 144 280 161.9 280 184C280 206.1 297.9 224 320 224z"
+    ></path>
+  </svg>
+</button>
+
+<div id="a11y-overlay" aria-hidden="true" hidden></div>
+
+<div id="a11y-panel" role="dialog" aria-modal="true" aria-labelledby="a11y-panel-title" hidden>
+  <div class="a11y-panel-header">
+    <h2 id="a11y-panel-title">Accessibility</h2>
+    <button id="a11y-close" aria-label="Close accessibility settings">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"></path></svg
+      >
+    </button>
+  </div>
+
+  <div class="a11y-panel-body">
+    <section class="a11y-section" aria-labelledby="a11y-text-label">
+      <h3 id="a11y-text-label" class="a11y-section-label">Text Size</h3>
+      <div class="a11y-choice-group">
+        <button id="a11y-text-normal" class="a11y-choice" aria-pressed="true">
+          <span class="a11y-size-preview text-sm">A</span>
+          <span>Normal</span>
+        </button>
+        <button id="a11y-text-large" class="a11y-choice" aria-pressed="false">
+          <span class="a11y-size-preview text-lg font-bold">A</span>
+          <span>Large</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="a11y-section" aria-labelledby="a11y-font-label">
+      <h3 id="a11y-font-label" class="a11y-section-label">Reading Font</h3>
+      <div class="a11y-choice-group">
+        <button id="a11y-font-default" class="a11y-choice" aria-pressed="true">
+          <span class="a11y-size-preview font-garamond">Aa</span>
+          <span>Default</span>
+        </button>
+        <button id="a11y-font-readable" class="a11y-choice" aria-pressed="false">
+          <span class="a11y-size-preview font-sans">Aa</span>
+          <span>Readable</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="a11y-section" aria-labelledby="a11y-display-label">
+      <h3 id="a11y-display-label" class="a11y-section-label">Display</h3>
+      <div class="a11y-toggle-row">
+        <div>
+          <span id="a11y-motion-name" class="a11y-toggle-name">Reduced motion</span>
+          <span class="a11y-toggle-desc">Pause decorative movement</span>
+        </div>
+        <button id="a11y-motion" role="switch" aria-checked="false" aria-labelledby="a11y-motion-name" class="a11y-switch">
+          <span class="a11y-switch-thumb"></span>
+        </button>
+      </div>
+      <div class="a11y-toggle-row">
+        <div>
+          <span id="a11y-calm-name" class="a11y-toggle-name">Calm colours</span>
+          <span class="a11y-toggle-desc">Softer contrast and saturation</span>
+        </div>
+        <button id="a11y-calm" role="switch" aria-checked="false" aria-labelledby="a11y-calm-name" class="a11y-switch">
+          <span class="a11y-switch-thumb"></span>
+        </button>
+      </div>
+      <div class="a11y-toggle-row">
+        <div>
+          <span id="a11y-focus-name" class="a11y-toggle-name">Focus mode</span>
+          <span class="a11y-toggle-desc">Hide decorative background details</span>
+        </div>
+        <button id="a11y-focus" role="switch" aria-checked="false" aria-labelledby="a11y-focus-name" class="a11y-switch">
+          <span class="a11y-switch-thumb"></span>
+        </button>
+      </div>
+    </section>
+
+    <button id="a11y-reset" class="a11y-reset-btn">Reset settings</button>
+    <p class="a11y-note">Preferences are saved in this browser.</p>
+  </div>
+</div>
+
+<style>
+  #a11y-fab {
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.35rem;
+    height: 3.35rem;
+    border: 1px solid rgba(192, 215, 225, 0.34);
+    border-radius: 9999px;
+    background: #c0d7e1;
+    color: #101820;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.34);
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  #a11y-fab:hover,
+  #a11y-fab:focus-visible {
+    background: #95bccb;
+    border-color: #95bccb;
+    transform: translateY(-2px);
+  }
+
+  #a11y-fab:focus-visible,
+  #a11y-close:focus-visible,
+  .a11y-choice:focus-visible,
+  .a11y-switch:focus-visible,
+  .a11y-reset-btn:focus-visible {
+    outline: 2px solid #f3b9ae;
+    outline-offset: 3px;
+  }
+
+  #a11y-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 61;
+    background: rgba(0, 0, 0, 0.42);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+
+  #a11y-overlay.a11y-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #a11y-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 62;
+    display: flex;
+    flex-direction: column;
+    width: min(21rem, 100vw);
+    height: 100%;
+    overflow-y: auto;
+    background: #101820;
+    border-left: 1px solid rgba(192, 215, 225, 0.22);
+    box-shadow: -12px 0 34px rgba(0, 0, 0, 0.45);
+    transform: translateX(100%);
+    transition: transform 0.28s ease;
+  }
+
+  #a11y-panel.a11y-open {
+    transform: translateX(0);
+  }
+
+  .a11y-panel-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 1.25rem;
+    background: #101820;
+    border-bottom: 1px solid rgba(192, 215, 225, 0.18);
+  }
+
+  #a11y-panel-title {
+    margin: 0;
+    color: #fffdfc;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.65rem;
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  #a11y-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid rgba(192, 215, 225, 0.25);
+    border-radius: 9999px;
+    background: transparent;
+    color: #fffdfc;
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  #a11y-close:hover {
+    background: rgba(192, 215, 225, 0.16);
+    transform: translateY(-1px);
+  }
+
+  .a11y-panel-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding: 1.25rem;
+  }
+
+  .a11y-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .a11y-section-label {
+    margin: 0;
+    color: #95bccb;
+    font-family: "Almarai", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .a11y-choice-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.55rem;
+  }
+
+  .a11y-choice,
+  .a11y-toggle-row,
+  .a11y-reset-btn {
+    border: 1px solid rgba(192, 215, 225, 0.22);
+    border-radius: 0.75rem;
+    background: rgba(22, 34, 48, 0.82);
+    color: #fffdfc;
+  }
+
+  .a11y-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    min-height: 4.5rem;
+    padding: 0.75rem 0.5rem;
+    font-family: "Almarai", sans-serif;
+    font-size: 0.83rem;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .a11y-choice:hover {
+    border-color: #95bccb;
+    transform: translateY(-1px);
+  }
+
+  .a11y-choice[aria-pressed="true"] {
+    background: #c0d7e1;
+    border-color: #c0d7e1;
+    color: #101820;
+    font-weight: 700;
+  }
+
+  .a11y-size-preview {
+    line-height: 1;
+  }
+
+  .a11y-toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 0.9rem;
+  }
+
+  .a11y-toggle-row > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .a11y-toggle-name {
+    color: #fffdfc;
+    font-size: 0.88rem;
+    font-weight: 700;
+  }
+
+  .a11y-toggle-desc {
+    color: #c7d0da;
+    font-size: 0.74rem;
+    line-height: 1.35;
+  }
+
+  .a11y-switch {
+    position: relative;
+    flex: 0 0 auto;
+    width: 2.75rem;
+    height: 1.45rem;
+    border: 0;
+    border-radius: 9999px;
+    background: #6f6862;
+    transition: background-color 0.2s ease;
+  }
+
+  .a11y-switch[aria-checked="true"] {
+    background: #c0d7e1;
+  }
+
+  .a11y-switch-thumb {
+    position: absolute;
+    top: 0.18rem;
+    left: 0.2rem;
+    width: 1.08rem;
+    height: 1.08rem;
+    border-radius: 9999px;
+    background: #fffdfc;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+    transition: transform 0.2s ease;
+  }
+
+  .a11y-switch[aria-checked="true"] .a11y-switch-thumb {
+    transform: translateX(1.28rem);
+    background: #101820;
+  }
+
+  .a11y-reset-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.86rem;
+    font-weight: 700;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .a11y-reset-btn:hover {
+    border-color: #95bccb;
+    background: rgba(192, 215, 225, 0.12);
+    transform: translateY(-1px);
+  }
+
+  .a11y-note {
+    margin: 0;
+    color: #95bccb;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    #a11y-fab {
+      left: 1.5rem;
+      bottom: 1.5rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #a11y-fab,
+    #a11y-overlay,
+    #a11y-panel,
+    .a11y-choice,
+    #a11y-close,
+    .a11y-switch,
+    .a11y-switch-thumb,
+    .a11y-reset-btn {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const panel = document.getElementById("a11y-panel");
+  const overlay = document.getElementById("a11y-overlay");
+  const fab = document.getElementById("a11y-fab");
+  const closeBtn = document.getElementById("a11y-close");
+  const root = document.documentElement;
+  const body = document.body;
+
+  const settings = [
+    { id: "a11y-motion", className: "reduce-motion", key: "reduceMotionEnabled", target: body, attr: "aria-checked" },
+    { id: "a11y-calm", className: "calm-mode", key: "calmModeEnabled", target: body, attr: "aria-checked" },
+    { id: "a11y-focus", className: "focus-mode", key: "focusModeEnabled", target: body, attr: "aria-checked" },
+  ];
+
+  const syncUI = () => {
+    document.getElementById("a11y-text-normal")?.setAttribute("aria-pressed", String(!root.classList.contains("text-large")));
+    document.getElementById("a11y-text-large")?.setAttribute("aria-pressed", String(root.classList.contains("text-large")));
+    document.getElementById("a11y-font-default")?.setAttribute("aria-pressed", String(!root.classList.contains("readable-font")));
+    document.getElementById("a11y-font-readable")?.setAttribute("aria-pressed", String(root.classList.contains("readable-font")));
+
+    settings.forEach(({ id, className, target, attr }) => {
+      document.getElementById(id)?.setAttribute(attr, String(target.classList.contains(className)));
+    });
+  };
+
+  const openPanel = () => {
+    panel?.removeAttribute("hidden");
+    overlay?.removeAttribute("hidden");
+    panel?.classList.add("a11y-open");
+    overlay?.classList.add("a11y-open");
+    fab?.setAttribute("aria-expanded", "true");
+    syncUI();
+    closeBtn?.focus();
+  };
+
+  const closePanel = () => {
+    panel?.classList.remove("a11y-open");
+    overlay?.classList.remove("a11y-open");
+    panel?.setAttribute("hidden", "");
+    overlay?.setAttribute("hidden", "");
+    fab?.setAttribute("aria-expanded", "false");
+    fab?.focus();
+  };
+
+  fab?.addEventListener("click", openPanel);
+  closeBtn?.addEventListener("click", closePanel);
+  overlay?.addEventListener("click", closePanel);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && panel?.classList.contains("a11y-open")) closePanel();
+  });
+
+  panel?.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab") return;
+    const focusable = Array.from(panel.querySelectorAll("button:not([disabled]), [href], [tabindex]:not([tabindex='-1'])"));
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+
+  document.getElementById("a11y-text-normal")?.addEventListener("click", () => {
+    root.classList.remove("text-large");
+    localStorage.setItem("largeTextEnabled", "false");
+    syncUI();
+  });
+
+  document.getElementById("a11y-text-large")?.addEventListener("click", () => {
+    root.classList.add("text-large");
+    localStorage.setItem("largeTextEnabled", "true");
+    syncUI();
+  });
+
+  document.getElementById("a11y-font-default")?.addEventListener("click", () => {
+    root.classList.remove("readable-font");
+    localStorage.setItem("readableFontEnabled", "false");
+    syncUI();
+  });
+
+  document.getElementById("a11y-font-readable")?.addEventListener("click", () => {
+    root.classList.add("readable-font");
+    localStorage.setItem("readableFontEnabled", "true");
+    syncUI();
+  });
+
+  settings.forEach(({ id, className, key, target }) => {
+    document.getElementById(id)?.addEventListener("click", () => {
+      const enabled = target.classList.toggle(className);
+      localStorage.setItem(key, String(enabled));
+      syncUI();
+    });
+  });
+
+  document.getElementById("a11y-reset")?.addEventListener("click", () => {
+    root.classList.remove("text-large", "readable-font");
+    body.classList.remove("reduce-motion", "calm-mode", "focus-mode");
+    ["largeTextEnabled", "readableFontEnabled", "reduceMotionEnabled", "calmModeEnabled", "focusModeEnabled"].forEach((key) => localStorage.removeItem(key));
+    syncUI();
+  });
+
+  syncUI();
+</script>

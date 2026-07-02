@@ -2,6 +2,167 @@
 
 ---
 
-<footer class="flex flex-col space-y-10 justify-center p-10 backdrop-blur-md">
-  <p class="text-center text-font-color_dark font-medium">&copy; 2024 Sara Ringkow Petersen – SRP Portfolio. All rights reserved.</p>
-</footer>
+<!-- Torii icon -->
+<div id="torii-icon" class="flex justify-center items-center pt-10 pb-6 pointer-events-none">
+  <img src="/illustrations/torii.svg" alt="" aria-hidden="true" class="w-[280px] md:w-[400px] h-auto" width="1956" height="582" loading="lazy" />
+</div>
+
+<div class="site-footer py-6 md:px-4 px-6">
+  <div class="container mx-auto flex flex-col items-start md:flex-row md:justify-between gap-10 md:gap-4">
+    <!-- Logo -->
+    <div
+      id="footer-logo"
+      class="flex justify-start md:justify-center items-center relative font-bold transition-opacity duration-300 ease-in-out mb-8 md:mb-0"
+    >
+      <a href="#top" class="group w-20 h-20">
+        <img
+          src="/illustrations/logo-srp-white.svg"
+          alt="Logo for my website, with three of my initials"
+          class="object-contain w-full h-full transition duration-300 ease-out group-hover:-translate-y-[2px] group-hover:scale-[1.02]"
+          width="80"
+          height="80"
+          loading="lazy"
+        />
+      </a>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="flex flex-col items-start">
+      <div class="flex items-center py-1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-4 h-4 mr-2 text-pale-50"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+          ></path>
+        </svg>
+        <a
+          href="mailto:sara.ringkow@gmail.com"
+          class="footer-contact-link text-pale-50 py-1 transition duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
+          aria-label="Send an email to 'sara.ringkow@gmail.com'">sara.ringkow@gmail.com</a
+        >
+      </div>
+      <div class="flex items-center py-1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-4 h-4 mr-2 text-pale-50"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+          ></path>
+        </svg>
+        <a
+          href="tel:+4542428807"
+          class="footer-contact-link text-pale-50 py-1 transition duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
+          aria-label="Call '+45 42 42 88 07'">+45 42 42 88 07</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom strip: copyright -->
+  <div class="container mx-auto mt-8 pt-4 footer-rule">
+    <p class="text-xs text-left">&copy; 2026 Sara Ringkow Petersen. All rights reserved.</p>
+  </div>
+</div>
+
+<style>
+  .site-footer {
+    background: #0b1118;
+    border-top: 1px solid rgba(192, 215, 225, 0.14);
+  }
+
+  .footer-rule {
+    border-top: 1px solid rgba(192, 215, 225, 0.14);
+  }
+
+  .footer-rule p {
+    color: rgba(246, 243, 238, 0.58);
+  }
+
+  .footer-contact-link {
+    position: relative;
+  }
+
+  .footer-contact-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    border-radius: 9999px;
+    background: #c0d7e1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s ease;
+  }
+
+  .footer-contact-link:hover,
+  .footer-contact-link:focus-visible {
+    color: #c0d7e1;
+  }
+
+  .footer-contact-link:hover::after,
+  .footer-contact-link:focus-visible::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* Torii entrance animation */
+  #torii-icon img {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 1.2s ease,
+      transform 1.2s ease;
+  }
+
+  #torii-icon.torii-visible img {
+    filter: invert(1) grayscale(1) brightness(0.8);
+    opacity: 0.15;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #torii-icon img {
+      transition: none;
+    }
+    #torii-icon.torii-visible img {
+      opacity: 0.14;
+      transform: none;
+    }
+  }
+</style>
+
+<script>
+  const toriEl = document.getElementById("torii-icon");
+  if (toriEl) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            toriEl.classList.add("torii-visible");
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.15 },
+    );
+    observer.observe(toriEl);
+  }
+</script>

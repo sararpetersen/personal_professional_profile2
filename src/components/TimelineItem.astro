@@ -1,0 +1,25 @@
+---
+interface Props {
+  period: string;
+  titleLines: string[];
+  description: string;
+}
+
+const { period, titleLines, description } = Astro.props;
+---
+
+<li class="timeline-card">
+  <time class="mb-2 block text-xl font-bold leading-none text-blue-300 md:text-2xl">{period}</time>
+  <h4 class="timeline-title text-xl font-regular text-pale-50 md:text-xl">
+    {
+      titleLines.map((line, index) => (
+        <>
+          {index > 0 && <br class="md:hidden block" />}
+          {index > 0 && " "}
+          {line}
+        </>
+      ))
+    }
+  </h4>
+  <p class="text-blue-100 text-sm md:text-base leading-relaxed pt-2">{description}</p>
+</li>

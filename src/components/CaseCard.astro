@@ -1,0 +1,31 @@
+---
+interface Props {
+  href: string;
+  image: string;
+  alt: string;
+  period: string;
+  title: string;
+  tools: string[];
+  large?: boolean;
+  imageClass?: string;
+}
+
+const { href, image, alt, period, title, tools, large = false, imageClass } = Astro.props;
+const cardSizeClass = large ? "md:col-span-2 md:row-span-2" : "";
+const resolvedImageClass = imageClass ?? (large ? "w-full h-full object-cover" : "w-full h-48 object-cover");
+---
+
+<div class:list={["case-card relative overflow-hidden group", cardSizeClass]}>
+  <a href={href} target="_blank" rel="noopener noreferrer" class="case-link block w-full h-full" aria-label={`Open case: ${title} (opens in a new tab)`}>
+    <img src={image} alt={alt} class:list={["case-image", resolvedImageClass]} loading="lazy" decoding="async" />
+    <div class="case-overlay absolute inset-0 opacity-0">
+      <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+        <p class="case-period" title={period}>{period}</p>
+        <h4>{title}</h4>
+        <div class="case-tools flex flex-wrap">
+          {tools.map((tool) => <span title={tool}>{tool}</span>)}
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
