@@ -134,45 +134,64 @@ body::after {
   }
 }
 
-.fade-in-section {
+/* Entrance animations: motion's inView() adds animate__animated + animate__fadeInUp
+   to each element below once it scrolls into view (see the page script). These
+   selectors pre-hide those same elements so there's nothing to "pop" — but only once
+   html.has-js confirms the reveal script actually loaded, and never while reduced
+   motion is active, so content never gets stuck invisible if JS fails or is skipped. */
+.animate__animated {
+  --animate-duration: 1.6s;
+}
+
+html.has-js body:not(.reduce-motion) #h1,
+html.has-js body:not(.reduce-motion) #h2,
+html.has-js body:not(.reduce-motion) .hero-image-wrap,
+html.has-js body:not(.reduce-motion) #info .section-heading,
+html.has-js body:not(.reduce-motion) #info p,
+html.has-js body:not(.reduce-motion) #pfp img,
+html.has-js body:not(.reduce-motion) #timeline .section-heading,
+html.has-js body:not(.reduce-motion) .timeline-card,
+html.has-js body:not(.reduce-motion) #skills .section-heading,
+html.has-js body:not(.reduce-motion) #skills h4,
+html.has-js body:not(.reduce-motion) .icon-wrapper,
+html.has-js body:not(.reduce-motion) #projects .section-heading,
+html.has-js body:not(.reduce-motion) .case-stagger,
+html.has-js body:not(.reduce-motion) .some h3,
+html.has-js body:not(.reduce-motion) .some a,
+html.has-js body:not(.reduce-motion) #contact .section-heading,
+html.has-js body:not(.reduce-motion) #contact img,
+html.has-js body:not(.reduce-motion) #contact p,
+html.has-js body:not(.reduce-motion) #cv .section-heading,
+html.has-js body:not(.reduce-motion) #cv .flex {
   opacity: 0;
-  transform: translate3d(0, 1.6rem, 0);
-  transition:
-    opacity 1.8s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 1.8s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
+  will-change: transform, opacity;
 }
 
-.fade-in-section.is-visible {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-
-.stagger-item {
-  opacity: 0;
-  transform: translate3d(0, 0.85rem, 0);
-  transition:
-    opacity 1.5s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 1.5s cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 0.3s ease,
-    filter 0.25s ease;
-  transition-delay: var(--stagger-delay, 0ms);
-  will-change: opacity, transform;
-}
-
-.stagger-item.is-visible {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-
+/* Safety valve: if the OS-level reduced-motion preference is on but the site's own
+   toggle isn't, the page script skips registering any inView animation — so make sure
+   these elements aren't left permanently invisible in that case either. */
 @media (prefers-reduced-motion: reduce) {
-  .fade-in-section,
-  .fade-in-section.is-visible,
-  .stagger-item,
-  .stagger-item.is-visible {
-    transition: none;
+  html.has-js body:not(.reduce-motion) #h1,
+  html.has-js body:not(.reduce-motion) #h2,
+  html.has-js body:not(.reduce-motion) .hero-image-wrap,
+  html.has-js body:not(.reduce-motion) #info .section-heading,
+  html.has-js body:not(.reduce-motion) #info p,
+  html.has-js body:not(.reduce-motion) #pfp img,
+  html.has-js body:not(.reduce-motion) #timeline .section-heading,
+  html.has-js body:not(.reduce-motion) .timeline-card,
+  html.has-js body:not(.reduce-motion) #skills .section-heading,
+  html.has-js body:not(.reduce-motion) #skills h4,
+  html.has-js body:not(.reduce-motion) .icon-wrapper,
+  html.has-js body:not(.reduce-motion) #projects .section-heading,
+  html.has-js body:not(.reduce-motion) .case-stagger,
+  html.has-js body:not(.reduce-motion) .some h3,
+  html.has-js body:not(.reduce-motion) .some a,
+  html.has-js body:not(.reduce-motion) #contact .section-heading,
+  html.has-js body:not(.reduce-motion) #contact img,
+  html.has-js body:not(.reduce-motion) #contact p,
+  html.has-js body:not(.reduce-motion) #cv .section-heading,
+  html.has-js body:not(.reduce-motion) #cv .flex {
     opacity: 1;
-    transform: none;
   }
 }
 
@@ -183,16 +202,6 @@ body.reduce-motion *::after {
   animation-duration: 0.001ms !important;
   animation-iteration-count: 1 !important;
   transition-duration: 0.001ms !important;
-}
-
-body.reduce-motion .fade-in-section {
-  opacity: 1;
-  transform: none;
-}
-
-body.reduce-motion .stagger-item {
-  opacity: 1;
-  transform: none;
 }
 
 body.reduce-motion .tooltip {
@@ -573,7 +582,6 @@ body.calm-mode .case-overlay {
   overflow: visible;
 }
 
-.skill-icon,
 .social-link,
 #logo a {
   display: inline-flex;
@@ -582,8 +590,6 @@ body.calm-mode .case-overlay {
     filter 0.25s ease;
 }
 
-.skill-icon:hover,
-.skill-icon:focus-visible,
 .social-link:hover,
 .social-link:focus-visible,
 #logo a:hover,
@@ -596,6 +602,18 @@ body.calm-mode .case-overlay {
 .icon-wrapper {
   position: relative;
   display: inline-block;
+  border-radius: 0.75rem;
+  /* transform lives here, not on the icon itself, so it doesn't fight the icon's own
+     infinite float animation (both would be racing to set `transform` on one element) */
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.icon-wrapper:hover,
+.icon-wrapper:focus-within {
+  transform: scale(1.1);
+  box-shadow: 0 0.6rem 1.1rem rgba(0, 0, 0, 0.28);
 }
 
 /* Default behavior: tooltips appear below the images */

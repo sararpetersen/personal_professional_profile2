@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/tailwind.css";
+import "animate.css";
 const { title } = Astro.props;
 import ScrollToTop from "../components/ScrollToTop.astro";
 import AccessibilityPanel from "../components/AccessibilityPanel.astro";
@@ -10,6 +11,9 @@ import AccessibilityPanel from "../components/AccessibilityPanel.astro";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <script is:inline>
+      document.documentElement.classList.add("has-js");
+    </script>
     <link rel="icon" type="image/svg+xml" href="/illustrations/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />

@@ -119,7 +119,9 @@ const caseStudies = [
 
 <MainLayout title="Sara Ringkow Petersen | Digital Resume">
   <!-- SECTION: Hero -->
-  <div class="fade-in-section hero-section top-content text-text-dark max-w-7xl mx-auto px-6 md:px-8 pb-20 pt-32 md:pb-28 md:pt-40 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+  <div
+    class="hero-section top-content text-text-dark max-w-7xl mx-auto px-6 md:px-8 pb-20 pt-32 md:pb-28 md:pt-40 grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+  >
     <div>
       <h1 id="h1" class="title text-5xl md:text-8xl text-center md:text-left pb-12 uppercase">Sara Ringkow Petersen</h1>
       <h2 id="h2" class="subtitle text-3xl md:text-5xl italic font-light text-center md:text-left tracking-wide text-text-secondary">
@@ -132,10 +134,10 @@ const caseStudies = [
   </div>
 
   <!-- SECTION: About -->
-  <div class="fade-in-section main-content1 max-w-7xl mx-8 md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-30 md:pb-60">
+  <div class="main-content1 max-w-7xl mx-8 md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-30 md:pb-60">
     <div id="info" class="left-content text-text-dark">
       <h3 class="section-heading text-3xl md:text-4xl pb-4">Who am I?</h3>
-      <p class="text-lg md:text-xl leading-6 md:leading-9">
+      <p class="text-lg leading-6 md:leading-9">
         My name is Sara Ringkow Petersen, a Multimedia Designer and Concept Developer based in <span class="text-warm-accent font-bold"
           >Copenhagen</span
         >. I design and build accessible websites, interfaces, and concepts&mdash; focusing on structure, clarity, and the people who use them. I'm
@@ -159,7 +161,7 @@ const caseStudies = [
   </div>
 
   <!-- SECTION: Timeline -->
-  <div id="timeline" class="fade-in-section timeline max-w-3xl mx-auto flex justify-center md:justify-center md:max-w-6xl pb-20 md:pb-60">
+  <div id="timeline" class="timeline max-w-3xl mx-auto flex justify-center md:justify-center md:max-w-6xl pb-20 md:pb-60">
     <div class="left-content text-text-dark">
       <h3 class="section-heading text-3xl md:text-4xl text-left ml-4 pb-10 md:ml-0 md:pb-8">The highlights of my journey</h3>
 
@@ -170,7 +172,7 @@ const caseStudies = [
   </div>
 
   <!-- SECTION: Skills -->
-  <div id="skills" class="fade-in-section skills max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-center mb-8">
+  <div id="skills" class="skills max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-center mb-8">
     <div class="text-center md:text-left mb-8 md:mb-0 md:mr-8 pr-0 md:pr-12 pb-12">
       <h3 class="section-heading text-3xl md:text-4xl pb-4 text-text-dark">Skills</h3>
       <h4 class="text-xl text-text-secondary">
@@ -285,20 +287,26 @@ const caseStudies = [
   </div>
 
   <!-- SECTION: Selected Cases -->
-  <div id="projects" class="fade-in-section projects_container pt-20 md:pt-60">
+  <div id="projects" class="projects_container pt-20 md:pt-60">
     <div class="flex justify-center">
       <div class="container mx-auto px-4 py-4">
         <h3 class="section-heading text-3xl md:text-4xl text-left mb-8 text-text-dark">Selected cases</h3>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {caseStudies.map((project) => <div class="case-stagger"><CaseCard {...project} /></div>)}
+          {
+            caseStudies.map((project) => (
+              <div class="case-stagger">
+                <CaseCard {...project} />
+              </div>
+            ))
+          }
         </div>
       </div>
     </div>
   </div>
 
   <!-- SECTION: Social Links -->
-  <div class="fade-in-section some">
+  <div class="some">
     <div class="flex flex-col items-center pt-20 md:pt-60">
       <h3 class="section-heading text-3xl md:text-4xl text-center pb-4 md:pb-8 text-text-dark z-[1]">Find me on social media</h3>
       <div class="flex justify-center space-x-5">
@@ -307,7 +315,7 @@ const caseStudies = [
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Go to my LinkedIn profile"
-          class="flex items-center justify-center w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] text-text-dark hover:opacity-70 transition duration-300"
+          class="social-link flex items-center justify-center w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] text-text-dark"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -328,7 +336,7 @@ const caseStudies = [
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Go to my GitHub page"
-          class="flex items-center justify-center w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] text-text-dark hover:opacity-70 transition duration-300"
+          class="social-link flex items-center justify-center w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] text-text-dark"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -347,7 +355,7 @@ const caseStudies = [
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Go to my Instagram profile"
-          class="flex items-center justify-center w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] text-text-dark hover:opacity-70 transition duration-300"
+          class="social-link flex items-center justify-center w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] text-text-dark"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -366,7 +374,7 @@ const caseStudies = [
   </div>
 
   <!-- SECTION: Contact -->
-  <div id="contact" class="fade-in-section forms_container flex justify-center">
+  <div id="contact" class="forms_container flex justify-center">
     <section class="pt-20 md:pt-40 pb-20 md:pb-40 max-w-5xl mx-auto p-6">
       <div class="flex flex-col items-center md:flex-row md:items-center md:justify-center">
         <img
@@ -376,17 +384,31 @@ const caseStudies = [
         />
         <div class="md:ml-4 text-center md:text-left pl-0 md:pl-20">
           <h3 class="section-heading text-text-dark text-3xl md:text-4xl pb-4 md:pb-8">Let's get in touch!</h3>
-          <p class="text-text-secondary text-md md:text-lg">Mail: sara.ringkow@gmail.com</p>
-          <p class="text-text-secondary text-md md:text-lg">Phone: +45 42428807</p>
+          <p class="text-lg">
+            <strong>Email:</strong>
+            <a
+              href="mailto:sara.ringkow@gmail.com"
+              class="contact-link py-1 transition duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
+              >sara.ringkow@gmail.com</a
+            >
+          </p>
+          <p class="text-lg">
+            <strong>Phone:</strong>
+            <a
+              href="tel:+4542428807"
+              class="contact-link py-1 transition duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
+              >+45 42428807</a
+            >
+          </p>
         </div>
       </div>
     </section>
   </div>
 
   <!-- SECTION: CV Downloads -->
-  <div id="cv" class="fade-in-section cv flex flex-col items-center pb-12 md:pb-40">
-    <h3 class="section-heading text-2xl md:text-4xl text-center pb-4 md:pb-8 text-text-dark">Want to know more about me?</h3>
-    <div class="flex flex-wrap justify-center">
+  <div id="cv" class="cv flex flex-col items-center pb-12 md:pb-40">
+    <h3 class="section-heading text-2xl md:text-4xl text-center pb-4 md:pb-8 text-text-dark">Wanna know more about me?</h3>
+    <div class="flex flex-wrap justify-center gap-4">
       <Button href="/pdfs/CV_sararpetersen_(DA).pdf">MIT CV (DK)</Button>
       <Button href="/pdfs/CV_sararpetersen_(EN).pdf">MY RESUME (EN)</Button>
     </div>
@@ -394,68 +416,73 @@ const caseStudies = [
 
   <!-- SECTION: Page Interactions -->
   <script>
-    const initHomePageInteractions = () => {
-      const sections = document.querySelectorAll(".fade-in-section");
+    import { inView } from "motion";
 
-      if ("IntersectionObserver" in window) {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            for (const entry of entries) {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-                observer.unobserve(entry.target);
-              }
-            }
-          },
-          { rootMargin: "0px 0px -8% 0px", threshold: 0.12 },
-        );
+    document.addEventListener("DOMContentLoaded", () => {
+      const reduceMotion = document.body.classList.contains("reduce-motion") || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const isMobileViewport = window.matchMedia("(max-width: 767px)").matches;
 
-        sections.forEach((section) => observer.observe(section));
-      } else {
-        // No IntersectionObserver support: nothing will ever trigger a reveal, so just show
-        // the content instead of leaving it invisible forever.
-        sections.forEach((section) => section.classList.add("is-visible"));
-      }
+      if (!reduceMotion) {
+        // Single-fire fadeInUp per element, in the order registered, each delayed a little
+        // further than the last — same registerInView pattern the portfolio uses.
+        const registerInView = (selector: string, delayMs = 0) => {
+          const element = document.querySelector(selector);
+          if (!element) return;
 
-      // Staggered fadeInUp entrance, forEach over each group with an increasing delay per item —
-      // same idea as the portfolio's registerInView helper, minus the motion.js/animate.css
-      // dependency: plain CSS transitions driven by a --stagger-delay custom property.
-      // Skill icons and social links are intentionally left out of the stagger set since they
-      // already have their own hover :transform, and stacking an entrance transform on top of
-      // that caused a flicker when hovered mid-animation. Case cards get a wrapper element
-      // (.case-stagger) instead of staggering .case-card itself, for the same reason.
-      const staggerGroups: NodeListOf<Element>[] = [
-        document.querySelectorAll("#info, #pfp"),
-        document.querySelectorAll(".timeline-card"),
-        document.querySelectorAll(".case-stagger"),
-      ];
+          let stop = () => {};
+          stop = inView(element, () => {
+            const normalizedDelay = isMobileViewport ? Math.min(delayMs, 220) : delayMs;
+            (element as HTMLElement).classList.add("animate__animated", "animate__fadeInUp");
+            (element as HTMLElement).style.animationDelay = `${normalizedDelay}ms`;
+            (element as HTMLElement).style.animationDuration = isMobileViewport ? "1s" : "1.6s";
+            (element as HTMLElement).style.animationFillMode = "both";
+            stop();
+          });
+        };
 
-      const staggerObserver =
-        "IntersectionObserver" in window
-          ? new IntersectionObserver(
-              (entries) => {
-                for (const entry of entries) {
-                  if (entry.isIntersecting) {
-                    entry.target.classList.add("is-visible");
-                    staggerObserver?.unobserve(entry.target);
-                  }
-                }
-              },
-              { rootMargin: "0px 0px -8% 0px", threshold: 0.12 },
-            )
-          : null;
-
-      staggerGroups.forEach((group) => {
-        group.forEach((item, index) => {
-          item.classList.add("stagger-item");
-          (item as HTMLElement).style.setProperty("--stagger-delay", `${Math.min(index * 80, 480)}ms`);
-          if (staggerObserver) {
-            staggerObserver.observe(item);
-          } else {
-            item.classList.add("is-visible");
-          }
+        [
+          "#h1",
+          "#h2",
+          ".hero-image-wrap",
+          "#info .section-heading",
+          "#info p",
+          "#pfp img",
+          "#timeline .section-heading",
+          "#skills .section-heading",
+          "#skills h4",
+          "#projects .section-heading",
+          ".some h3",
+          "#contact .section-heading",
+          "#contact img",
+          "#cv .section-heading",
+          "#cv .flex",
+        ].forEach((selector, index) => {
+          registerInView(selector, index * 60);
         });
-      });
+
+        // forEach groups: a handful of repeated items per section, each a little more
+        // delayed than the last, on a shorter duration so a long list doesn't take forever
+        // to finish revealing itself.
+        const registerGroup = (elements: NodeListOf<Element>, delayStep: number, durationDesktop: string, durationMobile: string) => {
+          elements.forEach((el, index) => {
+            let stop = () => {};
+            stop = inView(el, () => {
+              const delayMs = index * delayStep;
+              (el as HTMLElement).classList.add("animate__animated", "animate__fadeInUp");
+              (el as HTMLElement).style.animationDelay = `${isMobileViewport ? Math.min(delayMs, 220) : delayMs}ms`;
+              (el as HTMLElement).style.animationDuration = isMobileViewport ? durationMobile : durationDesktop;
+              (el as HTMLElement).style.animationFillMode = "both";
+              stop();
+            });
+          });
+        };
+
+        registerGroup(document.querySelectorAll(".timeline-card"), 60, "1.4s", "0.95s");
+        registerGroup(document.querySelectorAll(".icon-wrapper"), 60, "1.3s", "0.95s");
+        registerGroup(document.querySelectorAll(".case-stagger"), 80, "1.3s", "0.95s");
+        registerGroup(document.querySelectorAll(".some a"), 60, "1.3s", "0.95s");
+        registerGroup(document.querySelectorAll("#contact p"), 60, "1.3s", "0.95s");
+      }
 
       const iconWrappers = document.querySelectorAll(".icon-wrapper");
       iconWrappers.forEach((wrapper) => {
@@ -469,12 +496,37 @@ const caseStudies = [
       document.addEventListener("click", () => {
         iconWrappers.forEach((w) => w.classList.remove("tooltip-active"));
       });
-    };
-
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", initHomePageInteractions, { once: true });
-    } else {
-      initHomePageInteractions();
-    }
+    });
   </script>
+
+  <style>
+    .contact-link {
+      position: relative;
+    }
+
+    .contact-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      border-radius: 9999px;
+      background: #c0d7e1;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.25s ease;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus-visible {
+      color: #c0d7e1;
+    }
+
+    .contact-link:hover::after,
+    .contact-link:focus-visible::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  </style>
 </MainLayout>
