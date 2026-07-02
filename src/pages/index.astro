@@ -41,7 +41,7 @@ const timelineItems = [
   },
 ];
 
-const featuredCases = [
+const caseStudies = [
   {
     href: "https://cp-danmark.netlify.app/",
     image: "/projects/cpdanmark.webp",
@@ -49,7 +49,6 @@ const featuredCases = [
     period: "4th semester (final exam project)",
     title: "CP Danmark",
     tools: ["Astro", "Tailwind", "JSON", "JS"],
-    large: true,
   },
   {
     href: "https://singleusesucks-plasticchange.netlify.app/",
@@ -83,9 +82,6 @@ const featuredCases = [
     title: "Superheltedagen 2025",
     tools: ["Astro", "Tailwind", "JS"],
   },
-];
-
-const prototypeCases = [
   {
     href: "https://www.figma.com/proto/j8ikUOD43BsmBWApV5u2Sf/VibeLoop---fiktiv-app--DKON-?page-id=418%3A1048&node-id=418-1049&p=f&viewport=263%2C242%2C0.3&t=Ez2EYHzL6NBRdH57-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=418%3A1049",
     image: "/projects/vibeloop.webp",
@@ -93,7 +89,6 @@ const prototypeCases = [
     period: "1st semester",
     title: "VibeLoop",
     tools: ["Figma"],
-    imageClass: "w-full h-full object-cover",
   },
   {
     href: "https://www.figma.com/proto/ByBTPA755agBPbGNJD1p3r/K%C3%B8ge-Bibliotekerne--omr%C3%A5de-1----eksamensprojekt-S2025?page-id=1%3A9&node-id=65-332&p=f&viewport=410%2C455%2C0.2&t=geq9HU7hLmrlwuxS-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=65%3A332",
@@ -291,25 +286,12 @@ const prototypeCases = [
 
   <!-- SECTION: Selected Cases -->
   <div id="projects" class="fade-in-section projects_container pt-20 md:pt-60">
-    <div class="projects">
-      <div class="flex justify-center">
-        <div class="container mx-auto px-4 py-4">
-          <h3 class="section-heading text-3xl md:text-4xl text-left mb-8 text-text-dark">Selected cases</h3>
+    <div class="flex justify-center">
+      <div class="container mx-auto px-4 py-4">
+        <h3 class="section-heading text-3xl md:text-4xl text-left mb-8 text-text-dark">Selected cases</h3>
 
-          <!-- Case grid row 1 -->
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-            {featuredCases.map((project) => <CaseCard {...project} />)}
-          </div>
-        </div>
-      </div>
-      <div class="projects">
-        <div class="flex justify-center">
-          <div class="container mx-auto px-4">
-            <!-- Case grid row 2 -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-              {prototypeCases.map((project) => <CaseCard {...project} />)}
-            </div>
-          </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {caseStudies.map((project) => <div class="case-stagger"><CaseCard {...project} /></div>)}
         </div>
       </div>
     </div>
@@ -430,18 +412,23 @@ const prototypeCases = [
 
         sections.forEach((section) => observer.observe(section));
       } else {
+        // No IntersectionObserver support: nothing will ever trigger a reveal, so just show
+        // the content instead of leaving it invisible forever.
         sections.forEach((section) => section.classList.add("is-visible"));
       }
-
-      setTimeout(() => sections.forEach((section) => section.classList.add("is-visible")), 1200);
 
       // Staggered fadeInUp entrance, forEach over each group with an increasing delay per item —
       // same idea as the portfolio's registerInView helper, minus the motion.js/animate.css
       // dependency: plain CSS transitions driven by a --stagger-delay custom property.
-      // Case cards, skill icons, and social links are intentionally left out of the stagger set
-      // since they already have their own hover :transform, and stacking an entrance transform
-      // on top of that caused a flicker when hovered mid-animation.
-      const staggerGroups: NodeListOf<Element>[] = [document.querySelectorAll("#info, #pfp"), document.querySelectorAll(".timeline-card")];
+      // Skill icons and social links are intentionally left out of the stagger set since they
+      // already have their own hover :transform, and stacking an entrance transform on top of
+      // that caused a flicker when hovered mid-animation. Case cards get a wrapper element
+      // (.case-stagger) instead of staggering .case-card itself, for the same reason.
+      const staggerGroups: NodeListOf<Element>[] = [
+        document.querySelectorAll("#info, #pfp"),
+        document.querySelectorAll(".timeline-card"),
+        document.querySelectorAll(".case-stagger"),
+      ];
 
       const staggerObserver =
         "IntersectionObserver" in window
@@ -461,7 +448,7 @@ const prototypeCases = [
       staggerGroups.forEach((group) => {
         group.forEach((item, index) => {
           item.classList.add("stagger-item");
-          (item as HTMLElement).style.setProperty("--stagger-delay", `${Math.min(index * 90, 360)}ms`);
+          (item as HTMLElement).style.setProperty("--stagger-delay", `${Math.min(index * 80, 480)}ms`);
           if (staggerObserver) {
             staggerObserver.observe(item);
           } else {
@@ -469,10 +456,6 @@ const prototypeCases = [
           }
         });
       });
-
-      setTimeout(() => {
-        document.querySelectorAll(".stagger-item").forEach((item) => item.classList.add("is-visible"));
-      }, 1200);
 
       const iconWrappers = document.querySelectorAll(".icon-wrapper");
       iconWrappers.forEach((wrapper) => {
