@@ -354,6 +354,13 @@ body.reduce-motion .tooltip {
   justify-self: center;
 }
 
+.hero-divider {
+  width: 4rem;
+  height: 2px;
+  border: none;
+  background: rgba(220, 214, 208, 0.32);
+}
+
 @keyframes heroImageDrift {
   0%,
   100% {
@@ -446,6 +453,25 @@ body.reduce-motion .tooltip {
 .contact-inline-link:focus-visible {
   outline: 2px solid var(--brand-primary-soft);
   outline-offset: 4px;
+}
+
+a.hero-portfolio-link {
+  color: var(--brand-primary-soft);
+}
+
+a.hero-portfolio-link::after {
+  transform: scaleX(1);
+  background: var(--brand-primary-soft);
+}
+
+a.hero-portfolio-link:hover,
+a.hero-portfolio-link:focus-visible {
+  color: var(--brand-primary);
+}
+
+a.hero-portfolio-link:hover::after,
+a.hero-portfolio-link:focus-visible::after {
+  background: var(--brand-primary);
 }
 
 .portrait-image {
