@@ -22,12 +22,12 @@ const { href, image, alt, period, title, tools } = Astro.props;
     <img src={image} alt={alt} class="case-image w-full h-full object-cover" loading="lazy" decoding="async" />
     <div class="case-overlay absolute inset-0 opacity-0">
       <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6">
-        <p class="case-title text-h4-desktop font-light italic" title={period}>{period}</p>
-        <h4 class="case-period text-h4-mobile font-bold pb-2">{title}</h4>
+        <p class="case-title text-h4-mobile font-light italic" title={period}>{period}</p>
+        <h4 class="case-period text-h4-desktop font-extrabold pb-2">{title}</h4>
         <div class="case-tools flex flex-wrap">
           {
             tools.map((tool) => (
-              <span title={tool + " tool"} class="case-tool text-h4-mobile font-bold mr-2 mb-2">
+              <span title={tool + " tool"} class="case-tool text-h4-mobile font-bold mr-2">
                 {tool}
               </span>
             ))

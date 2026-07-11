@@ -820,7 +820,10 @@ body.calm-mode .case-overlay {
   font-weight: 600;
   letter-spacing: 0.08em;
   line-height: 1;
-  padding: 0.9rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   text-overflow: ellipsis;
   text-transform: uppercase;
 }
